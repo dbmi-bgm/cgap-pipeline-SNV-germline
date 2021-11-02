@@ -1,0 +1,82 @@
+{
+  "accession": "GAPW9IDRLG3D",
+  "app_name": "workflow_granite-rckTar",
+  "app_version": "VERSION",
+  "arguments": [
+      {
+          "argument_format": "rck_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "input_rcks"
+      },
+      {
+          "argument_format": "rck_tar",
+          "argument_type": "Output processed file",
+          "workflow_argument_name": "rck_tar",
+          "secondary_file_formats": ["rck_tar_index"]
+      }
+  ],
+  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+  "category": ["processing"],
+  "cwl_child_filenames": [],
+  "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
+  "cwl_main_filename": "granite-rckTar.cwl",
+  "cwl_pointer": "",
+  "description": "Create a tar archive of rck files. Create an index file for the archive",
+  "docker_image_name": "ACCOUNT/snv:VERSION",
+  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
+  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+  "name": "workflow_granite-rckTar_VERSION",
+  "aliases": ["cgap:workflow_granite-rckTar_VERSION",
+              "cgap:workflow_granite-rckTar_v25",
+              "cgap:workflow_granite-rckTar_v24",
+              "cgap:workflow_granite-rckTar_v23"],
+  "steps": [
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "array",
+                      "file_format": "rck_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "input_rcks",
+                  "source": [
+                      {
+                          "name": "input_rcks"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Run granite rckTar"
+              ],
+              "software_used": [
+                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+              ]
+          },
+          "name": "granite",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "rck_tar",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "rck_tar",
+                  "target": [
+                      {
+                          "name": "rck_tar"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "title": "Create a tar archive of rck files and an associate index file",
+  "uuid": "43200ef2-a5da-4216-a736-4d4eac4449d0",
+  "previous_version": ["dca2f426-7ef0-456b-927d-ba0ab388d0da"],
+  "version_upgrade_log": "Updated granite version, novoCaller expect proband first now"
+}

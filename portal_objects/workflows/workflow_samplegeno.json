@@ -1,0 +1,83 @@
+{
+  "accession": "GAPGLK9R65M2",
+  "app_name": "workflow_samplegeno",
+  "app_version": "VERSION",
+  "arguments": [
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "input_vcf"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Output processed file",
+          "workflow_argument_name": "samplegeno_vcf",
+          "secondary_file_formats": ["vcf_gz_tbi"]
+      }
+  ],
+  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+  "category": ["processing"],
+  "cwl_child_filenames": [],
+  "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
+  "cwl_main_filename": "samplegeno.cwl",
+  "cwl_pointer": "",
+  "description": "Add samplegeno information to variants from input vcf",
+  "docker_image_name": "ACCOUNT/snv:VERSION",
+  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
+  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+  "name": "workflow_samplegeno_VERSION",
+  "aliases": ["cgap:workflow_samplegeno_VERSION",
+              "cgap:workflow_samplegeno_v25",
+              "cgap:workflow_samplegeno_v24",
+              "cgap:workflow_samplegeno_v23",
+              "cgap:workflow_samplegeno_v22",
+              "cgap:workflow_samplegeno_v21",
+              "cgap:workflow_samplegeno_v20"],
+  "steps": [
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "input_vcf",
+                  "source": [
+                      {
+                          "name": "input_vcf"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Run samplegeno"
+              ],
+              "software_used": [
+                 "/softwares/c2380d3a-80a2-4009-a343-f9475381aab1"
+              ]
+          },
+          "name": "samplegeno",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "samplegeno_vcf",
+                  "target": [
+                      {
+                          "name": "samplegeno_vcf"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "title": "Add samplegeno",
+  "uuid": "1e86fc97-2cc5-4648-ae3b-9b2295c5f012"
+}

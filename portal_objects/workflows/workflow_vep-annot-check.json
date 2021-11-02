@@ -1,0 +1,454 @@
+{
+  "accession": "GAPWFEE29PCB",
+  "app_name": "workflow_vep-annot-check",
+  "app_version": "VERSION",
+  "arguments": [
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "input_vcf"
+      },
+      {
+          "argument_format": "fa",
+          "argument_type": "Input file",
+          "workflow_argument_name": "reference"
+      },
+      {
+          "argument_format": "txt",
+          "argument_type": "Input file",
+          "workflow_argument_name": "regions"
+      },
+      {
+          "argument_format": "vep_tar",
+          "argument_type": "Input file",
+          "workflow_argument_name": "vep"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "clinvar"
+      },
+      {
+          "argument_format": "dbnsfp_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "dbnsfp"
+      },
+      {
+          "argument_format": "tar_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "maxent"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "spliceai_snv"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "spliceai_indel"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "gnomad"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "gnomad2"
+      },
+      {
+          "argument_format": "tsv_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "CADD_snv"
+      },
+      {
+          "argument_format": "tsv_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "CADD_indel"
+      },
+      {
+          "argument_format": "BigWig",
+          "argument_type": "Input file",
+          "workflow_argument_name": "phylop100bw"
+      },
+      {
+          "argument_format": "BigWig",
+          "argument_type": "Input file",
+          "workflow_argument_name": "phylop30bw"
+      },
+      {
+          "argument_format": "BigWig",
+          "argument_type": "Input file",
+          "workflow_argument_name": "phastc100bw"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Output processed file",
+          "workflow_argument_name": "annotated_vcf",
+          "secondary_file_formats": ["vcf_gz_tbi"]
+      },
+      {
+          "argument_type": "Output QC file",
+          "workflow_argument_name": "annotated_vcf-check",
+          "argument_to_be_attached_to": "annotated_vcf",
+          "qc_zipped": false,
+          "qc_html": false,
+          "qc_json": false,
+          "qc_table": true,
+          "qc_type": "quality_metric_vcfcheck"
+      },
+      {
+          "argument_type": "parameter",
+          "workflow_argument_name": "min_depth"
+      },
+      {
+          "argument_type": "parameter",
+          "workflow_argument_name": "nthreads"
+      }
+  ],
+  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+  "category": ["processing"],
+  "cwl_child_filenames": ["vep-annot.cwl", "bcftools-norm-multiallelics.cwl", "depth_filter.cwl", "vcf-integrity-check.cwl"],
+  "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
+  "cwl_main_filename": "workflow_vep-annot_plus_vcf-integrity-check.cwl",
+  "cwl_pointer": "",
+  "description": "Split multiallelic variants. Run depth filter. Run VEP to annotate input vcf file. An integrity check is performed on the output file",
+  "docker_image_name": "ACCOUNT/snv:VERSION",
+  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
+  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+  "name": "workflow_vep-annot-check_VERSION",
+  "aliases": ["cgap:workflow_vep-annot-check_VERSION"],
+  "steps": [
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "input_vcf",
+                  "source": [
+                      {
+                          "name": "input_vcf"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "parameter"
+                  },
+                  "name": "min_depth",
+                  "source": [
+                      {
+                          "name": "min_depth"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "fa",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "reference",
+                  "source": [
+                      {
+                          "name": "reference"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "txt",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "regions",
+                  "source": [
+                      {
+                          "name": "regions"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vep_tar",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "vep",
+                  "source": [
+                      {
+                          "name": "vep"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "clinvar",
+                  "source": [
+                      {
+                          "name": "clinvar"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "dbnsfp_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "dbnsfp",
+                  "source": [
+                      {
+                          "name": "dbnsfp"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "tar_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "maxent",
+                  "source": [
+                      {
+                          "name": "maxent"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "spliceai_snv",
+                  "source": [
+                      {
+                          "name": "spliceai_snv"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "spliceai_indel",
+                  "source": [
+                      {
+                          "name": "spliceai_indel"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "gnomad",
+                  "source": [
+                      {
+                          "name": "gnomad"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "gnomad2",
+                  "source": [
+                      {
+                          "name": "gnomad2"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "tsv_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "CADD_snv",
+                  "source": [
+                      {
+                          "name": "CADD_snv"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "tsv_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "CADD_indel",
+                  "source": [
+                      {
+                          "name": "CADD_indel"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "BigWig",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "phylop100bw",
+                  "source": [
+                      {
+                          "name": "phylop100bw"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "BigWig",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "phylop30bw",
+                  "source": [
+                      {
+                          "name": "phylop30bw"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "BigWig",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "phastc100bw",
+                  "source": [
+                      {
+                          "name": "phastc100bw"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "parameter"
+                  },
+                  "name": "nthreads",
+                  "source": [
+                      {
+                          "name": "nthreads"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Run bcftools, depth_filter, and VEP to annotate vcf input file"
+              ],
+              "software_used": [
+                 "/softwares/791a7248-9ba3-44da-bff9-0d9b121eaf5c",
+                 "/softwares/85041e50-a7fc-4633-a83b-983b8ebbc48e",
+                 "/softwares/742c5810-b3f8-4d3e-87aa-eeb5710f2c0c"
+              ]
+          },
+          "name": "vep-annot",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "annotated_vcf",
+                  "target": [
+                      {
+                          "name": "annotated_vcf",
+                          "step": "vcf-integrity-check"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": false,
+                      "type": "data file"
+                  },
+                  "name": "annotated_vcf",
+                  "source": [
+                      {
+                          "name": "annotated_vcf",
+                          "step": "vep-annot"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Check integrity of vcf output file"
+              ],
+              "software_used": [
+                 "/softwares/f7ac2c5f-9203-49fa-b918-cede02bf46f7"
+              ]
+          },
+          "name": "vcf-integrity-check",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "QC"
+                  },
+                  "name": "annotated_vcf-check",
+                  "target": [
+                      {
+                          "name": "annotated_vcf-check"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "title": "Split multiallelic variants, filter by variant depth (DP), and run VEP to annotate input vcf file",
+  "uuid": "5b9412d0-7bca-49f3-9b8f-e02497b693a5",
+  "previous_version": ["2f997f5f-d334-4c2b-873c-e4392d6b83f5"],
+  "version_upgrade_log": "added depth_filter step"
+}

@@ -1,0 +1,261 @@
+{
+  "accession": "GAPK43RH92D8",
+  "app_name": "workflow_granite-filtering-check",
+  "app_version": "VERSION",
+  "arguments": [
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "input_vcf"
+      },
+      {
+          "argument_format": "txt",
+          "argument_type": "Input file",
+          "workflow_argument_name": "genes"
+      },
+      {
+          "argument_format": "bed",
+          "argument_type": "Input file",
+          "workflow_argument_name": "BEDfile"
+      },
+      {
+          "argument_format": "big",
+          "argument_type": "Input file",
+          "workflow_argument_name": "bigfile"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Output processed file",
+          "workflow_argument_name": "merged_vcf",
+          "secondary_file_formats": ["vcf_gz_tbi"]
+      },
+      {
+          "argument_type": "Output QC file",
+          "workflow_argument_name": "merged_vcf-check",
+          "argument_to_be_attached_to": "merged_vcf",
+          "qc_zipped": false,
+          "qc_html": false,
+          "qc_json": false,
+          "qc_table": true,
+          "qc_type": "quality_metric_vcfcheck"
+      },
+      {
+          "argument_type": "parameter",
+          "workflow_argument_name": "SpliceAI"
+      },
+      {
+          "argument_type": "parameter",
+          "workflow_argument_name": "VEPsep"
+      },
+      {
+          "argument_type": "parameter",
+          "workflow_argument_name": "aftag"
+      },
+      {
+          "argument_type": "parameter",
+          "workflow_argument_name": "afthr"
+      }
+  ],
+  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+  "category": ["processing"],
+  "cwl_child_filenames": ["granite-geneList.cwl", "granite-whiteList.cwl", "granite-cleanVCF.cwl", "granite-blackList.cwl", "merge-sort-vcf.cwl", "vcf-integrity-check.cwl"],
+  "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
+  "cwl_main_filename": "workflow_granite-filtering_plus_vcf-integrity-check.cwl",
+  "cwl_pointer": "",
+  "description": "Filter and clean the input vcf using granite (geneList, whiteList, cleanVCF, blackList). An integrity check is performed on the output file",
+  "docker_image_name": "ACCOUNT/snv:VERSION",
+  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
+  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+  "name": "workflow_granite-filtering-check_VERSION",
+  "aliases": ["cgap:workflow_granite-filtering-check_VERSION",
+              "cgap:workflow_granite-filtering-check_v25",
+              "cgap:workflow_granite-filtering-check_v24",
+              "cgap:workflow_granite-filtering-check_v23"],
+  "steps": [
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "input_vcf",
+                  "source": [
+                      {
+                          "name": "input_vcf"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "txt",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "genes",
+                  "source": [
+                      {
+                          "name": "genes"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "bed",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "BEDfile",
+                  "source": [
+                      {
+                          "name": "BEDfile"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "big",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "bigfile",
+                  "source": [
+                      {
+                          "name": "bigfile"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "parameter"
+                  },
+                  "name": "SpliceAI",
+                  "source": [
+                      {
+                          "name": "SpliceAI"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "parameter"
+                  },
+                  "name": "VEPsep",
+                  "source": [
+                      {
+                          "name": "VEPsep"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "parameter"
+                  },
+                  "name": "aftag",
+                  "source": [
+                      {
+                          "name": "aftag"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "parameter"
+                  },
+                  "name": "afthr",
+                  "source": [
+                      {
+                          "name": "afthr"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Run granite geneList, whiteList, cleanVCF, blackList"
+              ],
+              "software_used": [
+                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+              ]
+          },
+          "name": "granite",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "merged_vcf",
+                  "target": [
+                      {
+                          "name": "merged_vcf",
+                          "step": "vcf-integrity-check"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": false,
+                      "type": "data file"
+                  },
+                  "name": "merged_vcf",
+                  "source": [
+                      {
+                          "name": "merged_vcf",
+                          "step": "granite"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Check integrity of vcf output file"
+              ],
+              "software_used": [
+                 "/softwares/f7ac2c5f-9203-49fa-b918-cede02bf46f7"
+              ]
+          },
+          "name": "vcf-integrity-check",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "QC"
+                  },
+                  "name": "merged_vcf-check",
+                  "target": [
+                      {
+                          "name": "merged_vcf-check"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "title": "Run granite to filter and clean input vcf (geneList, whiteList, cleanVCF, blackList) plus output integrity-check",
+  "uuid": "77b36194-7f22-41b0-a4c9-12d0682501ef",
+  "previous_version": ["4a78b81f-3b1b-46d3-8f68-3c28229962bd"],
+  "version_upgrade_log": "Updated granite version, novoCaller expect proband first now"
+}

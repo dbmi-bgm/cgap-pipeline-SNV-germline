@@ -1,0 +1,161 @@
+{
+  "accession": "GAPWF3GVI28D",
+  "app_name": "workflow_merge-bam-check",
+  "app_version": "VERSION",
+  "arguments": [
+      {
+          "argument_format": "bam",
+          "argument_type": "Input file",
+          "workflow_argument_name": "input_bams"
+      },
+      {
+          "argument_format": "bam",
+          "argument_type": "Output processed file",
+          "workflow_argument_name": "merged_bam"
+      },
+      {
+          "argument_type": "Output QC file",
+          "workflow_argument_name": "merged_bam-check",
+          "argument_to_be_attached_to": "merged_bam",
+          "qc_zipped": false,
+          "qc_html": false,
+          "qc_json": false,
+          "qc_table": true,
+          "qc_type": "quality_metric_bamcheck"
+      }
+  ],
+  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+  "category": ["processing"],
+  "cwl_child_filenames": ["merge-bam.cwl", "integrity-check.cwl"],
+  "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
+  "cwl_main_filename": "workflow_merge-bam_plus_integrity-check.cwl",
+  "cwl_pointer": "",
+  "description": "Merge bam input files. An integrity check is performed on the output file",
+  "docker_image_name": "ACCOUNT/snv:VERSION",
+  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
+  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+  "name": "workflow_merge-bam-check_VERSION",
+  "aliases": ["cgap:workflow_merge-bam-check_VERSION",
+              "cgap:workflow_merge-bam-check_v25",
+              "cgap:workflow_merge-bam-check_v24",
+              "cgap:workflow_merge-bam-check_v23",
+              "cgap:workflow_merge-bam-check_v22",
+              "cgap:workflow_merge-bam-check_v21",
+              "cgap:workflow_merge-bam-check_v20",
+              "cgap:workflow_merge-bam-check_v19",
+              "cgap:workflow_merge-bam-check_v18",
+              "cgap:workflow_merge-bam-check_v17",
+              "cgap:workflow_merge-bam-check_v16",
+              "cgap:workflow_merge-bam-check_v15",
+              "cgap:workflow_merge-bam-check_v14",
+              "cgap:workflow_merge-bam-check_v13",
+              "cgap:workflow_merge-bam-check_v12",
+              "cgap:workflow_merge-bam-check_v11",
+              "cgap:workflow_merge-bam-check_v10"],
+  "steps": [
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "array",
+                      "file_format": "bam",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "input_bams",
+                  "source": [
+                      {
+                          "name": "input_bams"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Merge bam input files"
+              ],
+              "software_used": [
+                 "/softwares/3f2d3b0e-0365-4212-9468-c16ad9531c4d"
+              ]
+          },
+          "name": "merge",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "bam",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "merged_bam",
+                  "target": [
+                      {
+                          "name": "merged_bam",
+                          "step": "integrity-check"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "bam",
+                      "global": false,
+                      "type": "data file"
+                  },
+                  "name": "merged_bam",
+                  "source": [
+                      {
+                          "name": "merged_bam",
+                          "step": "merge"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "parameter"
+                  },
+                  "name": "count",
+                  "source": [
+                      {
+                          "name": "count"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Check integrity of output file"
+              ],
+              "software_used": [
+                 "/softwares/3f2d3b0e-0365-4212-9468-c16ad9531c4d"
+              ]
+          },
+          "name": "integrity-check",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "QC"
+                  },
+                  "name": "merged_bam-check",
+                  "target": [
+                      {
+                          "name": "merged_bam-check"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "title": "Merge bam files plus output integrity-check",
+  "uuid": "4853a03a-8c0c-4624-a45d-c5206a72907b",
+  "previous_version": ["30802d8c-20c3-4eea-82dd-dd34621569c6"],
+  "version_upgrade_log": "Multithreading"
+}

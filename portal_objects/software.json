@@ -1,0 +1,240 @@
+[
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "bwa",
+        "software_type": [
+            "aligner"
+        ],
+        "title": "bwa_0.7.17",
+        "uuid": "42adeb1b-c46c-4ba8-b191-56036ddcd544",
+        "version": "0.7.17"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "samtools",
+        "software_type": [
+            "file format converter"
+        ],
+        "source_url": "https://github.com/samtools/samtools",
+        "title": "samtools_1.9",
+        "uuid": "3f2d3b0e-0365-4212-9468-c16ad9531c4d",
+        "version": "1.9"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "gatk",
+        "software_type": [
+            "variant caller"
+        ],
+        "source_url": "https://software.broadinstitute.org/gatk/gatk4",
+        "title": "gatk_4.1.2.0",
+        "uuid": "4ae88fb4-23f2-4939-8852-4644069d14d9",
+        "version": "4.1.2.0"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "picard",
+        "software_type": [
+            "filter"
+        ],
+        "source_url": "https://broadinstitute.github.io/picard/",
+        "title": "picard_2.20.2",
+        "uuid": "586cef39-6505-4bf6-920a-4b26a500d210",
+        "version": "2.20.2"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "add-readgroups",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
+        "title": "add-readgroups_22ff179",
+        "uuid": "7d1ab137-fa88-4649-8d22-349686f5bbba",
+        "commit": "22ff179"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "vcf-tools",
+        "software_type": [
+            "quality metric generator"
+        ],
+        "source_url": "https://github.com/vcftools/vcftools",
+        "title": "vcf-tools_954e607",
+        "uuid": "f7ac2c5f-9203-49fa-b918-cede02bf46f7",
+        "commit": "954e607"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "cramtools",
+        "software_type": [
+            "file format converter"
+        ],
+        "source_url": "https://github.com/enasequence/cramtools",
+        "title": "cramtools_0b5c9ec",
+        "uuid": "72b0ca58-0cca-4344-8dd5-974a49c5a931",
+        "commit": "0b5c9ec"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "pigz",
+        "software_type": [
+            "compressor"
+        ],
+        "source_url": "https://zlib.net/pigz/",
+        "title": "pigz_pigz-2.6",
+        "uuid": "c730b361-1b4d-4d29-8eff-8f7576d776e2",
+        "version": "2.6"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "bamsnap",
+        "software_type": [
+            "image generator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/bamsnap",
+        "title": "bamsnap-cgap_0.3.0",
+        "uuid": "fd97e01c-0308-4e96-b4aa-52ef4f04790b",
+        "version": "0.3.0"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "granite",
+        "software_type": [
+            "filter"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/granite",
+        "title": "granite_0.1.12",
+        "uuid": "aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52",
+        "commit": "0.1.12"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "vep",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/Ensembl/ensembl-vep",
+        "title": "vep_101",
+        "uuid": "85041e50-a7fc-4633-a83b-983b8ebbc48e",
+        "version": "101"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "bcftools",
+        "software_type": [
+            "file format converter"
+        ],
+        "source_url": "https://github.com/samtools/bcftools",
+        "title": "bcftools_1.11",
+        "uuid": "791a7248-9ba3-44da-bff9-0d9b121eaf5c",
+        "version": "1.11"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "samplegeno",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
+        "title": "samplegeno_22ff179",
+        "uuid": "c2380d3a-80a2-4009-a343-f9475381aab1",
+        "commit": "22ff179"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "dbSNP_ID_fixer",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-annotations",
+        "title": "dbSNP_ID_fixer_2a9b3d7",
+        "uuid": "d3d3b223-6565-4942-8e39-bc9e79c1a4e7",
+        "commit": "2a9b3d7"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "liftover_hg19",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-annotations",
+        "title": "liftover_hg19_7a5fb7b",
+        "uuid":"3aa33ef0-add7-484b-b913-d69532e58fff",
+        "commit":"7a5fb7b"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "hgvsg_creator",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-annotations",
+        "title": "hgvsg_creator_7a5fb7b",
+        "uuid":"4654848a-42ec-4a92-952b-5091f2faa2b7",
+        "commit":"7a5fb7b"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "peddy",
+        "software_type": [
+            "quality metric generator"
+        ],
+        "source_url": "https://github.com/brentp/peddy",
+        "title": "peddy_0.4.7",
+        "uuid": "124c73f9-4bbe-4e5d-92e0-cc2d932f1228",
+        "version": "0.4.7"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "fastqc",
+        "software_type": [
+            "quality metric generator"
+        ],
+        "title": "fastqc_0.11.9",
+        "uuid": "efdac7ec-7da3-4f23-9056-7a04abbc5e8b",
+        "version": "0.11.9"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "split_bam",
+        "software_type": [
+            "file format converter"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
+        "title": "split_bam_28520db",
+        "uuid": "3d60553d-5b48-44eb-94f6-00f3355cfe02",
+        "commit": "28520db"
+    },
+    {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "depth_filter",
+        "software_type": [
+            "filter"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-annotations",
+        "title": "depth_filter_7776a34",
+        "uuid": "742c5810-b3f8-4d3e-87aa-eeb5710f2c0c",
+        "commit":"7776a34"
+    }
+]

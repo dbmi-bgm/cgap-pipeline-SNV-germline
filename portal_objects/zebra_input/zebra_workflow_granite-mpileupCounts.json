@@ -1,0 +1,37 @@
+{
+    "parameters": {
+      "nthreads": 15
+    },
+    "workflow_uuid": "620671e7-b21a-4c48-aa90-b5beb3283d64",
+    "input_files" : [
+       {
+           "workflow_argument_name": "input_bam",
+           "uuid": "",
+           "mount": true
+       },
+       {
+           "workflow_argument_name": "reference",
+           "uuid": "1936f246-22e1-45dc-bb5c-9cfd55537fe7",
+           "mount": true
+       },
+       {
+           "workflow_argument_name": "regions",
+           "uuid": "1c07a3aa-e2a3-498c-b838-15991c4a2f28",
+           "mount": true
+       }
+    ],
+    "config": {
+      "instance_type": "c5.4xlarge",
+      "ebs_size": 200,
+      "EBS_optimized": true,
+      "spot_instance": false,
+      "log_bucket": "tibanna-output",
+      "run_name": "run_workflow_granite-mpileupCounts",
+      "behavior_on_capacity_limit": "wait_and_retry"
+    },
+    "_tibanna": {
+      "run_type": "workflow_granite-mpileupCounts",
+      "env": "fourfront-cgap"
+    },
+    "app_name": "workflow_granite-mpileupCounts"
+}

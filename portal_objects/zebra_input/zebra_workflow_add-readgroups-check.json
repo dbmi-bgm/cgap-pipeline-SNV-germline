@@ -1,0 +1,27 @@
+{
+    "parameters": {
+      "sample_name": "mysample"
+    },
+    "workflow_uuid": "d554d59b-e709-4c35-a81f-68a0cb3dd38a",
+    "input_files" : [
+       {
+           "workflow_argument_name": "input_bam",
+           "uuid": "",
+           "mount": true
+       }
+    ],
+    "config": {
+      "instance_type": "c5.2xlarge",
+      "ebs_size": "2.5x",
+      "EBS_optimized": true,
+      "spot_instance": true,
+      "log_bucket": "tibanna-output",
+      "run_name": "run_workflow_add-readgroups-check",
+      "behavior_on_capacity_limit": "wait_and_retry"
+    },
+    "_tibanna": {
+      "run_type": "workflow_add-readgroups-check",
+      "env": "fourfront-cgap"
+    },
+    "app_name": "workflow_add-readgroups-check"
+}

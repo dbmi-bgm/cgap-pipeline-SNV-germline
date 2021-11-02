@@ -1,0 +1,449 @@
+[
+    {
+        "status": "shared",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "description": "This format is used for aligned reads",
+        "file_format": "txt",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "date_created": "2019-08-27T03:45:40.635467+00:00",
+        "valid_item_types": [
+            "FileProcessed",
+            "FileReference"
+        ],
+        "standard_file_extension": "txt",
+        "uuid": "0cd4e777-a596-4927-95c8-b07716121aa3"
+    },
+    {
+        "file_format": "ann",
+        "standard_file_extension": "ann",
+        "description": "An extra file of a bwt file",
+        "uuid": "106199e5-5a85-4817-9a55-7b31698e1fda",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "amb",
+        "standard_file_extension": "amb",
+        "description": "An extra file of a bwt file",
+        "uuid": "8db70ed6-0121-4fe1-a72e-d91dc5aa6cd3",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "pac",
+        "standard_file_extension": "pac",
+        "description": "An extra file of a bwt file",
+        "uuid": "7373ca48-0b3e-467b-967a-80870846f89b",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "sa",
+        "standard_file_extension": "sa",
+        "description": "An extra file of a bwt file",
+        "uuid": "11f2fc36-9a65-4d60-9365-d8ff241df4f7",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "alt",
+        "standard_file_extension": "alt",
+        "description": "An extra file of a bwt file",
+        "uuid": "9ed3e9f9-fee2-47e3-bbe3-c63a52f8d3b8",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "bwt",
+        "standard_file_extension": "bwt",
+        "description": "BWA genome index, untarred, uncompressed",
+        "uuid": "813b0001-5f3f-4e28-9203-4cdf261e19c4",
+        "extrafile_formats": [
+             "106199e5-5a85-4817-9a55-7b31698e1fda",
+             "8db70ed6-0121-4fe1-a72e-d91dc5aa6cd3",
+             "7373ca48-0b3e-467b-967a-80870846f89b",
+             "11f2fc36-9a65-4d60-9365-d8ff241df4f7",
+             "9ed3e9f9-fee2-47e3-bbe3-c63a52f8d3b8"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "dict",
+        "standard_file_extension": "dict",
+        "description": "extra file of genome reference fasta",
+        "uuid": "4ed9f7e0-2b2f-4aca-9533-a0a652b43442",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "fa_fai",
+        "standard_file_extension": "fa.fai",
+        "description": "extra file of genome reference fasta",
+        "uuid": "fb728bb4-bc56-46d5-8df5-a05562826b9a",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "fa",
+        "standard_file_extension": "fa",
+        "description": "genome reference fasta",
+        "uuid": "5ced774b-a73e-4d1b-8186-d7fbbde7a3c2",
+        "extrafile_formats": [
+            "4ed9f7e0-2b2f-4aca-9533-a0a652b43442",
+            "fb728bb4-bc56-46d5-8df5-a05562826b9a"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "vcf_idx",
+        "standard_file_extension": "vcf.idx",
+        "description": "GATK/IGV-index of vcf, uncompressed",
+        "uuid": "ec96f95a-cf13-4633-ab0d-c4a5138bbe0b",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "vcf",
+        "standard_file_extension": "vcf",
+        "description": "vcf, uncompressed",
+        "uuid": "fcc2647d-301b-4888-8d9d-83ea4270309c",
+        "extrafile_formats": [
+            "ec96f95a-cf13-4633-ab0d-c4a5138bbe0b"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "vcf_gz_tbi",
+        "standard_file_extension": "vcf.gz.tbi",
+        "description": "Tabix index file of vcf, compressed",
+        "uuid": "f84f1922-7f4e-4afc-922f-bec620969bf1",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference", "FileProcessed"]
+    },
+    {
+        "file_format": "vcf_gz",
+        "standard_file_extension": "vcf.gz",
+        "description": "vcf, compressed",
+        "uuid": "1b8f525f-aecb-4211-9ae5-a2c998b05599",
+        "extrafile_formats": [
+            "f84f1922-7f4e-4afc-922f-bec620969bf1"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference", "FileProcessed"]
+    },
+    {
+        "file_format": "gvcf_gz_tbi",
+        "standard_file_extension": "gvcf.gz.tbi",
+        "description": "Tabix index file of gvcf, compressed",
+        "uuid": "b01ee86e-b2c7-4725-81d7-798718674485",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed"]
+    },
+    {
+        "file_format": "gvcf_gz",
+        "standard_file_extension": "gvcf.gz",
+        "description": "gvcf, compressed",
+        "uuid": "ad47d469-4561-4234-bce2-820f08f58e7c",
+        "extrafile_formats": [
+            "b01ee86e-b2c7-4725-81d7-798718674485"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed"]
+    },
+    {
+        "file_format": "md5_list",
+        "standard_file_extension": "md5_list",
+        "description": "List of md5 in the format of cramtools getref output",
+        "uuid": "1362126e-e6ee-4010-9fb8-06e9b39dbb83",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "big",
+        "standard_file_extension": "big",
+        "description": "binary index genome",
+        "uuid": "f66af4df-c107-44f0-bc94-227f1b4ccf72",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "rck_gz_tbi",
+        "standard_file_extension": "rck.gz.tbi",
+        "description": "Tabix index file of rck, compressed",
+        "uuid": "c55ace88-3289-49b0-a67a-c046e1004e5a",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "rck",
+        "standard_file_extension": "rck",
+        "description": "read count keeper, uncompressed",
+        "uuid": "228190b1-4178-46ad-872e-9b8ca1931a31",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "rck_gz",
+        "standard_file_extension": "rck.gz",
+        "description": "read count keeper, compressed",
+        "uuid": "20d4d3aa-5f1c-4b75-9e25-73f9f370fefa",
+        "extrafile_formats": [
+            "c55ace88-3289-49b0-a67a-c046e1004e5a"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "rck_tar_index",
+        "standard_file_extension": "rck.tar.index",
+        "description": "index file for rck archive",
+        "uuid": "1c7dc723-811c-4fcf-b8e5-d5e17a2013f7",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "rck_tar",
+        "standard_file_extension": "rck.tar",
+        "description": "rck files archive",
+        "uuid": "39f836d8-bbb1-46c7-80d4-e321d4a44204",
+        "extrafile_formats": [
+            "1c7dc723-811c-4fcf-b8e5-d5e17a2013f7"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "bed",
+        "standard_file_extension": "bed",
+        "description": "bed, uncompressed",
+        "uuid": "4c04f6de-89a7-4477-8dc4-811b50c67401",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "chain",
+        "standard_file_extension": "chain.gz",
+        "description": "chain file for coordinates liftover, compressed",
+        "uuid": "dd1ef82d-da5e-4680-bd5c-cf471a87eb5b",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "plugins_tar",
+        "standard_file_extension": "plugins.tar.gz",
+        "description": "archive with VEP plugins, compressed",
+        "uuid": "65ccbf65-80f9-41b4-b002-468500821c62",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "vep_tar",
+        "standard_file_extension": "vep.tar.gz",
+        "description": "archive with VEP datasource, compressed",
+        "uuid": "d05f9688-0ee1-4a86-83f4-656e6e21352a",
+        "extrafile_formats": [
+            "65ccbf65-80f9-41b4-b002-468500821c62"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "dbnsfp_gz_tbi",
+        "standard_file_extension": "dbnsfp.gz.tbi",
+        "description": "Tabix index file for dbNSFP in vcf format, compressed",
+        "uuid": "311ac7bf-e1d5-463f-af15-61ebfea29608",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "dbnsfp_readme_txt",
+        "standard_file_extension": "dbnsfp.readme.txt",
+        "description": "readme file for dbNSFP",
+        "uuid": "ac822ea4-d281-41e0-b9c9-f283c51f1c15",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "dbnsfp_gz",
+        "standard_file_extension": "dbnsfp.gz",
+        "description": "dbNSFP source in vcf format, compressed",
+        "uuid": "65a2cca2-dae8-4ff2-ac8b-aa1e92f5416b",
+        "extrafile_formats": [
+            "311ac7bf-e1d5-463f-af15-61ebfea29608",
+            "ac822ea4-d281-41e0-b9c9-f283c51f1c15"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "tar_gz",
+        "standard_file_extension": "tar.gz",
+        "description": "files archive, compressed",
+        "uuid": "f2ec3b9f-a898-4e6c-8da5-734a7a6410b8",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed", "FileReference"]
+    },
+    {
+        "file_format": "sv_vcf_gz_tbi",
+        "standard_file_extension": "sv.vcf.gz.tbi",
+        "description": "Tabix index file of SV vcf, compressed",
+        "uuid": "193bc1cd-b8a9-41dc-b0dc-9cbad87ace09",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference", "FileProcessed"]
+    },
+    {
+        "file_format": "sv_vcf_gz",
+        "standard_file_extension": "sv.vcf.gz",
+        "description": "SV vcf, compressed",
+        "uuid": "a9ce449e-5f56-4106-be87-c96427912edf",
+        "extrafile_formats": [
+            "193bc1cd-b8a9-41dc-b0dc-9cbad87ace09"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference", "FileProcessed"]
+    },
+    {
+        "file_format": "BigWig",
+        "standard_file_extension": "bw",
+        "description": "dense continuous data with genomic coordinates. compressed wiggle (wig) file",
+        "uuid": "33f30c42-d582-4163-af44-fecf586b9dd3",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference"]
+    },
+    {
+        "file_format": "tsv_gz_tbi",
+        "standard_file_extension": "tsv.gz.tbi",
+        "description": "Tabix index file of tab-separate values (tsv), compressed",
+        "uuid": "829ed303-e427-4d9a-a217-be75ad11317e",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference", "FileProcessed"]
+    },
+    {
+        "file_format": "tsv_gz",
+        "standard_file_extension": "tsv.gz",
+        "description": "tab-separate values (tsv), compressed",
+        "uuid": "11ca3783-db6e-430e-997b-9cf0ca275814",
+        "extrafile_formats": [
+            "829ed303-e427-4d9a-a217-be75ad11317e"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileReference", "FileProcessed"]
+    },
+    {
+        "file_format": "cram",
+        "standard_file_extension": "cram",
+        "description": "cram alignment format",
+        "uuid": "d363c5f9-7159-45b1-b516-e5ec433f9b86",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed"]
+    },
+    {
+        "file_format": "bai",
+        "standard_file_extension": "bam.bai",
+        "description": "Bam index format",
+        "uuid": "d13d06c1-218e-4f61-aaf0-91f226248b3c",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed"]
+    },
+    {
+        "file_format": "bam",
+        "standard_file_extension": "bam",
+        "description": "This format is used for aligned reads",
+        "uuid": "d13d06cf-218e-4f61-aaf0-91f226248b3c",
+        "extrafile_formats": [
+            "d13d06c1-218e-4f61-aaf0-91f226248b3c"
+        ],
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileProcessed"]
+    },
+    {
+        "file_format": "fastq",
+        "standard_file_extension": "fastq.gz",
+        "other_allowed_extensions": ["fq.gz"],
+        "description": "This format is used for short read sequence data - more information can be found here https://www.ncbi.nlm.nih.gov/sra/docs/submitformats/#fastq-files",
+        "uuid": "c13d06cf-218e-4f61-aaf0-91f226248b2c",
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "status": "shared",
+        "valid_item_types": ["FileFastq", "FileProcessed"]
+    }
+]

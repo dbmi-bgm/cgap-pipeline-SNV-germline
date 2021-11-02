@@ -1,0 +1,150 @@
+{
+  "accession": "GAPWF3LQBB7P",
+  "app_name": "workflow_gatk-BaseRecalibrator",
+  "app_version": "VERSION",
+  "arguments": [
+      {
+          "argument_format": "bam",
+          "argument_type": "Input file",
+          "workflow_argument_name": "input_bam"
+      },
+      {
+          "argument_format": "fa",
+          "argument_type": "Input file",
+          "workflow_argument_name": "reference"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "known-sites-snp"
+      },
+      {
+          "argument_format": "vcf",
+          "argument_type": "Input file",
+          "workflow_argument_name": "known-sites-indels"
+      },
+      {
+          "argument_format": "txt",
+          "argument_type": "Output processed file",
+          "workflow_argument_name": "recalibration_report"
+      }
+  ],
+  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+  "category": ["processing"],
+  "cwl_child_filenames": [],
+  "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
+  "cwl_main_filename": "gatk-BaseRecalibrator.cwl",
+  "cwl_pointer": "",
+  "description": "Run gatk BaseRecalibrator on bam input file. Produce a recalibration report",
+  "docker_image_name": "ACCOUNT/snv:VERSION",
+  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
+  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+  "name": "workflow_gatk-BaseRecalibrator_VERSION",
+  "aliases": ["cgap:workflow_gatk-BaseRecalibrator_VERSION",
+              "cgap:workflow_gatk-BaseRecalibrator_v25",
+              "cgap:workflow_gatk-BaseRecalibrator_v24",
+              "cgap:workflow_gatk-BaseRecalibrator_v23",
+              "cgap:workflow_gatk-BaseRecalibrator_v22",
+              "cgap:workflow_gatk-BaseRecalibrator_v21",
+              "cgap:workflow_gatk-BaseRecalibrator_v20",
+              "cgap:workflow_gatk-BaseRecalibrator_v19",
+              "cgap:workflow_gatk-BaseRecalibrator_v18",
+              "cgap:workflow_gatk-BaseRecalibrator_v17",
+              "cgap:workflow_gatk-BaseRecalibrator_v16",
+              "cgap:workflow_gatk-BaseRecalibrator_v15",
+              "cgap:workflow_gatk-BaseRecalibrator_v14",
+              "cgap:workflow_gatk-BaseRecalibrator_v13",
+              "cgap:workflow_gatk-BaseRecalibrator_v12",
+              "cgap:workflow_gatk-BaseRecalibrator_v11",
+              "cgap:workflow_gatk-BaseRecalibrator_v10",
+              "cgap:workflow_gatk-BaseRecalibrator_v9"],
+  "steps": [
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "bam",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "input_bam",
+                  "source": [
+                      {
+                          "name": "input_bam"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "fa",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "reference",
+                  "source": [
+                      {
+                          "name": "reference"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "known-sites-snp",
+                  "source": [
+                      {
+                          "name": "known-sites-snp"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf",
+                      "global": true,
+                      "type": "reference file"
+                  },
+                  "name": "known-sites-indels",
+                  "source": [
+                      {
+                          "name": "known-sites-indels"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Run gatk BaseRecalibrator"
+              ],
+              "software_used": [
+                 "/softwares/4ae88fb4-23f2-4939-8852-4644069d14d9"
+              ]
+          },
+          "name": "BaseRecalibrator",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "txt",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "recalibration_report",
+                  "target": [
+                      {
+                          "name": "recalibration_report"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "title": "Run gatk BaseRecalibrator",
+  "uuid": "455b3056-64ca-4a9b-b546-294b01c9ca92"
+}
