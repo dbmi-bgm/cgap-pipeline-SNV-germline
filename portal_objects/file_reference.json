@@ -1,37 +1,5 @@
 [
     {
-      "uuid": "e91a59c0-c546-4bea-a407-df6ab5552f13",
-      "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-      "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-      "file_format": "bwt",
-      "description": "hg38 bwa genome index, include alt index",
-      "aliases": ["cgap:hg38-bwt-alt"],
-      "extra_files": [
-          {
-              "file_format": "ann",
-              "status": "uploading"
-          },
-          {
-              "file_format": "amb",
-              "status": "uploading"
-          },
-          {
-              "file_format": "sa",
-              "status": "uploading"
-          },
-          {
-              "file_format": "pac",
-              "status": "uploading"
-          },
-          {
-              "file_format": "alt",
-              "status": "uploading"
-          }
-      ],
-      "status": "uploading",
-      "accession": "GAPFI91YVC12"
-    },
-    {
         "uuid": "1936f246-22e1-45dc-bb5c-9cfd55537fe7",
         "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
         "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
@@ -54,24 +22,6 @@
         "accession": "GAPFIXRDPDK5"
     },
     {
-        "uuid": "55ac5044-f927-4df7-afa2-bf713764ee57",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "file_format": "vcf",
-        "description": "hg38 Mills_and_1000G_gold_standard_indels",
-        "aliases": [
-            "cgap:hg38-Mills-and-1000G-gold-standard-indels"
-        ],
-        "extra_files": [
-            {
-                "file_format": "vcf_idx",
-                "status": "uploading"
-            }
-        ],
-        "status": "uploading",
-        "accession": "GAPFIAX2PPYB"
-    },
-    {
         "uuid": "8ed35691-0af4-467a-adbc-81eb088549f0",
         "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
         "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
@@ -91,60 +41,6 @@
         "accession": "GAPFI4LJRN98"
     },
     {
-        "uuid": "3f7161f3-1698-4665-a59b-20c3009a3998",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "file_format": "vcf",
-        "description": "hg38 1000G_omni2.5",
-        "aliases": [
-            "cgap:hg38-1000G_omni2.5"
-        ],
-        "extra_files": [
-            {
-                "file_format": "vcf_idx",
-                "status": "uploading"
-            }
-        ],
-        "status": "uploading",
-        "accession": "GAPFINDZ7H7H"
-    },
-    {
-        "uuid": "5ca55bd5-4050-440e-b060-9441da57060e",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "file_format": "vcf",
-        "description": "hg38 1000G_phase1.snps.high_confidence",
-        "aliases": [
-            "cgap:hg38-1000G_phase1.snps.high_confidence"
-        ],
-        "extra_files": [
-            {
-                "file_format": "vcf_idx",
-                "status": "uploading"
-            }
-        ],
-        "status": "uploading",
-        "accession": "GAPFIEA3YJ6S"
-    },
-    {
-        "uuid": "f0684716-6c8c-4197-b9c4-a1e287d834a5",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "file_format": "vcf",
-        "description": "hg38 hapmap_3.3",
-        "aliases": [
-            "cgap:hg38-hapmap_3.3"
-        ],
-        "extra_files": [
-            {
-                "file_format": "vcf_idx",
-                "status": "uploading"
-            }
-        ],
-        "status": "uploading",
-        "accession": "GAPFILGA4UIX"
-    },
-    {
         "uuid": "a1d504ee-a313-4064-b6ae-65fed9738980",
         "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
         "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
@@ -156,19 +52,6 @@
         "extra_files": [],
         "status": "uploading",
         "accession": "GAPFIGJVJDUY"
-    },
-    {
-        "uuid": "db00cc5a-d7bc-424c-8560-e53827a52db9",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "file_format": "md5_list",
-        "description": "md5 list of hg38",
-        "aliases": [
-            "cgap:hg38-md5-list"
-        ],
-        "extra_files": [],
-        "status": "uploading",
-        "accession": "GAPFIGWSGHNU"
     },
     {
         "uuid": "297c872a-5b6b-4fc3-83d3-f4a853f8805c",
@@ -443,25 +326,6 @@
         "accession": "GAPFI6KXAQMV"
     },
     {
-        "uuid": "4468e4a2-6c92-4d82-b333-821be68d0a55",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "file_format": "rck_tar",
-        "description": "archive of 20 unrelated rck.gz files, MQ = 0 and BQ = 0",
-        "aliases": [
-            "cgap:novoCaller_unrelated_rcks"
-        ],
-        "extra_files": [
-            {
-                "file_format": "rck_tar_index",
-                "status": "uploading"
-            }
-        ],
-        "status": "uploading",
-        "file_version": "v1",
-        "accession": "GAPFIXD5LCRG"
-    },
-    {
         "uuid": "1c07a3aa-e2a3-498c-b838-15991c4a2f28",
         "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
         "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
@@ -473,25 +337,6 @@
         "extra_files": [],
         "status": "uploading",
         "accession": "GAPFIBGEOI72"
-    },
-    {
-        "uuid": "fcd6a543-fe49-4d32-b569-1d63db7176d3",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "file_format": "rck_tar",
-        "description": "archive of 20 unrelated rck.gz files from UGRP, MQ = 0 and BQ = 0",
-        "aliases": [
-            "cgap:novoCaller_unrelated_rcks_ugrp"
-        ],
-        "extra_files": [
-            {
-                "file_format": "rck_tar_index",
-                "status": "uploading"
-            }
-        ],
-        "status": "uploading",
-        "file_version": "v1",
-        "accession": "GAPFI84GCNW1"
     },
     {
         "uuid": "eac862c0-8c87-4838-83cb-9a77412bff6f",

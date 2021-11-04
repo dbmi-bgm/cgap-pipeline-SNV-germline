@@ -82,7 +82,6 @@
                   "Run liftover_hg19"
               ],
               "software_used": [
-                 "/softwares/3aa33ef0-add7-484b-b913-d69532e58fff",
                  "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
               ]
           },
@@ -128,7 +127,6 @@
                   "Run hgvsg_creator"
               ],
               "software_used": [
-                 "/softwares/4654848a-42ec-4a92-952b-5091f2faa2b7",
                  "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
               ]
           },

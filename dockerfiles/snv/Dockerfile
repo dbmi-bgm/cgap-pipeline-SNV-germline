@@ -1,5 +1,5 @@
 FROM 4dndcic/ubuntu16.04-miniconda-python36:v1
-MAINTAINER Soo Lee (duplexa@gmail.com), Michele Berselli (berselli.michele@gmail.com)
+MAINTAINER Phil Grayson (phil.d.grayson@gmail.com), Michele Berselli (berselli.michele@gmail.com)
 
 # general updates & installing necessary Linux components
 RUN apt-get update -y && apt-get install -y \
@@ -42,16 +42,6 @@ RUN conda install -c bioconda -y gatk4==4.1.2.0 picard==2.20.2 \
     pysam==0.15.3 bitarray==1.2.1 pytabix==0.0.2 h5py==2.10.0 numpy==1.18.1 pyfaidx==0.5.8 tqdm==4.48.2 pyliftover==0.4 python=3.6.8 peddy==0.4.7 && \
     conda clean -a -y -f
 
-# samtools
-RUN wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2 && \
-    tar -xjf samtools-1.9.tar.bz2 && \
-    rm -rf samtools-1.9.tar.bz2 && \
-    cd samtools-1.9 && \
-    ./configure && \
-    make && \
-    cd .. && \
-    ln -s samtools-1.9 samtools
-
 # bcftools
 RUN wget https://github.com/samtools/bcftools/releases/download/1.11/bcftools-1.11.tar.bz2 && \
     tar -xjf bcftools-1.11.tar.bz2 && \
@@ -62,15 +52,6 @@ RUN wget https://github.com/samtools/bcftools/releases/download/1.11/bcftools-1.
     cd .. && \
     ln -s bcftools-1.11 bcftools
 
-# bwa
-RUN wget https://github.com/lh3/bwa/archive/v0.7.17.tar.gz && \
-    tar -xzf v0.7.17.tar.gz && \
-    rm -rf v0.7.17.tar.gz && \
-    cd bwa-0.7.17 && \
-    make && \
-    cd .. && \
-    ln -s bwa-0.7.17 bwa
-
 # vcf tools
 RUN git clone https://github.com/vcftools/vcftools.git && \
     mv vcftools vcftools_tmp && \
@@ -80,12 +61,6 @@ RUN git clone https://github.com/vcftools/vcftools.git && \
     ./configure && \
     make && \
     make install && \
-    cd ..
-
-# cramtools
-RUN git clone https://github.com/enasequence/cramtools && \
-    cd cramtools && \
-    git checkout 0b5c9ec && \
     cd ..
 
 # pigz
@@ -153,17 +128,6 @@ ENV PERL5LIB=$PERL5LIB:/usr/local/bin/cpanm_bw/lib/perl5
 COPY vep-annot.sh .
 RUN chmod +x vep-annot.sh
 
-# bwa mem script
-COPY bwa-mem-to-bam.sh .
-RUN chmod +x bwa-mem-to-bam.sh
-
-COPY bwa-mem-to-bam_no_unzip.sh .
-RUN chmod +x bwa-mem-to-bam_no_unzip.sh
-
-# bam integrity check script
-COPY integrity-check.sh .
-RUN chmod +x integrity-check.sh
-
 # vcf integrity check script
 COPY vcf-integrity-check.sh .
 RUN chmod +x vcf-integrity-check.sh
@@ -172,36 +136,24 @@ RUN chmod +x vcf-integrity-check.sh
 COPY sort-bgzip-vcf.sh .
 RUN chmod +x sort-bgzip-vcf.sh
 
-# add read groups script
+# add depth filter script
 RUN git clone https://github.com/dbmi-bgm/cgap-scripts/ && \
     cd cgap-scripts && \
-    git checkout 28520db && \
-    chmod +x AddReadGroups.py && \
-    chmod +x duplines_vcf.py && \
-    chmod +x samplegeno.py && \
-    chmod +x split_bam.py && \
+    git checkout 2afe195 && \
+    chmod +x depth_filter.py && \
     cd ..
 
-# add cgap-annotations scripts - dbSNP ID, hgvsg, liftover_hg19, depth_filter
-RUN git clone https://github.com/dbmi-bgm/cgap-annotations.git && \
-    cd cgap-annotations && \
-    git checkout 7a5fb7b && \
-    cd .. && \
-    cp cgap-annotations/variants/scripts/hgvsg_creator.py . && \
-    chmod +x hgvsg_creator.py && \
-    cp cgap-annotations/variants/scripts/liftover_hg19.py . && \
-    chmod +x liftover_hg19.py && \
-    cd cgap-annotations && \
-    git checkout 2a9b3d7 && \
-    cd .. && \
-    cp cgap-annotations/variants/scripts/dbSNP_ID_fixer.py . && \
-    chmod +x dbSNP_ID_fixer.py && \
-    cd cgap-annotations && \
-    git checkout 7776a34 && \
-    cd .. && \
-    cp cgap-annotations/variants/scripts/depth_filter.py . && \
-    chmod +x depth_filter.py && \
-    rm -rf cgap-annotations
+# dbSNP ID fixer
+COPY scripts/dbSNP_ID_fixer.py .
+RUN chmod +x dbSNP_ID_fixer.py
+
+# hgvsg script
+COPY scripts/hgvsg_creator.py .
+RUN chmod +x hgvsg_creator.py
+
+# liftover_hg19 script
+COPY scripts/liftover_hg19.py .
+RUN chmod +x liftover_hg19.py
 
 # HaplotypeCaller parallel script
 COPY HaplotypeCaller-parallel.sh .
@@ -218,15 +170,6 @@ RUN chmod +x CombineGVCFs-parallel.sh
 # GenotypeGVCFs parallel script
 COPY GenotypeGVCFs-parallel.sh .
 RUN chmod +x GenotypeGVCFs-parallel.sh
-
-# cram2fastq, cram2bam scripts
-COPY md5_to_fasta.py .
-COPY cram_to_fastq.sh .
-COPY cram_to_bam.sh .
-COPY bam_to_fastq.sh .
-RUN chmod +x cram_to_fastq.sh
-RUN chmod +x cram_to_bam.sh
-RUN chmod +x bam_to_fastq.sh
 
 # granite
 RUN pip install granite-suite==0.1.12
@@ -250,37 +193,28 @@ RUN chmod +x merge-sort-vcf.sh
 COPY bcftools-norm-multiallelics.sh .
 RUN chmod +x bcftools-norm-multiallelics.sh
 
-# samplegeno
+# samplegeno script
 COPY samplegeno.sh .
 RUN chmod +x samplegeno.sh
 
-# dbSNP ID fix
+# parallel dbSNP ID fixer script
 COPY parallel_dbSNP_ID_fixer.sh .
 RUN chmod +x parallel_dbSNP_ID_fixer.sh
-
-# bamqc
-COPY bamqc.py .
 
 # peddy
 COPY peddy.sh .
 RUN chmod +x peddy.sh
 
-# unique variants
+# unique variants script
 COPY uniq_variants.sh .
 RUN chmod +x uniq_variants.sh
 
-# qc variant line count
+# qc variant line count script
 COPY qc_variant_line_count.sh .
 RUN chmod +x qc_variant_line_count.sh
 
-# ApplyBQSR parallel
-COPY ApplyBQSR-parallel.sh .
-RUN chmod +x ApplyBQSR-parallel.sh
-
 # env paths
-ENV PATH=/usr/local/bin/samtools/:$PATH
 ENV PATH=/usr/local/bin/bcftools/:$PATH
-ENV PATH=/usr/local/bin/bwa/:$PATH
 ENV PATH=/usr/local/bin/cgap-scripts/:$PATH
 ENV PATH=/usr/local/bin/pigz/:$PATH
 ENV PATH=/usr/local/bin/ensembl-vep/:$PATH

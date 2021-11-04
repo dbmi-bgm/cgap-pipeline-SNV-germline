@@ -2,83 +2,15 @@
     {
         "status": "shared",
         "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "description": "This format is used for aligned reads",
+        "description": "plain text format",
         "file_format": "txt",
         "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "date_created": "2019-08-27T03:45:40.635467+00:00",
         "valid_item_types": [
             "FileProcessed",
             "FileReference"
         ],
         "standard_file_extension": "txt",
         "uuid": "0cd4e777-a596-4927-95c8-b07716121aa3"
-    },
-    {
-        "file_format": "ann",
-        "standard_file_extension": "ann",
-        "description": "An extra file of a bwt file",
-        "uuid": "106199e5-5a85-4817-9a55-7b31698e1fda",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileReference"]
-    },
-    {
-        "file_format": "amb",
-        "standard_file_extension": "amb",
-        "description": "An extra file of a bwt file",
-        "uuid": "8db70ed6-0121-4fe1-a72e-d91dc5aa6cd3",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileReference"]
-    },
-    {
-        "file_format": "pac",
-        "standard_file_extension": "pac",
-        "description": "An extra file of a bwt file",
-        "uuid": "7373ca48-0b3e-467b-967a-80870846f89b",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileReference"]
-    },
-    {
-        "file_format": "sa",
-        "standard_file_extension": "sa",
-        "description": "An extra file of a bwt file",
-        "uuid": "11f2fc36-9a65-4d60-9365-d8ff241df4f7",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileReference"]
-    },
-    {
-        "file_format": "alt",
-        "standard_file_extension": "alt",
-        "description": "An extra file of a bwt file",
-        "uuid": "9ed3e9f9-fee2-47e3-bbe3-c63a52f8d3b8",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileReference"]
-    },
-    {
-        "file_format": "bwt",
-        "standard_file_extension": "bwt",
-        "description": "BWA genome index, untarred, uncompressed",
-        "uuid": "813b0001-5f3f-4e28-9203-4cdf261e19c4",
-        "extrafile_formats": [
-             "106199e5-5a85-4817-9a55-7b31698e1fda",
-             "8db70ed6-0121-4fe1-a72e-d91dc5aa6cd3",
-             "7373ca48-0b3e-467b-967a-80870846f89b",
-             "11f2fc36-9a65-4d60-9365-d8ff241df4f7",
-             "9ed3e9f9-fee2-47e3-bbe3-c63a52f8d3b8"
-        ],
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileReference"]
     },
     {
         "file_format": "dict",
@@ -182,16 +114,6 @@
         "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
         "status": "shared",
         "valid_item_types": ["FileProcessed"]
-    },
-    {
-        "file_format": "md5_list",
-        "standard_file_extension": "md5_list",
-        "description": "List of md5 in the format of cramtools getref output",
-        "uuid": "1362126e-e6ee-4010-9fb8-06e9b39dbb83",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileReference"]
     },
     {
         "file_format": "big",
@@ -347,29 +269,6 @@
         "valid_item_types": ["FileProcessed", "FileReference"]
     },
     {
-        "file_format": "sv_vcf_gz_tbi",
-        "standard_file_extension": "sv.vcf.gz.tbi",
-        "description": "Tabix index file of SV vcf, compressed",
-        "uuid": "193bc1cd-b8a9-41dc-b0dc-9cbad87ace09",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileReference", "FileProcessed"]
-    },
-    {
-        "file_format": "sv_vcf_gz",
-        "standard_file_extension": "sv.vcf.gz",
-        "description": "SV vcf, compressed",
-        "uuid": "a9ce449e-5f56-4106-be87-c96427912edf",
-        "extrafile_formats": [
-            "193bc1cd-b8a9-41dc-b0dc-9cbad87ace09"
-        ],
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileReference", "FileProcessed"]
-    },
-    {
         "file_format": "BigWig",
         "standard_file_extension": "bw",
         "description": "dense continuous data with genomic coordinates. compressed wiggle (wig) file",
@@ -403,16 +302,6 @@
         "valid_item_types": ["FileReference", "FileProcessed"]
     },
     {
-        "file_format": "cram",
-        "standard_file_extension": "cram",
-        "description": "cram alignment format",
-        "uuid": "d363c5f9-7159-45b1-b516-e5ec433f9b86",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileProcessed"]
-    },
-    {
         "file_format": "bai",
         "standard_file_extension": "bam.bai",
         "description": "Bam index format",
@@ -434,16 +323,5 @@
         "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
         "status": "shared",
         "valid_item_types": ["FileProcessed"]
-    },
-    {
-        "file_format": "fastq",
-        "standard_file_extension": "fastq.gz",
-        "other_allowed_extensions": ["fq.gz"],
-        "description": "This format is used for short read sequence data - more information can be found here https://www.ncbi.nlm.nih.gov/sra/docs/submitformats/#fastq-files",
-        "uuid": "c13d06cf-218e-4f61-aaf0-91f226248b2c",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "status": "shared",
-        "valid_item_types": ["FileFastq", "FileProcessed"]
     }
 ]
