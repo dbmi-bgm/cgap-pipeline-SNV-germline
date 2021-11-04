@@ -115,7 +115,7 @@
   "cwl_main_filename": "workflow_vep-annot_plus_vcf-integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Split multiallelic variants. Run depth filter. Run VEP to annotate input vcf file. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/snv:VERSION",
+  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
   "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
   "name": "workflow_vep-annot-check_VERSION",

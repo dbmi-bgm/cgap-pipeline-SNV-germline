@@ -9,7 +9,7 @@ requirements:
 
 hints:
   - class: DockerRequirement
-    dockerPull: ACCOUNT/snv:VERSION
+    dockerPull: ACCOUNT/snv_germline:VERSION
 
 baseCommand: [parallel_dbSNP_ID_fixer.sh]
 

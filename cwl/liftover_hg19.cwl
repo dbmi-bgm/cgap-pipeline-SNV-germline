@@ -9,7 +9,7 @@ requirements:
 
 hints:
   - class: DockerRequirement
-    dockerPull: ACCOUNT/snv:VERSION
+    dockerPull: ACCOUNT/snv_germline:VERSION
 
 baseCommand: [python3, /usr/local/bin/liftover_hg19.py]
 
