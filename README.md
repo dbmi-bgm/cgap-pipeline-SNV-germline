@@ -2,7 +2,7 @@
 
 # CGAP Single-Nucleotide Variants Pipeline, Germline
 
-* This repo contains components for CGAP pipeline for single-nucleotide germline variants:
+This repo contains components for CGAP pipeline for single-nucleotide germline variants:
 
   * CWL
   * CGAP Portal Workflows and Metaworkflow
