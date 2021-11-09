@@ -1,20 +1,23 @@
 {
-  "name": "WGS_proband_only_cram_60x",
-  "title": "WGS Proband-only Cram VERSION, 60x",
+  "name": "WES_SNV_germline_family",
+  "title": "WES SNV Germline Family VERSION",
   "version": "VERSION",
-  "accession": "GAPMWFPJ22C7",
-  "uuid": "7df4fec4-47b4-4451-aab8-6a11983677ec",
-  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-  "previous_version": ["5dd0393b-c124-4263-8066-97e98659e36e"],
-  "version_upgrade_log": "depth filter for VEP and added accession",
+  "accession": "GAPMWFKKL2S1",
+  "description": "WES downstream pipeline for SNV using GATK for family",
+  "uuid": "5e2f1859-95e2-4173-aa0e-d3387d91ae8e",
+  "project": "PROJECT_UUID",
+  "institution": "INSTITUTION_UUID",
   "input": [
     {
-      "argument_name": "crams",
+      "argument_name": "bams_proband_first",
       "argument_type": "file"
     },
     {
-      "argument_name": "sample_names",
+      "argument_name": "sample_names_proband_first",
+      "argument_type": "parameter"
+    },
+    {
+      "argument_name": "sample_name_proband",
       "argument_type": "parameter"
     },
     {
@@ -26,24 +29,13 @@
       "argument_type": "parameter"
     },
     {
-      "argument_name": "reference_bwa",
-      "argument_type": "file",
-      "files": [{"file": "e91a59c0-c546-4bea-a407-df6ab5552f13"}]
+      "argument_name": "family_size",
+      "argument_type": "parameter"
     },
     {
       "argument_name": "reference_fa",
       "argument_type": "file",
       "files": [{"file": "1936f246-22e1-45dc-bb5c-9cfd55537fe7"}]
-    },
-    {
-      "argument_name": "reference_md5_list",
-      "argument_type": "file",
-      "files": [{"file": "db00cc5a-d7bc-424c-8560-e53827a52db9"}]
-    },
-    {
-      "argument_name": "known-sites-indels",
-      "argument_type": "file",
-      "files": [{"file": "55ac5044-f927-4df7-afa2-bf713764ee57"}]
     },
     {
       "argument_name": "known-sites-snp",
@@ -54,6 +46,11 @@
       "argument_name": "regions",
       "argument_type": "file",
       "files": [{"file": "1c07a3aa-e2a3-498c-b838-15991c4a2f28"}]
+    },
+    {
+      "argument_name": "regions_exome_bed",
+      "argument_type": "file",
+      "files": [{"file": "27cfd5ba-bb5f-4b60-914e-70332db875a4"}]
     },
     {
       "argument_name": "chromosomes",
@@ -155,481 +152,14 @@
   ],
   "workflows": [
     {
-      "name": "workflow_cram2fastq",
-      "workflow": "7bbf3487-a1fc-4073-952a-d5771973e875",
+      "name": "workflow_gatk-HaplotypeCaller_exome",
+      "workflow": "c64b8f19-ab15-44a5-94e8-f8c778d93db0",
       "config": {
-        "instance_type": "c5.4xlarge",
-        "ebs_size": "30x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_workflow_cram2fastq",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "fastq1": {
-              "file_type": "reads (from .cram)",
-              "description": "Reads (from .cram)"
-          },
-          "fastq2": {
-              "file_type": "reads (from .cram)",
-              "description": "Reads (from .cram)"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "cram",
-          "argument_type": "file",
-          "mount": false,
-          "scatter": 1,
-          "source_argument_name": "crams"
-        },
-        {
-          "argument_name": "reference_fasta",
-          "argument_type": "file",
-          "source_argument_name": "reference_fa"
-        },
-        {
-          "argument_name": "reference_md5_list",
-          "argument_type": "file",
-          "source_argument_name": "reference_md5_list"
-        }
-      ]
-    },
-    {
-      "name": "fastqc-r1",
-      "workflow": "49e96b51-ed6c-4418-a693-d0e9f79adfa5",
-      "config": {
-        "instance_type": "t3.large",
-        "ebs_size": "1.1x",
-        "EBS_optimized": true,
-        "spot_instance": false,
-        "run_name": "run_fastqc-r1",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_fastq",
-          "argument_type": "file",
-          "source_argument_name": "fastq1",
-          "source": "workflow_cram2fastq"
-        }
-      ]
-    },
-    {
-      "name": "fastqc-r2",
-      "workflow": "49e96b51-ed6c-4418-a693-d0e9f79adfa5",
-      "config": {
-        "instance_type": "t3.large",
-        "ebs_size": "1.1x",
-        "EBS_optimized": true,
-        "spot_instance": false,
-        "run_name": "run_fastqc-r2",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_fastq",
-          "argument_type": "file",
-          "source_argument_name": "fastq2",
-          "source": "workflow_cram2fastq"
-        }
-      ]
-    },
-    {
-      "name": "workflow_bwa-mem_no_unzip-check",
-      "workflow": "aa490a0f-e6a7-4b97-9c91-4e15b5896423",
-      "config": {
-        "instance_type": "c5n.18xlarge",
-        "ebs_size": "6.3x",
-        "EBS_optimized": true,
-        "spot_instance": false,
-        "run_name": "run_workflow_bwa-mem_no_unzip-check",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "raw_bam": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "fastq_R1",
-          "argument_type": "file",
-          "source_argument_name": "fastq1",
-          "source": "workflow_cram2fastq"
-        },
-        {
-          "argument_name": "fastq_R2",
-          "argument_type": "file",
-          "source_argument_name": "fastq2",
-          "source": "workflow_cram2fastq"
-        },
-        {
-          "argument_name": "reference",
-          "argument_type": "file",
-          "source_argument_name": "reference_bwa"
-        }
-      ]
-    },
-    {
-      "name": "cgap-bamqc",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "r4.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_bwa-mem_no_unzip-check",
-          "source_argument_name": "raw_bam"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
-      "name": "workflow_add-readgroups-check",
-      "workflow": "d554d59b-e709-4c35-a81f-68a0cb3dd38a",
-      "config": {
-        "instance_type": "c5.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_workflow_add-readgroups-check",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "bam_w_readgroups": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_bwa-mem_no_unzip-check",
-          "source_argument_name": "raw_bam"
-        },
-        {
-          "argument_name": "sample_name",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
-      "name": "cgap-bamqc-1",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "r4.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_add-readgroups-check",
-          "source_argument_name": "bam_w_readgroups"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
-      "name": "workflow_merge-bam-check",
-      "workflow": "4853a03a-8c0c-4624-a45d-c5206a72907b",
-      "config": {
-        "instance_type": "c5.2xlarge",
-        "ebs_size": "3x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_workflow_merge-bam-check",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "merged_bam": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "input_bams",
-          "argument_type": "file",
-          "gather": 1,
-          "source": "workflow_add-readgroups-check",
-          "source_argument_name": "bam_w_readgroups"
-        }
-      ]
-    },
-    {
-      "name": "cgap-bamqc-2",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "r4.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_merge-bam-check",
-          "source_argument_name": "merged_bam"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
-      "name": "workflow_picard-MarkDuplicates-check",
-      "workflow": "beb2b340-94ee-4afe-b4e3-66caaf063397",
-      "config": {
-        "instance_type": "c5n.18xlarge",
-        "ebs_size": "3x",
-        "EBS_optimized": true,
-        "spot_instance": false,
-        "run_name": "run_workflow_picard-MarkDuplicates-check",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "dupmarked_bam": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_merge-bam-check",
-          "source_argument_name": "merged_bam"
-        }
-      ]
-    },
-    {
-      "name": "cgap-bamqc-3",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "r4.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_picard-MarkDuplicates-check",
-          "source_argument_name": "dupmarked_bam"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
-      "name": "workflow_sort-bam-check",
-      "workflow": "560f5194-cd3a-4799-9b1a-6a2d2c371c89",
-      "config": {
-        "instance_type": "m5a.2xlarge",
-        "ebs_size": "3.2x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_workflow_sort-bam-check",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "sorted_bam": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_picard-MarkDuplicates-check",
-          "source_argument_name": "dupmarked_bam"
-        }
-      ]
-    },
-    {
-      "name": "cgap-bamqc-4",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "r4.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_sort-bam-check",
-          "source_argument_name": "sorted_bam"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
-      "name": "workflow_gatk-BaseRecalibrator",
-      "workflow": "455b3056-64ca-4a9b-b546-294b01c9ca92",
-      "config": {
-        "instance_type": "t3.small",
-        "ebs_size": "2x",
-        "EBS_optimized": true,
-        "spot_instance": false,
-        "run_name": "run_workflow_gatk-BaseRecalibrator",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "recalibration_report": {
-              "file_type": "intermediate file",
-              "description": "Intermediate report file"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_sort-bam-check",
-          "source_argument_name": "sorted_bam"
-        },
-        {
-          "argument_name": "reference",
-          "argument_type": "file",
-          "source_argument_name": "reference_fa"
-        },
-        {
-          "argument_name": "known-sites-indels",
-          "argument_type": "file"
-        },
-        {
-          "argument_name": "known-sites-snp",
-          "argument_type": "file"
-        }
-      ]
-    },
-    {
-      "name": "workflow_gatk-ApplyBQSR-check",
-      "workflow": "c4d9ce59-7ff3-44c8-8336-f46774a4d882",
-      "config": {
-        "instance_type": "c5n.9xlarge",
-        "ebs_size": "5.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_workflow_gatk-ApplyBQSR-check",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "recalibrated_bam": {
-              "file_type": "alignments",
-              "description": "processed output from cgap upstream pipeline"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_sort-bam-check",
-          "source_argument_name": "sorted_bam"
-        },
-        {
-          "argument_name": "recalibration_report",
-          "argument_type": "file",
-          "source": "workflow_gatk-BaseRecalibrator",
-          "source_argument_name": "recalibration_report"
-        },
-        {
-          "argument_name": "reference",
-          "argument_type": "file",
-          "source_argument_name": "reference_fa"
-        },
-        {
-          "argument_name": "nthreads",
-          "argument_type": "parameter",
-          "value": "28",
-          "value_type": "integer"
-        }
-      ]
-    },
-    {
-      "name": "cgap-bamqc-5",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "r4.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_gatk-ApplyBQSR-check",
-          "source_argument_name": "recalibrated_bam"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
-      "name": "workflow_gatk-HaplotypeCaller",
-      "workflow": "a09b0e1d-6a6c-483c-b907-1e1eb3bc172a",
-      "config": {
-        "instance_type": "c5n.18xlarge",
+        "instance_type": "t3.xlarge",
         "ebs_size": "5x",
         "EBS_optimized": true,
         "spot_instance": true,
-        "run_name": "run_workflow_gatk-HaplotypeCaller",
+        "run_name": "run_workflow_gatk-HaplotypeCaller_exome",
         "behavior_on_capacity_limit": "wait_and_retry"
       },
       "custom_pf_fields": {
@@ -643,8 +173,8 @@
         {
           "argument_name": "input_bam",
           "argument_type": "file",
-          "source": "workflow_gatk-ApplyBQSR-check",
-          "source_argument_name": "recalibrated_bam"
+          "source_argument_name": "bams_proband_first",
+          "scatter": 1
         },
         {
           "argument_name": "reference",
@@ -653,13 +183,51 @@
         },
         {
           "argument_name": "regions",
-          "argument_type": "file"
+          "argument_type": "file",
+          "source_argument_name": "regions_exome_bed"
         },
         {
           "argument_name": "nthreads",
           "argument_type": "parameter",
-          "value": "20",
+          "value": "1",
           "value_type": "integer"
+        }
+      ]
+    },
+    {
+      "name": "workflow_gatk-CombineGVCFs",
+      "workflow": "2d0eed17-0bf5-49ea-94b1-c4913bf1a058",
+      "config": {
+        "instance_type": "c5n.4xlarge",
+        "ebs_size": "formula:str(10 + family_size - 3) + 'x'",
+        "EBS_optimized": true,
+        "spot_instance": true,
+        "run_name": "run_workflow_gatk-CombineGVCFs",
+        "behavior_on_capacity_limit": "wait_and_retry"
+      },
+      "custom_pf_fields": {
+          "combined_gvcf": {
+              "file_type": "combined gVCF",
+              "variant_type": "SNV",
+              "description": "processed output from cgap downstream pipeline"
+          }
+      },
+      "input": [
+        {
+          "argument_name": "input_gvcfs",
+          "argument_type": "file",
+          "gather": 1,
+          "source": "workflow_gatk-HaplotypeCaller_exome",
+          "source_argument_name": "gvcf"
+        },
+        {
+          "argument_name": "reference",
+          "argument_type": "file",
+          "source_argument_name": "reference_fa"
+        },
+        {
+          "argument_name": "chromosomes",
+          "argument_type": "file"
         }
       ]
     },
@@ -685,8 +253,8 @@
         {
           "argument_name": "input_gvcf",
           "argument_type": "file",
-          "source": "workflow_gatk-HaplotypeCaller",
-          "source_argument_name": "gvcf"
+          "source": "workflow_gatk-CombineGVCFs",
+          "source_argument_name": "combined_gvcf"
         },
         {
           "argument_name": "reference",
@@ -728,7 +296,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names"
+          "source_argument_name": "sample_names_proband_first"
         },
         {
           "argument_name": "trio_errors",
@@ -802,7 +370,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names"
+          "source_argument_name": "sample_names_proband_first"
         },
         {
           "argument_name": "trio_errors",
@@ -913,7 +481,7 @@
         {
           "argument_name": "nthreads",
           "argument_type": "parameter",
-          "value": "72",
+          "value": "50",
           "value_type": "integer"
         }
       ]
@@ -968,7 +536,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names"
+          "source_argument_name": "sample_names_proband_first"
         },
         {
           "argument_name": "trio_errors",
@@ -1056,7 +624,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names"
+          "source_argument_name": "sample_names_proband_first"
         },
         {
           "argument_name": "trio_errors",
@@ -1106,7 +674,7 @@
         {
           "argument_name": "trio",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names"
+          "source_argument_name": "sample_name_proband"
         }
       ]
     },
@@ -1135,7 +703,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names"
+          "source_argument_name": "sample_names_proband_first"
         },
         {
           "argument_name": "trio_errors",
@@ -1219,7 +787,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names"
+          "source_argument_name": "sample_names_proband_first"
         },
         {
           "argument_name": "trio_errors",
@@ -1287,9 +855,7 @@
         {
           "argument_name": "input_bams",
           "argument_type": "file",
-          "source": "workflow_gatk-ApplyBQSR-check",
-          "source_argument_name": "recalibrated_bam",
-          "extra_dimension": 1
+          "source_argument_name": "bams_proband_first"
         },
         {
           "argument_name": "input_vcf",
@@ -1343,7 +909,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names"
+          "source_argument_name": "sample_names_proband_first"
         },
         {
           "argument_name": "trio_errors",

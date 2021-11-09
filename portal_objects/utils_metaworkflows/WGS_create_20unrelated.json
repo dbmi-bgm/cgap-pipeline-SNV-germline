@@ -3,8 +3,8 @@
   "title": "WGS create 20 unrelated v25",
   "version": "v25",
   "uuid": "0c61d21e-003e-4845-ab57-932a307bf531",
-  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+  "project": "PROJECT_UUID",
+  "institution": "INSTITUTION_UUID",
   "previous_version": ["00e919c4-99f8-45a1-b9a8-da1d758ee515"],
   "version_upgrade_log": "new parallel ApplyBQSR",
   "input": [

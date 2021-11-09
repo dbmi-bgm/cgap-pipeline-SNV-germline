@@ -1,8 +1,8 @@
 [
     {
         "uuid": "1936f246-22e1-45dc-bb5c-9cfd55537fe7",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "fa",
         "description": "hg38 full reference fasta plus decoy for CGAP",
         "aliases": [
@@ -23,8 +23,8 @@
     },
     {
         "uuid": "8ed35691-0af4-467a-adbc-81eb088549f0",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "vcf_gz",
         "description": "hg38 dbsnp_b151 common variants",
         "aliases": [
@@ -42,8 +42,8 @@
     },
     {
         "uuid": "a1d504ee-a313-4064-b6ae-65fed9738980",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "txt",
         "description": "hg38 chromosomes Yfirst",
         "aliases": [
@@ -55,8 +55,8 @@
     },
     {
         "uuid": "297c872a-5b6b-4fc3-83d3-f4a853f8805c",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "chain",
         "description": "chain file for coordinates liftover, hg38 to hg19",
         "aliases": [
@@ -67,8 +67,8 @@
     },
     {
         "uuid": "ea103486-b65a-4439-9d0b-1186f8e59388",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "vep_tar",
         "description": "datasource for VEP v101 plus plugins, including a modified dbNSFP plugin to annotate non-missense variants",
         "aliases": [
@@ -86,8 +86,8 @@
     },
     {
         "uuid": "7db786d5-13d2-4622-bdd2-99866036b9b9",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "vcf_gz",
         "description": "datasource for ClinVar v20201101",
         "aliases": [
@@ -105,8 +105,8 @@
     },
     {
         "uuid": "52c6cbf6-ae94-4c10-ad03-26ed34f74a3e",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "vcf_gz",
         "description": "datasource for gnomAD v3.1, trimmed",
         "aliases": [
@@ -124,8 +124,8 @@
     },
     {
         "uuid": "a35e580c-7579-4312-a3a1-66810e6d9366",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "vcf_gz",
         "description": "datasource for SpliceAI SNV v1.3",
         "aliases": [
@@ -143,8 +143,8 @@
     },
     {
         "uuid": "3b7c0c29-5ee2-47c8-95a8-d28e15d5de47",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "vcf_gz",
         "description": "datasource for SpliceAI indels v1.3",
         "aliases": [
@@ -162,8 +162,8 @@
     },
     {
         "uuid": "dc02df4c-49ac-4532-b85c-02800941aa44",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "dbnsfp_gz",
         "description": "datasource for dbNSFP v4.1a",
         "aliases": [
@@ -185,8 +185,8 @@
     },
     {
         "uuid": "71a7d16b-8452-4266-ae80-bbede2e305e2",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "tar_gz",
         "description": "datasource for MaxEnt v20040421",
         "aliases": [
@@ -198,8 +198,8 @@
     },
     {
         "uuid": "84f2bb24-edd7-459b-ab89-0a21866d7826",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "txt",
         "description": "list of genes",
         "aliases": [
@@ -212,8 +212,8 @@
     },
     {
         "uuid": "aa542c8e-b31c-4cff-b2d4-aa4037bb913c",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "vcf_gz",
         "description": "hg38 dbSNP v151 all variants",
         "aliases": [
@@ -231,8 +231,8 @@
     },
     {
         "uuid": "672de47f-d058-4dbd-9fc4-3e134cfe71d8",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "tsv_gz",
         "description": "CADD hg38 all possible SNVs",
         "aliases": [
@@ -250,8 +250,8 @@
     },
     {
         "uuid": "b9f123dd-be05-4a14-957a-5e1e5a5ce254",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "tsv_gz",
         "description": "CADD hg38 InDels",
         "aliases": [
@@ -269,8 +269,8 @@
     },
     {
         "uuid": "dd6f0384-d0b5-47d6-99a8-395c0b72feed",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "vcf_gz",
         "description": "datasource for gnomAD exome v2.1.1 hg38 liftover, trimmed",
         "aliases": [
@@ -288,8 +288,8 @@
     },
     {
         "uuid": "f6809af1-f7b9-43c0-882a-16764ccc431d",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "BigWig",
         "description": "phyloP 30-way mammalian BigWig",
         "aliases": [
@@ -301,8 +301,8 @@
     },
     {
         "uuid": "af93aecb-6b8e-4c8b-b159-eefb3f9d0ffb",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "BigWig",
         "description": "phyloP 100-way vertebrate BigWig",
         "aliases": [
@@ -314,8 +314,8 @@
     },
     {
         "uuid": "19f03828-175b-4594-ba1a-52ddabcf640d",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "BigWig",
         "description": "PhastCons 100-way vertebrate BigWig",
         "aliases": [
@@ -327,8 +327,8 @@
     },
     {
         "uuid": "1c07a3aa-e2a3-498c-b838-15991c4a2f28",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "txt",
         "description": "hg38 300 regions",
         "aliases": [
@@ -340,8 +340,8 @@
     },
     {
         "uuid": "eac862c0-8c87-4838-83cb-9a77412bff6f",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "rck_tar",
         "description": "archive of 20 unrelated rck.gz files from UGRP, MQ = 0 and BQ = 0 re-aligned using alt index",
         "aliases": [
@@ -359,8 +359,8 @@
     },
     {
         "uuid": "27cfd5ba-bb5f-4b60-914e-70332db875a4",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
         "file_format": "bed",
         "description": "hg38 exome regions VEP v101",
         "aliases": [

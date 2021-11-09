@@ -35,7 +35,7 @@
           "qc_type": "quality_metric_vcfcheck"
       }
   ],
-  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+  "project": "PROJECT_UUID",
   "category": ["processing"],
   "cwl_child_filenames": ["granite-novoCaller-rck.cwl", "vcf-integrity-check.cwl"],
   "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
@@ -44,9 +44,10 @@
   "description": "Run granite novoCaller on vcf input file. Use rck files. An integrity check is performed on the output file",
   "docker_image_name": "ACCOUNT/snv_germline:VERSION",
   "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
-  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+  "institution": "INSTITUTION_UUID",
   "name": "workflow_granite-novoCaller-rck-check_VERSION",
   "aliases": ["cgap:workflow_granite-novoCaller-rck-check_VERSION",
+              "cgap:workflow_granite-novoCaller-rck-check_v26",
               "cgap:workflow_granite-novoCaller-rck-check_v25",
               "cgap:workflow_granite-novoCaller-rck-check_v24",
               "cgap:workflow_granite-novoCaller-rck-check_v23"],
