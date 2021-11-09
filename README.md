@@ -1,8 +1,8 @@
 <img src="https://github.com/dbmi-bgm/cgap-pipeline/blob/master/docs/images/cgap_logo.png" width="200" align="right">
 
-# CGAP Pipeline for Germline Single-Nucleotide Variants
+# CGAP Pipeline for Germline Single-Nucleotide Variants and small INDELs
 
-This repository contains components for the CGAP pipeline for germline single-nucleotide variants:
+This repository contains components for the CGAP pipeline for germline single-nucleotide variants and small indels:
 
   * CWL
   * CGAP Portal Workflows and Metaworkflow
