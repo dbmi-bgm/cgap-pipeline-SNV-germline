@@ -1,8 +1,8 @@
 <img src="https://github.com/dbmi-bgm/cgap-pipeline/blob/master/docs/images/cgap_logo.png" width="200" align="right">
 
-# CGAP Single-Nucleotide Variants Pipeline, Germline
+# CGAP Pipeline for Germline Single-Nucleotide Variants
 
-This repository contains components for the CGAP pipeline for single-nucleotide germline variants:
+This repository contains components for the CGAP pipeline for germline single-nucleotide variants:
 
   * CWL
   * CGAP Portal Workflows and Metaworkflow
