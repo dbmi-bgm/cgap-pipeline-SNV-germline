@@ -2,13 +2,13 @@
 
 # CGAP Single-Nucleotide Variants Pipeline, Germline
 
-* This repo contains components for CGAP single-nucleotide variants pipeline for germline mutations
+* This repo contains components for CGAP pipeline for single-nucleotide germline variants:
 
   * CWL
   * CGAP Portal Workflows and Metaworkflow
   * ECR (Docker) source files, which allow for creation of public Docker images (using `docker build`) or private dynamically-generated ECR images (using `cgap pipeline utils` (https://github.com/dbmi-bgm/cgap-pipeline-utils/) `deploy_pipeline`)
 
-For more details check the [*documentation*](https://cgap-pipeline-master.readthedocs.io/en/latest/Pipelines/Downstream/SNV_germline/index-SNV_germline.html "SNV germline documentation")
+For more details check [*documentation*](https://cgap-pipeline-master.readthedocs.io/en/latest/Pipelines/Downstream/SNV_germline/index-SNV_germline.html "SNV germline documentation").
 
 ### Version updates
 
