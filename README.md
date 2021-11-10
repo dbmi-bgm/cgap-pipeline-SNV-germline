@@ -4,8 +4,8 @@
 
 This repository contains components for the CGAP pipeline for germline single-nucleotide variants and small indels:
 
-  * CWL
-  * CGAP Portal Workflows and Metaworkflow
+  * CWL workflows
+  * CGAP Portal Workflows and MetaWorkflows objects
   * ECR (Docker) source files, which allow for creation of public Docker images (using `docker build`) or private dynamically-generated ECR images (using [*cgap pipeline utils*](https://github.com/dbmi-bgm/cgap-pipeline-utils/) `deploy_pipeline`)
 
 For more details check [*documentation*](https://cgap-pipeline-master.readthedocs.io/en/latest/Pipelines/Downstream/SNV_germline/index-SNV_germline.html "SNV germline documentation").
