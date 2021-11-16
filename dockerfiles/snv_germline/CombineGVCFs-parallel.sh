@@ -23,7 +23,6 @@ for arg in $@;
   done
 
 # running command
-#cat $chromosomefile | parallel --halt 2 --jobs $nthreads $command || exit 1
 cat $chromosomefile | xargs -P $nthreads -i bash -c "$command" || exit 1
 
 

@@ -24,7 +24,6 @@ gunzip -c $sample_vcf | grep '^#' > chr0:header || { echo >&2 "FAILED TO CREATE 
 
 # running dbSNP rsID fixer
 
-#cat $regionfile | parallel --halt 2 --jobs $nthreads python3 /usr/local/bin/dbSNP_ID_fixer.py -db $dbSNP_vcf --inputvcf $sample_vcf --regionfile {} || exit 1
 cat $regionfile | xargs -P $nthreads -i python3 /usr/local/bin/dbSNP_ID_fixer.py -db $dbSNP_vcf --inputvcf $sample_vcf --regionfile {} || { echo >&2 "FAILED DURING RUN"; exit 1; }
 
 # merging the results
