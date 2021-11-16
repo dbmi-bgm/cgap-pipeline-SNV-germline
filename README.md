@@ -11,7 +11,7 @@ This repository contains components for the CGAP pipeline for germline single-nu
 The pipeline starts from analysis ready `bam` files and produces `g.vcf` and `vcf` files containing calls for SNVs and small INDELs as output.
 For more details check [*documentation*](https://cgap-pipeline-master.readthedocs.io/en/latest/Pipelines/Downstream/SNV_germline/index-SNV_germline.html "SNV germline documentation").
 
-### Version updates
+### Version Updates
 
 #### v27
 * Initial release based on v26 pipeline
