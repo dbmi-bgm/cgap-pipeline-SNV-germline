@@ -136,11 +136,13 @@ RUN chmod +x vcf-integrity-check.sh
 COPY sort-bgzip-vcf.sh .
 RUN chmod +x sort-bgzip-vcf.sh
 
-# add depth filter script
+# add cgap-scripts - depth_filter, samplegeno and duplines_vcf
 RUN git clone https://github.com/dbmi-bgm/cgap-scripts/ && \
     cd cgap-scripts && \
     git checkout 2afe195 && \
     chmod +x depth_filter.py && \
+    chmod +x samplegeno.py && \
+    chmod +x duplines_vcf.py && \
     cd ..
 
 # dbSNP ID fixer
@@ -171,11 +173,11 @@ RUN chmod +x CombineGVCFs-parallel.sh
 COPY GenotypeGVCFs-parallel.sh .
 RUN chmod +x GenotypeGVCFs-parallel.sh
 
-# granite
+# granite (when updated, also update mpileupCounts version below)
 RUN pip install granite-suite==0.1.12
 
-# mpileupCounts parallel script
-RUN wget https://raw.githubusercontent.com/dbmi-bgm/granite/master/docker/mpileupCounts-parallel.sh && \
+# mpileupCounts parallel script (from granite repo - should be same version as above)
+RUN wget https://raw.githubusercontent.com/dbmi-bgm/granite/0.1.12/docker/mpileupCounts-parallel.sh && \
     chmod +x mpileupCounts-parallel.sh
 
 # bamsnap

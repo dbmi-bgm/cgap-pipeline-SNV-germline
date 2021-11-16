@@ -11,7 +11,7 @@ hints:
   - class: DockerRequirement
     dockerPull: ACCOUNT/snv_germline:VERSION
 
-baseCommand: [python3, /usr/local/bin/depth_filter.py]
+baseCommand: [python3, /usr/local/bin/cgap-scripts/depth_filter.py]
 
 inputs:
   - id: input

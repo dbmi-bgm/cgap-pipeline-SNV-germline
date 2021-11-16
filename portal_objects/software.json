@@ -103,9 +103,9 @@
             "annotator"
         ],
         "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
-        "title": "samplegeno_22ff179",
+        "title": "samplegeno_2afe195",
         "uuid": "c2380d3a-80a2-4009-a343-f9475381aab1",
-        "commit": "22ff179"
+        "commit": "2afe195"
     },
     {
         "project": "PROJECT_UUID",
@@ -130,5 +130,17 @@
         "title": "depth_filter_2afe195",
         "uuid": "742c5810-b3f8-4d3e-87aa-eeb5710f2c0c",
         "commit":"2afe195"
+    },
+    {
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
+        "name": "duplines_vcf",
+        "software_type": [
+            "filter"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
+        "title": "duplines_vcf_2afe195",
+        "uuid": "2f1e98db-64c6-48a8-a25a-eb44a6f5e4a6",
+        "commit": "2afe195"
     }
 ]

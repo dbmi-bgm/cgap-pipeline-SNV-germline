@@ -90,6 +90,9 @@
           "meta": {
               "analysis_step_types": [
                   "Merge and sort two vcf files"
+              ],
+              "software_used": [
+                 "/softwares/2f1e98db-64c6-48a8-a25a-eb44a6f5e4a6"
               ]
           },
           "name": "merge-sort",
