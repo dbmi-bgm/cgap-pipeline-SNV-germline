@@ -52,7 +52,7 @@
   "project": "PROJECT_UUID",
   "category": ["QC"],
   "cwl_child_filenames": ["granite-qcVCF.cwl", "uniq_variants.cwl"],
-  "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
+  "cwl_directory_url_v1": "s3://CWLBUCKET/PIPELINE/VERSION",
   "cwl_main_filename": "workflow_granite-qcVCF_plus_uniq_variants.cwl",
   "cwl_pointer": "",
   "description": "Run granite qcVCF on vcf input file. Produce a json report for quality metrics",

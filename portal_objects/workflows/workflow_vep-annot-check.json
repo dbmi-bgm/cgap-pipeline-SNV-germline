@@ -111,7 +111,7 @@
   "project": "PROJECT_UUID",
   "category": ["processing"],
   "cwl_child_filenames": ["vep-annot.cwl", "bcftools-norm-multiallelics.cwl", "depth_filter.cwl", "vcf-integrity-check.cwl"],
-  "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
+  "cwl_directory_url_v1": "s3://CWLBUCKET/PIPELINE/VERSION",
   "cwl_main_filename": "workflow_vep-annot_plus_vcf-integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Split multiallelic variants. Run depth filter. Run VEP to annotate input vcf file. An integrity check is performed on the output file",

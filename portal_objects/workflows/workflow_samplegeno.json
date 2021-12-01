@@ -18,7 +18,7 @@
   "project": "PROJECT_UUID",
   "category": ["processing"],
   "cwl_child_filenames": [],
-  "cwl_directory_url_v1": "https://CWLBUCKET.s3.amazonaws.com/PIPELINE/VERSION",
+  "cwl_directory_url_v1": "s3://CWLBUCKET/PIPELINE/VERSION",
   "cwl_main_filename": "samplegeno.cwl",
   "cwl_pointer": "",
   "description": "Add samplegeno information to variants from input vcf",
