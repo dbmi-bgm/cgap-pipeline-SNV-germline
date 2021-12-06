@@ -136,13 +136,14 @@ RUN chmod +x vcf-integrity-check.sh
 COPY sort-bgzip-vcf.sh .
 RUN chmod +x sort-bgzip-vcf.sh
 
-# add cgap-scripts - depth_filter, samplegeno and duplines_vcf
+# add cgap-scripts - depth_filter, samplegeno and duplines_vcf, liftover_hg19
 RUN git clone https://github.com/dbmi-bgm/cgap-scripts/ && \
     cd cgap-scripts && \
-    git checkout 2afe195 && \
+    git checkout 2eeb9da && \
     chmod +x depth_filter.py && \
     chmod +x samplegeno.py && \
     chmod +x duplines_vcf.py && \
+    chmod +x liftover_hg19.py && \
     cd ..
 
 # dbSNP ID fixer
@@ -152,10 +153,6 @@ RUN chmod +x dbSNP_ID_fixer.py
 # hgvsg script
 COPY scripts/hgvsg_creator.py .
 RUN chmod +x hgvsg_creator.py
-
-# liftover_hg19 script
-COPY scripts/liftover_hg19.py .
-RUN chmod +x liftover_hg19.py
 
 # HaplotypeCaller parallel script
 COPY HaplotypeCaller-parallel.sh .

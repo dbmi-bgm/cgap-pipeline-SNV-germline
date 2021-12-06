@@ -11,7 +11,7 @@ hints:
   - class: DockerRequirement
     dockerPull: ACCOUNT/snv_germline:VERSION
 
-baseCommand: [python3, /usr/local/bin/liftover_hg19.py]
+baseCommand: [python3, /usr/local/bin/cgap-scripts/liftover_hg19.py]
 
 inputs:
   - id: input

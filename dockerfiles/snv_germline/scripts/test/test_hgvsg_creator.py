@@ -14,9 +14,9 @@ from hgvsg_creator import (
 #   Tests
 #################################################################
 
-def test_full_process():
+def test_no_liftover():
     # Variables and Run
-    args = {'inputfile': 'test/files/test_reduced_sorted','outputfile':'output.vcf','chainfile':'test/files/test.chain'}
+    args = {'inputfile': 'test/files/test_reduced_sorted','outputfile':'output.vcf'}
     # Test
     main_hgvsg_creator(args)
     a = os.popen('bgzip -c -d output.vcf.gz')
@@ -27,6 +27,18 @@ def test_full_process():
     os.remove('output.vcf.gz')
     os.remove('output.vcf.gz.tbi')
 
+def test_liftover():
+    # Variables and Run
+    args = {'inputfile': 'test/files/test_reduced_lo_sorted.vcf.gz','outputfile':'output.vcf'}
+    # Test
+    main_hgvsg_creator(args)
+    a = os.popen('bgzip -c -d output.vcf.gz')
+    b = os.popen('bgzip -c -d test/files/hgvsg_with_LO.vcf.gz')
+
+    assert [row for row in a.read()] == [row for row in b.read()]
+    # Clean
+    os.remove('output.vcf.gz')
+    os.remove('output.vcf.gz.tbi')
 
 #################################################################
 #   Errors

@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFHLFG275",
+  "accession": "GAPWFR588CV2",
   "app_name": "workflow_hg19lo_hgvsg-check",
   "app_version": "VERSION",
   "arguments": [
@@ -41,11 +41,7 @@
   "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_hg19lo_hgvsg-check_VERSION",
-  "aliases": ["cgap:workflow_hg19lo_hgvsg-check_VERSION",
-              "cgap:workflow_hg19lo_hgvsg-check_v26",
-              "cgap:workflow_hg19lo_hgvsg-check_v25",
-              "cgap:workflow_hg19lo_hgvsg-check_v24",
-              "cgap:workflow_hg19lo_hgvsg-check_v23"],
+  "aliases": ["cgap:workflow_hg19lo_hgvsg-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -83,7 +79,8 @@
                   "Run liftover_hg19"
               ],
               "software_used": [
-                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52",
+                 "/softwares/affec979-09bd-48b2-b58a-9c54d3c1deb2"
               ]
           },
           "name": "liftover_hg19",
@@ -194,8 +191,8 @@
           ]
       }
   ],
-  "title": "Run hg19 liftover, hsgvsg creator, and a vcf integrity check",
-  "uuid": "66434019-65c5-498f-a986-9e791eeff0ad",
-  "previous_version": ["d77fd7b5-c7d3-4689-914a-443c2d4ec17d"],
-  "version_upgrade_log": "updated to run granite_0.1.12"
+  "title": "Run hg19 liftover, hgvsg creator, and a vcf integrity check",
+  "uuid": "dab2dca8-0dd1-4703-b899-37363f85dd09",
+  "previous_version": ["66434019-65c5-498f-a986-9e791eeff0ad"],
+  "version_upgrade_log": "hg19_liftover moved to cgap-scripts and hgvsg now runs for hg19 as well"
 }
