@@ -167,7 +167,7 @@ def create_hgvsg(CHROM, POS, REF, ALT, DICT):
 def main(args):
     vcf = vcf_parser.Vcf(args['inputfile'])
     hgvsg_definition = '##INFO=<ID=hgvsg,Number=1,Type=String,Description="hgvsg created from variant following best practices - http://varnomen.hgvs.org/recommendations/DNA/">'
-    hgvsg_19_definition = '##INFO=<ID=hgvsg_hg19,Number=1,Type=String,Description="hgvsg created from variant following best practices - http://varnomen.hgvs.org/recommendations/DNA/">'
+    hgvsg_19_definition = '##INFO=<ID=hgvsg_hg19,Number=1,Type=String,Description="hgvsg for liftover coordinates in hg19 created from variant following best practices - http://varnomen.hgvs.org/recommendations/DNA/">'
     vcf.header.add_tag_definition(hgvsg_19_definition)
     vcf.header.add_tag_definition(hgvsg_definition)
 

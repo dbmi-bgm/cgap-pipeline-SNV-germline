@@ -148,7 +148,7 @@
         "institution": "INSTITUTION_UUID",
         "name": "liftover_hg19",
         "software_type": [
-            "filter"
+            "annotator"
         ],
         "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
         "title": "liftover_hg19_2eeb9da",
