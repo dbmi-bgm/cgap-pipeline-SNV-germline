@@ -155,6 +155,10 @@ RUN chmod +x dbSNP_ID_fixer.py
 COPY scripts/hgvsg_creator.py .
 RUN chmod +x hgvsg_creator.py
 
+# higlass joint parsere script
+COPY scripts/higlass_joint_parser.py .
+RUN chmod +x higlass_joint_parser.py
+
 # HaplotypeCaller parallel script
 COPY HaplotypeCaller-parallel.sh .
 RUN chmod +x HaplotypeCaller-parallel.sh
