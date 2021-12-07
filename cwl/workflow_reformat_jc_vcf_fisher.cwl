@@ -25,10 +25,6 @@ outputs:
     type: File
     outputSource: jc_parse_fisher/output
 
-  vcf-check:
-    type: File
-    outputSource: integrity-check/output
-
 steps:
   reformat_vcf:
     run: reformat_vcf.cwl
@@ -36,13 +32,6 @@ steps:
       input:
         source: input_vcf
     out:  [output]
-
-  integrity-check:
-    run: vcf-integrity-check.cwl
-    in:
-      input:
-        source: reformat_vcf/output
-    out: [output]
 
   jc_parse_fisher:
     run: jc_parse_fisher.cwl
@@ -56,6 +45,5 @@ steps:
     out: [output]
 
 doc: |
-  run reformat_vcf.py to identify worst consequence for each transcript |
-  run an integrity check on the output vcf gz |
+  run reformat_vcf.sh to identify worst consequence for each transcript and run internal integrity check |
   run higlass_joint_parser.py to clean annotations and calculate Fisher's exact scores for each variant for HiGlass

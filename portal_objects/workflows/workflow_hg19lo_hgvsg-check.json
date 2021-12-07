@@ -92,7 +92,7 @@
                       "global": true,
                       "type": "data file"
                   },
-                  "name": "vcf",
+                  "name": "LOvcf",
                   "target": [
                       {
                           "name": "LOvcf",
