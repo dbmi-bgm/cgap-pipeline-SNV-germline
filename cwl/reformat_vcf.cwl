@@ -37,4 +37,5 @@ outputs:
 
 
 doc: |
-  run portal_reformat_vcf.py
+  run portal_reformat_vcf.py |
+  run integrated vcf integrity check
