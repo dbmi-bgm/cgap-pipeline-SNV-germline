@@ -1,0 +1,123 @@
+{
+  "accession": "GAPWF39GGK8Z",
+  "app_name": "workflow_reformat-check-jc_fisher",
+  "app_version": "VERSION",
+  "arguments": [
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Input file",
+          "workflow_argument_name": "input_vcf"
+      },
+      {
+          "argument_format": "vcf_gz",
+          "argument_type": "Output processed file",
+          "workflow_argument_name": "vcf",
+          "secondary_file_formats": ["vcf_gz_tbi"]
+      }
+  ],
+  "project": "PROJECT_UUID",
+  "category": ["processing"],
+  "cwl_child_filenames": ["reformat_vcf.cwl", "jc_parse_fisher.cwl"],
+  "cwl_directory_url_v1": "s3://CWLBUCKET/PIPELINE/VERSION",
+  "cwl_main_filename": "workflow_reformat_jc_vcf_fisher.cwl",
+  "cwl_pointer": "",
+  "description": "Run reformat vcf on the annotated jointly-called vcf and an integrity check on the resulting output file, then run the parser and Fisher test to create a file for HiGlass viewing",
+  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
+  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
+  "institution": "INSTITUTION_UUID",
+  "name": "workflow_reformat-check-jc_fisher_VERSION",
+  "aliases": ["cgap:workflow_reformat-check-jc_fisher_VERSION"],
+  "steps": [
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "input_vcf",
+                  "source": [
+                      {
+                          "name": "input_vcf"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Run reformat_vcf"
+              ],
+              "software_used": [
+                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52",
+                 "/softwares/f1b8ae14-f8b4-4100-8086-09ce4a461d40"
+              ]
+          },
+          "name": "reformat_vcf",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "reformat_vcf",
+                  "target": [
+                      {
+                          "name": "reformat_vcf",
+                          "step": "jc_parse_fisher"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "inputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": false,
+                      "type": "data file"
+                  },
+                  "name": "reformat_vcf",
+                  "source": [
+                      {
+                          "name": "reformat_vcf",
+                          "step": "jc_parse_fisher"
+                      }
+                  ]
+              }
+          ],
+          "meta": {
+              "analysis_step_types": [
+                  "Run jc_parse_fisher"
+              ],
+              "software_used": [
+                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+              ]
+          },
+          "name": "jc_parse_fisher",
+          "outputs": [
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "vcf_gz",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "vcf",
+                  "target": [
+                      {
+                          "name": "vcf"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "title": "Run vcf reformat with internal integrity check, and joint call parsing with Fisher test for HiGlass",
+  "uuid": "f0748e63-f57c-4b57-b0ba-bbb295281a65"
+}

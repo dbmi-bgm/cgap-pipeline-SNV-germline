@@ -153,6 +153,18 @@
         "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
         "title": "liftover_hg19_2eeb9da",
         "uuid": "affec979-09bd-48b2-b58a-9c54d3c1deb2",
-        "commit":"2eeb9da"
+        "commit": "2eeb9da"
+    },
+    {
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
+        "name": "reformat_vcf",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
+        "title": "reformat_vcf_2eeb9da",
+        "uuid": "f1b8ae14-f8b4-4100-8086-09ce4a461d40",
+        "commit": "2eeb9da"
     }
 ]
