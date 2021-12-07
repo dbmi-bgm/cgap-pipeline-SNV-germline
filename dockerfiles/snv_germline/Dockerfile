@@ -155,7 +155,7 @@ RUN chmod +x dbSNP_ID_fixer.py
 COPY scripts/hgvsg_creator.py .
 RUN chmod +x hgvsg_creator.py
 
-# higlass joint parsere script
+# higlass joint parser script
 COPY scripts/higlass_joint_parser.py .
 RUN chmod +x higlass_joint_parser.py
 
