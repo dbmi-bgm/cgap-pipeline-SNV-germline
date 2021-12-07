@@ -16,6 +16,10 @@ inputs:
     type: File
     doc: expect the path to a list of sample IDs for probands (cases in case vs control)
 
+  - id: gnomAD
+    type: string[]
+    doc: list of gnomAD version(s) to use as control (v2 and/or v3)
+
 outputs:
   vcf:
     type: File
@@ -45,8 +49,10 @@ steps:
     in:
       input:
         source: reformat_vcf/output
-      probands:
+      proband_list:
         source: proband_list
+      gnomAD:
+        source: gnomAD
     out: [output]
 
 doc: |
