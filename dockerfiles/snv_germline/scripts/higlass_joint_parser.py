@@ -324,7 +324,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Add hgvsg INFO field for each qualified variant')
 
     parser.add_argument('-i','--inputfile', help='input VCF file', required=True)
-    parser.add_argument('-p','--probandlist', help='txt file with all cases (proband) IDs on individual lines')
+    parser.add_argument('-p','--probandlist', help='txt file with all cases (proband) IDs on individual lines', required=True)
     parser.add_argument('-o','--outputfile', help='output VCF file', required=True)
     parser.add_argument('-g','--gnomAD', nargs='*', help='gnomAD version(s) to use as control (v2 and/or v3)', choices=['v2', 'v3'], required=True)
 
