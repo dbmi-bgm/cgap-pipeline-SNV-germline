@@ -144,6 +144,7 @@ RUN git clone https://github.com/dbmi-bgm/cgap-scripts/ && \
     chmod +x samplegeno.py && \
     chmod +x duplines_vcf.py && \
     chmod +x liftover_hg19.py && \
+    chmod +x portal_reformat_vcf.py && \
     cd ..
 
 # dbSNP ID fixer
@@ -169,6 +170,10 @@ RUN chmod +x CombineGVCFs-parallel.sh
 # GenotypeGVCFs parallel script
 COPY GenotypeGVCFs-parallel.sh .
 RUN chmod +x GenotypeGVCFs-parallel.sh
+
+# reformat_vcf script
+COPY reformat_vcf.sh .
+RUN chmod +x reformat_vcf.sh
 
 # granite (when updated, also update mpileupCounts version below)
 RUN pip install granite-suite==0.1.12
