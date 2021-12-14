@@ -96,6 +96,18 @@
         "version": "1.11"
     },
     {
+        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
+        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "name": "samtools",
+        "software_type": [
+            "file format converter"
+        ],
+        "source_url": "https://github.com/samtools/samtools",
+        "title": "samtools_1.9",
+        "uuid": "3f2d3b0e-0365-4212-9468-c16ad9531c4d",
+        "version": "1.9"
+    },
+    {
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
         "name": "peddy",
