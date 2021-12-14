@@ -143,7 +143,8 @@
                   "Run granite mpileupCounts"
               ],
               "software_used": [
-                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52",
+                 "/softwares/3f2d3b0e-0365-4212-9468-c16ad9531c4d"
               ]
           },
           "name": "granite",

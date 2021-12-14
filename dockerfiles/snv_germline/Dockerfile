@@ -52,6 +52,16 @@ RUN wget https://github.com/samtools/bcftools/releases/download/1.11/bcftools-1.
     cd .. && \
     ln -s bcftools-1.11 bcftools
 
+# samtools
+RUN wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2 && \
+    tar -xjf samtools-1.9.tar.bz2 && \
+    rm -rf samtools-1.9.tar.bz2 && \
+    cd samtools-1.9 && \
+    ./configure && \
+    make && \
+    cd .. && \
+    ln -s samtools-1.9 samtools
+
 # vcftools
 RUN git clone https://github.com/vcftools/vcftools.git && \
     mv vcftools vcftools_tmp && \
@@ -220,6 +230,7 @@ ENV PATH=/usr/local/bin/bcftools/:$PATH
 ENV PATH=/usr/local/bin/cgap-scripts/:$PATH
 ENV PATH=/usr/local/bin/pigz/:$PATH
 ENV PATH=/usr/local/bin/ensembl-vep/:$PATH
+ENV PATH=/usr/local/bin/samtools/:$PATH
 
 # supporting UTF-8
 RUN locale-gen "en_US.UTF-8" && update-locale LC_ALL="en_US.UTF-8"
