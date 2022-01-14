@@ -95,7 +95,7 @@
                   "source": [
                       {
                           "name": "reformat_vcf",
-                          "step": "jc_parse_fisher"
+                          "step": "reformat_vcf"
                       }
                   ]
               },
