@@ -11,30 +11,21 @@ hints:
   - class: DockerRequirement
     dockerPull: ACCOUNT/snv_germline:VERSION
 
-baseCommand: [python3, /usr/local/bin/cgap-scripts/liftover_hg19.py]
+baseCommand: [reformat_vcf.sh]
 
 inputs:
   - id: input
     type: File
     inputBinding:
       position: 1
-      prefix: -i
     doc: expect the path to the sample vcf gz file
 
-  - id: chainfile
-    type: File
-    inputBinding:
-      position: 2
-      prefix: -c
-    doc: expect the path to the hg38-to-hg19-chain file
-
   - id: outputfile
-    default: 'liftover.vcf'
+    default: 'reformatted.vcf'
     type: string
     inputBinding:
       position: 2
-      prefix: -o
-    doc: base name of output vcf gz file
+    doc: name of output intermediate vcf file
 
 outputs:
   - id: output
@@ -46,4 +37,5 @@ outputs:
 
 
 doc: |
-  run liftover_hg19.py to add hg19_chr and hg19_pos data to INFO field for qualified variants
+  run portal_reformat_vcf.py |
+  run integrated vcf integrity check

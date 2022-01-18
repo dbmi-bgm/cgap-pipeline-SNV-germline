@@ -1,6 +1,6 @@
 {
-  "accession": "GAPWFR588CV2",
-  "app_name": "workflow_hg19lo_hgvsg-check",
+  "accession": "GAPWF39GGK8Z",
+  "app_name": "workflow_reformat_jc_fisher",
   "app_version": "VERSION",
   "arguments": [
       {
@@ -9,9 +9,9 @@
           "workflow_argument_name": "input_vcf"
       },
       {
-          "argument_format": "chain",
+          "argument_format": "txt",
           "argument_type": "Input file",
-          "workflow_argument_name": "chainfile"
+          "workflow_argument_name": "proband_list"
       },
       {
           "argument_format": "vcf_gz",
@@ -20,28 +20,22 @@
           "secondary_file_formats": ["vcf_gz_tbi"]
       },
       {
-          "argument_type": "Output QC file",
-          "workflow_argument_name": "vcf-check",
-          "argument_to_be_attached_to": "vcf",
-          "qc_zipped": false,
-          "qc_html": false,
-          "qc_json": false,
-          "qc_table": true,
-          "qc_type": "quality_metric_vcfcheck"
+          "argument_type": "parameter",
+          "workflow_argument_name": "gnomAD"
       }
   ],
   "project": "PROJECT_UUID",
   "category": ["processing"],
-  "cwl_child_filenames": ["liftover_hg19.cwl", "hgvsg_creator.cwl", "vcf-integrity-check.cwl"],
+  "cwl_child_filenames": ["reformat_vcf.cwl", "jc_parse_fisher.cwl"],
   "cwl_directory_url_v1": "s3://CWLBUCKET/PIPELINE/VERSION",
-  "cwl_main_filename": "workflow_hg19lo_hgvsg_plus_vcf-integrity-check.cwl",
+  "cwl_main_filename": "workflow_reformat_jc_vcf_fisher.cwl",
   "cwl_pointer": "",
-  "description": "Run hg19 liftover on an input vcf. hgvsg_creator is run on the output vcf to create another vcf. An integrity check is performed on the output file",
+  "description": "Run reformat vcf on the annotated jointly-called vcf and an internal integrity check on the resulting output file, then run the parser and Fisher test to create a file for HiGlass viewing",
   "docker_image_name": "ACCOUNT/snv_germline:VERSION",
   "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
-  "name": "workflow_hg19lo_hgvsg-check_VERSION",
-  "aliases": ["cgap:workflow_hg19lo_hgvsg-check_VERSION"],
+  "name": "workflow_reformat_jc_fisher_VERSION",
+  "aliases": ["cgap:workflow_reformat_jc_fisher_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -58,32 +52,18 @@
                           "name": "input_vcf"
                       }
                   ]
-              },
-              {
-                  "meta": {
-                      "cardinality": "single",
-                      "file_format": "chain",
-                      "global": true,
-                      "type": "reference file"
-                  },
-                  "name": "chainfile",
-                  "source": [
-                      {
-                          "name": "chainfile"
-                      }
-                  ]
               }
           ],
           "meta": {
               "analysis_step_types": [
-                  "Run liftover_hg19"
+                  "Run reformat_vcf"
               ],
               "software_used": [
                  "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52",
-                 "/softwares/affec979-09bd-48b2-b58a-9c54d3c1deb2"
+                 "/softwares/f1b8ae14-f8b4-4100-8086-09ce4a461d40"
               ]
           },
-          "name": "liftover_hg19",
+          "name": "reformat_vcf",
           "outputs": [
               {
                   "meta": {
@@ -92,11 +72,11 @@
                       "global": true,
                       "type": "data file"
                   },
-                  "name": "LOvcf",
+                  "name": "reformat_vcf",
                   "target": [
                       {
-                          "name": "LOvcf",
-                          "step": "hgvsg_creator"
+                          "name": "reformat_vcf",
+                          "step": "jc_parse_fisher"
                       }
                   ]
               }
@@ -111,24 +91,51 @@
                       "global": false,
                       "type": "data file"
                   },
-                  "name": "LOvcf",
+                  "name": "reformat_vcf",
                   "source": [
                       {
-                          "name": "LOvcf",
-                          "step": "liftover_hg19"
+                          "name": "reformat_vcf",
+                          "step": "reformat_vcf"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "file_format": "txt",
+                      "global": true,
+                      "type": "data file"
+                  },
+                  "name": "proband_list",
+                  "source": [
+                      {
+                          "name": "proband_list"
+                      }
+                  ]
+              },
+              {
+                  "meta": {
+                      "cardinality": "single",
+                      "global": true,
+                      "type": "parameter"
+                  },
+                  "name": "gnomAD",
+                  "source": [
+                      {
+                          "name": "gnomAD"
                       }
                   ]
               }
           ],
           "meta": {
               "analysis_step_types": [
-                  "Run hgvsg_creator"
+                  "Run jc_parse_fisher"
               ],
               "software_used": [
                  "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
               ]
           },
-          "name": "hgvsg_creator",
+          "name": "jc_parse_fisher",
           "outputs": [
               {
                   "meta": {
@@ -140,59 +147,13 @@
                   "name": "vcf",
                   "target": [
                       {
-                          "name": "vcf",
-                          "step": "vcf-integrity-check"
-                      }
-                  ]
-              }
-          ]
-      },
-      {
-          "inputs": [
-              {
-                  "meta": {
-                      "cardinality": "single",
-                      "file_format": "vcf_gz",
-                      "global": false,
-                      "type": "data file"
-                  },
-                  "name": "vcf",
-                  "source": [
-                      {
-                          "name": "vcf",
-                          "step": "hgvsg_creator"
-                      }
-                  ]
-              }
-          ],
-          "meta": {
-              "analysis_step_types": [
-                  "Check integrity of vcf output file"
-              ],
-              "software_used": [
-                 "/softwares/f7ac2c5f-9203-49fa-b918-cede02bf46f7"
-              ]
-          },
-          "name": "vcf-integrity-check",
-          "outputs": [
-              {
-                  "meta": {
-                      "cardinality": "single",
-                      "global": true,
-                      "type": "QC"
-                  },
-                  "name": "vcf-check",
-                  "target": [
-                      {
-                          "name": "vcf-check"
+                          "name": "vcf"
                       }
                   ]
               }
           ]
       }
   ],
-  "title": "Run hg19 liftover, hgvsg creator, and a vcf integrity check",
-  "uuid": "dab2dca8-0dd1-4703-b899-37363f85dd09",
-  "previous_version": ["66434019-65c5-498f-a986-9e791eeff0ad"],
-  "version_upgrade_log": "hg19_liftover moved to cgap-scripts and hgvsg now runs for hg19 as well"
+  "title": "Run vcf reformat with internal integrity check, and joint call parsing with Fisher test for HiGlass",
+  "uuid": "f0748e63-f57c-4b57-b0ba-bbb295281a65"
 }

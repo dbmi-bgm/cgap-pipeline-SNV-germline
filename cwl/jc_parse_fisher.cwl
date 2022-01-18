@@ -11,28 +11,31 @@ hints:
   - class: DockerRequirement
     dockerPull: ACCOUNT/snv_germline:VERSION
 
-baseCommand: [python3, /usr/local/bin/cgap-scripts/liftover_hg19.py]
+baseCommand: [python3, /usr/local/bin/higlass_joint_parser.py]
 
 inputs:
   - id: input
     type: File
     inputBinding:
-      position: 1
       prefix: -i
     doc: expect the path to the sample vcf gz file
 
-  - id: chainfile
+  - id: gnomAD
+    type: string[]
+    inputBinding:
+      prefix: -g
+    doc: list of gnomAD version(s) to use as control (v2 and/or v3)
+
+  - id: proband_list
     type: File
     inputBinding:
-      position: 2
-      prefix: -c
-    doc: expect the path to the hg38-to-hg19-chain file
+      prefix: -p
+    doc: expect the path to txt file containing 1 proband sample ID per line
 
   - id: outputfile
-    default: 'liftover.vcf'
+    default: 'joint_called_higlass.vcf'
     type: string
     inputBinding:
-      position: 2
       prefix: -o
     doc: base name of output vcf gz file
 
@@ -44,6 +47,5 @@ outputs:
     secondaryFiles:
       - .tbi
 
-
 doc: |
-  run liftover_hg19.py to add hg19_chr and hg19_pos data to INFO field for qualified variants
+  run higlass_joint_parser.py to clean annotations and generate Fisher's exact scores for HiGlass viewing of a jointly-called vcf file
