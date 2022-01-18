@@ -14,7 +14,6 @@ For more details check [*documentation*](https://cgap-pipeline-master.readthedoc
 ### Version Updates
 
 #### v27
-* Initial release based on v26 pipeline
 * Changes in repo structure to allow for compatibility with new pipeline organization
-* Changes to the hg19 liftover/HGVSG workflow now allow for HGVSg characterizations to be generated for hg19 liftover coordinates
-* New cwls and workflows added for annotation of a jointly called ``vcf`` files
+* Changes to the hg19 liftover/HGVSG workflow now allow for HGVSg characterizations to be generated from hg19 liftover coordinates
+* New cwls and workflows added for annotation of jointly called ``vcf`` files
