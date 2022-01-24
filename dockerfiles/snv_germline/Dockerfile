@@ -74,9 +74,9 @@ RUN git clone https://github.com/vcftools/vcftools.git && \
     cd ..
 
 # pigz
-RUN wget https://zlib.net/pigz/pigz-2.6.tar.gz && \
-    tar -xzf pigz-2.6.tar.gz && \
-    rm -rf pigz-2.6.tar.gz && \
+RUN wget https://github.com/madler/pigz/archive/refs/tags/v2.6.tar.gz && \
+    tar -xzf v2.6.tar.gz && \
+    rm -rf v2.6.tar.gz && \
     cd pigz-2.6 && \
     make && \
     cd .. && \
