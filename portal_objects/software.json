@@ -110,14 +110,14 @@
     {
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
-        "name": "samplegeno",
+        "name": "samtools",
         "software_type": [
-            "annotator"
+            "file format converter"
         ],
-        "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
-        "title": "samplegeno_2afe195",
-        "uuid": "c2380d3a-80a2-4009-a343-f9475381aab1",
-        "commit": "2afe195"
+        "source_url": "https://github.com/samtools/samtools",
+        "title": "samtools_1.9",
+        "uuid": "3f2d3b0e-0365-4212-9468-c16ad9531c4d",
+        "version": "1.9"
     },
     {
         "project": "PROJECT_UUID",
@@ -139,9 +139,21 @@
             "filter"
         ],
         "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
-        "title": "depth_filter_2afe195",
+        "title": "depth_filter_2eeb9da",
         "uuid": "742c5810-b3f8-4d3e-87aa-eeb5710f2c0c",
-        "commit":"2afe195"
+        "commit":"2eeb9da"
+    },
+    {
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
+        "name": "samplegeno",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
+        "title": "samplegeno_2eeb9da",
+        "uuid": "c2380d3a-80a2-4009-a343-f9475381aab1",
+        "commit": "2eeb9da"
     },
     {
         "project": "PROJECT_UUID",
@@ -151,8 +163,32 @@
             "filter"
         ],
         "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
-        "title": "duplines_vcf_2afe195",
+        "title": "duplines_vcf_2eeb9da",
         "uuid": "2f1e98db-64c6-48a8-a25a-eb44a6f5e4a6",
-        "commit": "2afe195"
+        "commit": "2eeb9da"
+    },
+    {
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
+        "name": "liftover_hg19",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
+        "title": "liftover_hg19_2eeb9da",
+        "uuid": "affec979-09bd-48b2-b58a-9c54d3c1deb2",
+        "commit": "2eeb9da"
+    },
+    {
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
+        "name": "reformat_vcf",
+        "software_type": [
+            "annotator"
+        ],
+        "source_url": "https://github.com/dbmi-bgm/cgap-scripts",
+        "title": "reformat_vcf_2eeb9da",
+        "uuid": "f1b8ae14-f8b4-4100-8086-09ce4a461d40",
+        "commit": "2eeb9da"
     }
 ]

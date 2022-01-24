@@ -146,13 +146,15 @@ RUN chmod +x vcf-integrity-check.sh
 COPY sort-bgzip-vcf.sh .
 RUN chmod +x sort-bgzip-vcf.sh
 
-# add cgap-scripts - depth_filter, samplegeno and duplines_vcf
+# add cgap-scripts - depth_filter, samplegeno and duplines_vcf, liftover_hg19
 RUN git clone https://github.com/dbmi-bgm/cgap-scripts/ && \
     cd cgap-scripts && \
-    git checkout 2afe195 && \
+    git checkout 2eeb9da && \
     chmod +x depth_filter.py && \
     chmod +x samplegeno.py && \
     chmod +x duplines_vcf.py && \
+    chmod +x liftover_hg19.py && \
+    chmod +x portal_reformat_vcf.py && \
     cd ..
 
 # dbSNP ID fixer
@@ -163,9 +165,9 @@ RUN chmod +x dbSNP_ID_fixer.py
 COPY scripts/hgvsg_creator.py .
 RUN chmod +x hgvsg_creator.py
 
-# liftover_hg19 script
-COPY scripts/liftover_hg19.py .
-RUN chmod +x liftover_hg19.py
+# higlass joint parser script
+COPY scripts/higlass_joint_parser.py .
+RUN chmod +x higlass_joint_parser.py
 
 # HaplotypeCaller parallel script
 COPY HaplotypeCaller-parallel.sh .
@@ -182,6 +184,10 @@ RUN chmod +x CombineGVCFs-parallel.sh
 # GenotypeGVCFs parallel script
 COPY GenotypeGVCFs-parallel.sh .
 RUN chmod +x GenotypeGVCFs-parallel.sh
+
+# reformat_vcf script
+COPY reformat_vcf.sh .
+RUN chmod +x reformat_vcf.sh
 
 # granite (when updated, also update mpileupCounts version below)
 RUN pip install granite-suite==0.1.12
