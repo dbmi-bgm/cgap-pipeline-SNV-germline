@@ -2,22 +2,22 @@
   "name": "WGS_SNV_germline_proband",
   "title": "WGS SNV Germline Proband VERSION",
   "version": "VERSION",
-  "accession": "GAPM12LCAA92",
+  "accession": "GAPM12LCBB92",
   "description": "WGS downstream pipeline for SNV using GATK for proband only",
-  "uuid": "0b702300-cb82-4056-995b-a76f16e38195",
+  "uuid": "b9291619-83a1-48bb-a032-4860469f2fb3",
   "project": "PROJECT_UUID",
   "institution": "INSTITUTION_UUID",
   "input": [
     {
-      "argument_name": "input_bam",
+      "argument_name": "input_bams",
       "argument_type": "file"
     },
     {
-      "argument_name": "sample_name",
+      "argument_name": "sample_names",
       "argument_type": "parameter"
     },
     {
-      "argument_name": "bamsnap_title",
+      "argument_name": "bamsnap_titles",
       "argument_type": "parameter"
     },
     {
@@ -151,15 +151,16 @@
       },
       "custom_pf_fields": {
           "gvcf": {
-              "file_type": "gVCF",
+              "file_type": "HaplotypeCaller g.vcf",
               "variant_type": "SNV",
-              "description": "processed output from cgap upstream pipeline"
+              "description": "output from HaplotypeCaller in g.vcf format"
           }
       },
       "input": [
         {
           "argument_name": "input_bam",
-          "argument_type": "file"
+          "argument_type": "file",
+          "source_argument_name": "input_bams"
         },
         {
           "argument_name": "reference",
@@ -191,9 +192,10 @@
       },
       "custom_pf_fields": {
           "vcf": {
-              "file_type": "raw VCF",
+              "file_type": "raw vcf",
               "variant_type": "SNV",
-              "description": "processed output from cgap downstream pipeline"
+              "description": "output from GenotypeGVCF in vcf format",
+              "linkto_location": "SampleProcessing"
           }
       },
       "input": [
@@ -243,7 +245,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_name"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -280,7 +282,7 @@
           "samplegeno_vcf": {
               "file_type": "intermediate file",
               "variant_type": "SNV",
-              "description": "Intermediate VCF file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -317,7 +319,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_name"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -352,9 +354,10 @@
       },
       "custom_pf_fields": {
           "annotated_vcf": {
-              "file_type": "vep-annotated VCF",
+              "file_type": "vep-annotated vcf",
               "variant_type": "SNV",
-              "description": "vep-annotated VCF file"
+              "description": "output from VEP in vcf format",
+              "linkto_location": "SampleProcessing"
           }
       },
       "input": [
@@ -483,7 +486,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_name"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -518,9 +521,9 @@
       },
       "custom_pf_fields": {
           "merged_vcf": {
-              "file_type": "intermediate file",
+              "file_type": "filtered vcf",
               "variant_type": "SNV",
-              "description": "Intermediate VCF file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -571,7 +574,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_name"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -606,9 +609,9 @@
       },
       "custom_pf_fields": {
           "comHet_vcf": {
-              "file_type": "intermediate file",
+              "file_type": "comHet vcf",
               "variant_type": "SNV",
-              "description": "Intermediate VCF file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -621,7 +624,7 @@
         {
           "argument_name": "trio",
           "argument_type": "parameter",
-          "source_argument_name": "sample_name"
+          "source_argument_name": "sample_names"
         }
       ]
     },
@@ -650,7 +653,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_name"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -687,7 +690,7 @@
           "vcf": {
               "file_type": "intermediate file",
               "variant_type": "SNV",
-              "description": "Intermediate VCF file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -734,7 +737,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_name"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -769,9 +772,10 @@
       },
       "custom_pf_fields": {
           "vcf": {
-              "file_type": "full annotated VCF",
+              "file_type": "full-annotated vcf",
               "variant_type": "SNV",
-              "description": "full annotated VCF file"
+              "description": "fully annotated output in vcf format",
+              "linkto_location": "SampleProcessing"
           }
       },
       "input": [
@@ -802,7 +806,7 @@
         {
           "argument_name": "input_bams",
           "argument_type": "file",
-          "source_argument_name": "input_bam",
+          "source_argument_name": "input_bams",
           "extra_dimension": 1
         },
         {
@@ -824,7 +828,7 @@
         },
         {
           "argument_name": "titles",
-          "source_argument_name": "bamsnap_title",
+          "source_argument_name": "bamsnap_titles",
           "argument_type": "parameter"
         }
       ]
@@ -857,7 +861,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_name"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",

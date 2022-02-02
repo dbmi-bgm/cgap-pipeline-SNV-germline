@@ -2,18 +2,18 @@
   "name": "WGS_SNV_germline_family",
   "title": "WGS SNV Germline Family VERSION",
   "version": "VERSION",
-  "accession": "GAPMKF1LL2A3",
+  "accession": "GAPMKF1LL29K",
   "description": "WGS downstream pipeline for SNV using GATK for family",
-  "uuid": "a380d14c-55a7-41b1-a862-ce0486adacfb",
+  "uuid": "5dea430b-40df-4092-a79b-8d19e77e9539",
   "project": "PROJECT_UUID",
   "institution": "INSTITUTION_UUID",
   "input": [
     {
-      "argument_name": "bams_proband_first",
+      "argument_name": "input_bams",
       "argument_type": "file"
     },
     {
-      "argument_name": "sample_names_proband_first",
+      "argument_name": "sample_names",
       "argument_type": "parameter"
     },
     {
@@ -159,16 +159,16 @@
       },
       "custom_pf_fields": {
           "gvcf": {
-              "file_type": "gVCF",
+              "file_type": "HaplotypeCaller g.vcf",
               "variant_type": "SNV",
-              "description": "processed output from cgap upstream pipeline"
+              "description": "output from HaplotypeCaller in g.vcf format"
           }
       },
       "input": [
         {
           "argument_name": "input_bam",
           "argument_type": "file",
-          "source_argument_name": "bams_proband_first",
+          "source_argument_name": "input_bams",
           "scatter": 1
         },
         {
@@ -201,9 +201,9 @@
       },
       "custom_pf_fields": {
           "combined_gvcf": {
-              "file_type": "combined gVCF",
+              "file_type": "combined g.vcf",
               "variant_type": "SNV",
-              "description": "processed output from cgap downstream pipeline"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -238,9 +238,10 @@
       },
       "custom_pf_fields": {
           "vcf": {
-              "file_type": "raw VCF",
+              "file_type": "raw vcf",
               "variant_type": "SNV",
-              "description": "processed output from cgap downstream pipeline"
+              "description": "output from GenotypeGVCF in vcf format",
+              "linkto_location": "SampleProcessing"
           }
       },
       "input": [
@@ -290,7 +291,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -327,7 +328,7 @@
           "samplegeno_vcf": {
               "file_type": "intermediate file",
               "variant_type": "SNV",
-              "description": "Intermediate VCF file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -364,7 +365,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -399,9 +400,10 @@
       },
       "custom_pf_fields": {
           "annotated_vcf": {
-              "file_type": "vep-annotated VCF",
+              "file_type": "vep-annotated vcf",
               "variant_type": "SNV",
-              "description": "vep-annotated VCF file"
+              "description": "output from VEP in vcf format",
+              "linkto_location": "SampleProcessing"
           }
       },
       "input": [
@@ -530,7 +532,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -565,9 +567,9 @@
       },
       "custom_pf_fields": {
           "merged_vcf": {
-              "file_type": "intermediate file",
+              "file_type": "filtered vcf",
               "variant_type": "SNV",
-              "description": "Intermediate VCF file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -618,7 +620,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -653,9 +655,9 @@
       },
       "custom_pf_fields": {
           "comHet_vcf": {
-              "file_type": "intermediate file",
+              "file_type": "comHet vcf",
               "variant_type": "SNV",
-              "description": "Intermediate VCF file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -697,7 +699,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -734,7 +736,7 @@
           "vcf": {
               "file_type": "intermediate file",
               "variant_type": "SNV",
-              "description": "Intermediate VCF file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -781,7 +783,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
@@ -816,9 +818,10 @@
       },
       "custom_pf_fields": {
           "vcf": {
-              "file_type": "full annotated VCF",
+              "file_type": "full-annotated vcf",
               "variant_type": "SNV",
-              "description": "full annotated VCF file"
+              "description": "fully annotated output in vcf format",
+              "linkto_location": "SampleProcessing"
           }
       },
       "input": [
@@ -849,7 +852,7 @@
         {
           "argument_name": "input_bams",
           "argument_type": "file",
-          "source_argument_name": "bams_proband_first"
+          "source_argument_name": "input_bams"
         },
         {
           "argument_name": "input_vcf",
@@ -903,7 +906,7 @@
         {
           "argument_name": "samples",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first"
+          "source_argument_name": "sample_names"
         },
         {
           "argument_name": "trio_errors",
