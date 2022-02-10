@@ -160,7 +160,8 @@
         {
           "argument_name": "input_bam",
           "argument_type": "file",
-          "source_argument_name": "input_bams"
+          "source_argument_name": "input_bams",
+          "input_dimension": 1
         },
         {
           "argument_name": "reference",
@@ -798,7 +799,7 @@
         "instance_type": "r5a.4xlarge",
         "ebs_size": "2x",
         "EBS_optimized": true,
-        "spot_instance": false,
+        "spot_instance": true,
         "run_name": "run_bamsnap",
         "behavior_on_capacity_limit": "wait_and_retry"
       },
