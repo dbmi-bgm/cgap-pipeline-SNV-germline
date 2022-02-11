@@ -160,8 +160,7 @@
         {
           "argument_name": "input_bam",
           "argument_type": "file",
-          "source_argument_name": "input_bams",
-          "input_dimension": 1
+          "source_argument_name": "input_bams"
         },
         {
           "argument_name": "reference",
