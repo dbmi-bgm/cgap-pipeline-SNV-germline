@@ -10,27 +10,33 @@
   "input": [
     {
       "argument_name": "input_bams",
-      "argument_type": "file"
+      "argument_type": "file",
+      "dimensionality": 1
     },
     {
       "argument_name": "sample_names",
-      "argument_type": "parameter"
+      "argument_type": "parameter",
+      "value_type": "json"
     },
     {
       "argument_name": "bamsnap_titles",
-      "argument_type": "parameter"
+      "argument_type": "parameter",
+      "value_type": "json"
     },
     {
       "argument_name": "pedigree",
-      "argument_type": "parameter"
+      "argument_type": "parameter",
+      "value_type": "string"
     },
     {
       "argument_name": "rcktar_file_names",
-      "argument_type": "parameter"
+      "argument_type": "parameter",
+      "value_type": "json"
     },
     {
       "argument_name": "family_size",
-      "argument_type": "parameter"
+      "argument_type": "parameter",
+      "value_type": "integer"
     },
     {
       "argument_name": "reference_fa",
@@ -315,7 +321,7 @@
               "file_type": "raw vcf",
               "variant_type": "SNV",
               "description": "output from GenotypeGVCF in vcf format",
-              "linkto_location": "SampleProcessing"
+              "linkto_location": ["SampleProcessing"]
           }
       },
       "input": [
@@ -477,7 +483,7 @@
               "file_type": "vep-annotated vcf",
               "variant_type": "SNV",
               "description": "output from VEP in vcf format",
-              "linkto_location": "SampleProcessing"
+              "linkto_location": ["SampleProcessing"]
           }
       },
       "input": [
@@ -979,7 +985,7 @@
               "file_type": "full-annotated vcf",
               "variant_type": "SNV",
               "description": "fully annotated output in vcf format",
-              "linkto_location": "SampleProcessing"
+              "linkto_location": ["SampleProcessing"]
           }
       },
       "input": [
