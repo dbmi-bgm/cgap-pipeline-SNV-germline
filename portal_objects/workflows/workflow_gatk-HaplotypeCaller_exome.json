@@ -44,8 +44,6 @@
   "cwl_main_filename": "gatk-HaplotypeCaller_exome.cwl",
   "cwl_pointer": "",
   "description": "Run gatk HaplotypeCaller exome on bam input file. Produce a g.vcf file",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_gatk-HaplotypeCaller_exome_VERSION",
   "aliases": ["cgap:workflow_gatk-HaplotypeCaller_exome_VERSION",

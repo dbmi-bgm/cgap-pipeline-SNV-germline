@@ -22,8 +22,6 @@
   "cwl_main_filename": "samplegeno.cwl",
   "cwl_pointer": "",
   "description": "Add samplegeno information to variants from input vcf",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_samplegeno_VERSION",
   "aliases": ["cgap:workflow_samplegeno_VERSION",

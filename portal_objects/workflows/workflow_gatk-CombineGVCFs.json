@@ -36,8 +36,6 @@
   "cwl_main_filename": "gatk-CombineGVCFs.cwl",
   "cwl_pointer": "",
   "description": "Run gatk CombineGVCFs on input g.vcf files",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_gatk-CombineGVCFs_VERSION",
   "aliases": ["cgap:workflow_gatk-CombineGVCFs_VERSION",

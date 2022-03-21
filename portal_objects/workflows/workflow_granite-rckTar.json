@@ -22,8 +22,6 @@
   "cwl_main_filename": "granite-rckTar.cwl",
   "cwl_pointer": "",
   "description": "Create a tar archive of rck files. Create an index file for the archive",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_granite-rckTar_VERSION",
   "aliases": ["cgap:workflow_granite-rckTar_VERSION",

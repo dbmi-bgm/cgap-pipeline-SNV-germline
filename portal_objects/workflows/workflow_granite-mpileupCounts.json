@@ -44,8 +44,6 @@
   "cwl_main_filename": "granite-mpileupCounts.cwl",
   "cwl_pointer": "",
   "description": "Run granite mpileupCounts on bam input file. Produce a rck.gz file",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_granite-mpileupCounts_VERSION",
   "aliases": ["cgap:workflow_granite-mpileupCounts_VERSION",

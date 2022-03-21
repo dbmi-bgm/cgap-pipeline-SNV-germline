@@ -37,8 +37,6 @@
   "cwl_main_filename": "workflow_hg19lo_hgvsg_plus_vcf-integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Run hg19 liftover on an input vcf. hgvsg_creator is run on the output vcf to create another vcf. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_hg19lo_hgvsg-check_VERSION",
   "aliases": ["cgap:workflow_hg19lo_hgvsg-check_VERSION"],

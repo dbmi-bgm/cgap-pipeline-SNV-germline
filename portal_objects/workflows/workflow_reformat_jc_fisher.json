@@ -31,8 +31,6 @@
   "cwl_main_filename": "workflow_reformat_jc_vcf_fisher.cwl",
   "cwl_pointer": "",
   "description": "Run reformat vcf on the annotated jointly-called vcf and an internal integrity check on the resulting output file, then run the parser and Fisher test to create a file for HiGlass viewing",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_reformat_jc_fisher_VERSION",
   "aliases": ["cgap:workflow_reformat_jc_fisher_VERSION"],
