@@ -20,7 +20,7 @@ WORKDIR /usr/local/bin
 #     Software
 #######################################################################
 ## conda install
-RUN conda install -y peddy==0.4.7 \
+RUN conda install -c bioconda -y peddy==0.4.7 \
     pysam==0.15.3 pytabix==0.0.2 pyfaidx==0.5.8 tqdm==4.48.2 && \
     conda clean -a -y -f
 
