@@ -27,8 +27,7 @@ ARG GRANITE_VERSION=0.1.12
 #     Software
 #######################################################################
 ## conda install
-RUN conda install -y scipy==1.5.3 \
-    pyliftover==0.4 pytabix==0.0.2 && \
+RUN conda install -y scipy==1.5.3 pyliftover==0.4 && \
     conda clean -a -y -f
 
 ## samtools (used by granite mpileupCounts)
