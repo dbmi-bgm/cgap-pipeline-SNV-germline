@@ -1,7 +1,7 @@
 #######################################################################
 #     Basic image
 #######################################################################
-FROM cgap/cgap-ubuntu2104-py-38:0.0.1
+FROM 4dndcic/ubuntu16.04-miniconda-python36:v1
 MAINTAINER Phil Grayson (phil.d.grayson@gmail.com), Michele Berselli (berselli.michele@gmail.com)
 
 #######################################################################
