@@ -28,7 +28,7 @@ ARG GRANITE_VERSION=0.1.12
 #######################################################################
 ## conda install
 RUN conda install -y scipy==1.5.3 && \
-conda clean -a -y -f
+    conda clean -a -y -f
 
 ## samtools (used by granite mpileupCounts)
 RUN wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2 && \

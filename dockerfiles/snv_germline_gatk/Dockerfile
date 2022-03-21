@@ -21,7 +21,7 @@ WORKDIR /usr/local/bin
 #######################################################################
 ## conda install
 RUN conda install -c bioconda -y gatk4==4.2.5.0 && \
-conda clean -a -y -f
+    conda clean -a -y -f
 
 #######################################################################
 #     Scripts
