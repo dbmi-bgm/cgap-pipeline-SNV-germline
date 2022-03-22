@@ -46,20 +46,18 @@ RUN git clone https://github.com/Ensembl/ensembl-vep.git && \
 RUN cpan App::cpanminus && \
     wget https://github.com/ucscGenomeBrowser/kent/archive/v335_base.tar.gz && \
     tar xzf v335_base.tar.gz && \
-
     export KENT_SRC=/usr/local/bin/kent-335_base/src && \
     export MACHTYPE=$(uname -m) && \
     export CFLAGS="-fPIC" && \
-    export MYSQLINC=`mysql_config --include | sed -e 's/^-I//g'` && \
-    export MYSQLLIBS=`mysql_config --libs` && \
-
+    MYSQLINC=`mysql_config --include | sed -e 's/^-I//g'` && \
+    export MYSQLINC && \
+    MYSQLLIBS=`mysql_config --libs` && \
+    export MYSQLLIBS && \
     cd $KENT_SRC/lib && \
     echo 'CFLAGS="-fPIC"' > ../inc/localEnvironment.mk && \
-
     make clean && make && \
     cd ../jkOwnLib && \
     make clean && make && \
-
     cd /usr/local/bin/ && \
     mkdir -p /usr/local/bin/cpanm_bw && \
     export PERL5LIB=$PERL5LIB:/usr/local/bin/cpanm_bw/lib/perl5 && \
