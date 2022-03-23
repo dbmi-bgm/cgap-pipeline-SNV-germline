@@ -149,7 +149,7 @@
   "workflows": [
     {
       "name": "workflow_gatk-HaplotypeCaller_exome",
-      "workflow": "c64b8f19-ab15-44a5-94e8-f8c778d93db0",
+      "workflow": "49e81e50-4562-4388-8fff-702905fb1d9b",
       "config": {
         "instance_type": "t3.xlarge",
         "ebs_size": "5x",
@@ -192,7 +192,7 @@
     },
     {
       "name": "workflow_gatk-GenotypeGVCFs-check",
-      "workflow": "4ff008de-6c9c-4991-879a-5925893ca1b1",
+      "workflow": "bf34d8b4-1b76-4f76-869b-7310537d0998",
       "config": {
         "instance_type": "c5n.4xlarge",
         "ebs_size": "2.5x",
@@ -233,7 +233,7 @@
     },
     {
       "name": "workflow_granite-qcVCF",
-      "workflow": "e9a20462-5b4f-4105-8835-7f669629d88d",
+      "workflow": "78ba0550-0c09-47e1-8559-a45be0058056",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "2x",
@@ -280,7 +280,7 @@
     },
     {
       "name": "workflow_samplegeno",
-      "workflow": "1e86fc97-2cc5-4648-ae3b-9b2295c5f012",
+      "workflow": "068446c4-87f9-48a1-8f46-cf05084392a9",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "7x",
@@ -307,7 +307,7 @@
     },
     {
       "name": "workflow_granite-qcVCF-1",
-      "workflow": "e9a20462-5b4f-4105-8835-7f669629d88d",
+      "workflow": "78ba0550-0c09-47e1-8559-a45be0058056",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "2x",
@@ -354,7 +354,7 @@
     },
     {
       "name": "workflow_vep-annot-check",
-      "workflow": "5b9412d0-7bca-49f3-9b8f-e02497b693a5",
+      "workflow": "c1c3c327-cd25-49fb-a6f6-aa14ea7af13f",
       "config": {
         "instance_type": "c5n.18xlarge",
         "ebs_size": "1.35x",
@@ -449,7 +449,7 @@
     },
     {
       "name": "workflow_peddy",
-      "workflow": "dc98d286-dbde-436b-8fca-3fa46f33f150",
+      "workflow": "b90f16cc-7d6a-4306-836e-4e9cb7879fb3",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "10x",
@@ -473,7 +473,7 @@
     },
     {
       "name": "workflow_granite-qcVCF-2",
-      "workflow": "e9a20462-5b4f-4105-8835-7f669629d88d",
+      "workflow": "78ba0550-0c09-47e1-8559-a45be0058056",
       "dependencies": ["workflow_peddy"],
       "config": {
         "instance_type": "t3.small",
@@ -521,7 +521,7 @@
     },
     {
       "name": "workflow_granite-filtering-check",
-      "workflow": "77b36194-7f22-41b0-a4c9-12d0682501ef",
+      "workflow": "97190da3-b0db-4176-b8e2-dd2168f85c31",
       "config": {
         "instance_type": "t3.medium",
         "ebs_size": "10x",
@@ -562,7 +562,7 @@
     },
     {
       "name": "workflow_granite-qcVCF-3",
-      "workflow": "e9a20462-5b4f-4105-8835-7f669629d88d",
+      "workflow": "78ba0550-0c09-47e1-8559-a45be0058056",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "2x",
@@ -609,7 +609,7 @@
     },
     {
       "name": "workflow_granite-comHet-check",
-      "workflow": "8fc79178-a81e-4da1-8cfd-121d4193e12c",
+      "workflow": "bdcd68e4-be7f-43ea-a6a7-567dc682217e",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "3.5x",
@@ -641,7 +641,7 @@
     },
     {
       "name": "workflow_granite-qcVCF-4",
-      "workflow": "e9a20462-5b4f-4105-8835-7f669629d88d",
+      "workflow": "78ba0550-0c09-47e1-8559-a45be0058056",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "2x",
@@ -688,7 +688,7 @@
     },
     {
       "name": "workflow_dbSNP_ID_fixer-check",
-      "workflow": "b9fe14eb-eab0-4360-b70c-d7a37292ffce",
+      "workflow": "2fe0a5c6-08f0-4c1b-8ac2-8209927e198b",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "2x",
@@ -725,7 +725,7 @@
     },
     {
       "name": "workflow_granite-qcVCF-5",
-      "workflow": "e9a20462-5b4f-4105-8835-7f669629d88d",
+      "workflow": "78ba0550-0c09-47e1-8559-a45be0058056",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "2x",
@@ -772,7 +772,7 @@
     },
     {
       "name": "workflow_hg19lo_hgvsg-check",
-      "workflow": "dab2dca8-0dd1-4703-b899-37363f85dd09",
+      "workflow": "0f08dc44-42c6-4b84-8962-af26e2133784",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "3x",
@@ -804,7 +804,7 @@
     },
     {
       "name": "bamsnap",
-      "workflow": "5d3a7a4b-15d4-4343-9738-79bbc0d44642",
+      "workflow": "3849ea9c-afbe-4733-8b97-5044dea21e04",
       "config": {
         "instance_type": "r5a.4xlarge",
         "ebs_size": "2x",
@@ -846,7 +846,7 @@
     },
     {
       "name": "workflow_granite-qcVCF-6",
-      "workflow": "e9a20462-5b4f-4105-8835-7f669629d88d",
+      "workflow": "78ba0550-0c09-47e1-8559-a45be0058056",
       "config": {
         "instance_type": "t3.small",
         "ebs_size": "2x",

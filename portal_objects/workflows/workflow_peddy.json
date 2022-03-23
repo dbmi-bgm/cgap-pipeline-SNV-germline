@@ -1,5 +1,5 @@
 {
-  "accession": "GAPXKK231Z9P",
+  "accession": "GAPXKK231Z91",
   "app_name": "workflow_peddy",
   "app_version": "VERSION",
   "arguments": [
@@ -46,11 +46,7 @@
   "description": "Run peddy on vcf input file",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_peddy_VERSION",
-  "aliases": ["cgap:workflow_peddy_VERSION",
-              "cgap:workflow_peddy_v26",
-              "cgap:workflow_peddy_v25",
-              "cgap:workflow_peddy_v24",
-              "cgap:workflow_peddy_v23"],
+  "aliases": ["cgap:workflow_peddy_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -100,7 +96,7 @@
                   "Run peddy"
               ],
               "software_used": [
-                  "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52",
+                  "/softwares/04e57a90-471b-431d-a5ec-b94b3dacf219",
                   "/softwares/124c73f9-4bbe-4e5d-92e0-cc2d932f1228"
               ]
           },
@@ -136,7 +132,7 @@
       }
   ],
   "title": "Run peddy",
-  "uuid": "dc98d286-dbde-436b-8fca-3fa46f33f150",
-  "previous_version": ["d03e23cd-9875-43b5-b596-f8b080c5545e"],
-  "version_upgrade_log": "Updated granite version, no expected differences"
+  "uuid": "b90f16cc-7d6a-4306-836e-4e9cb7879fb3",
+  "previous_version": ["dc98d286-dbde-436b-8fca-3fa46f33f150"],
+  "version_upgrade_log": "docker images re-structure"
 }

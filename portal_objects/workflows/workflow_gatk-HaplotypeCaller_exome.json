@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFMU49CW2",
+  "accession": "GAPWFMU49CW6",
   "app_name": "workflow_gatk-HaplotypeCaller_exome",
   "app_version": "VERSION",
   "arguments": [
@@ -46,8 +46,7 @@
   "description": "Run gatk HaplotypeCaller exome on bam input file. Produce a g.vcf file",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_gatk-HaplotypeCaller_exome_VERSION",
-  "aliases": ["cgap:workflow_gatk-HaplotypeCaller_exome_VERSION",
-              "cgap:workflow_gatk-HaplotypeCaller_exome_v26"],
+  "aliases": ["cgap:workflow_gatk-HaplotypeCaller_exome_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -138,7 +137,7 @@
                   "Run gatk HaplotypeCaller"
               ],
               "software_used": [
-                 "/softwares/4ae88fb4-23f2-4939-8852-4644069d14d9"
+                 "/softwares/7b86efcc-60c4-442b-b803-eeccc63ff175"
               ]
           },
           "name": "HaplotypeCaller",
@@ -161,5 +160,7 @@
       }
   ],
   "title": "Run gatk HaplotypeCaller exome",
-  "uuid": "c64b8f19-ab15-44a5-94e8-f8c778d93db0"
+  "uuid": "49e81e50-4562-4388-8fff-702905fb1d9b",
+  "previous_version": ["c64b8f19-ab15-44a5-94e8-f8c778d93db0"],
+  "version_upgrade_log": "docker images re-structure, updated software"
 }

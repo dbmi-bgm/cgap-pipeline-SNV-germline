@@ -1,5 +1,5 @@
 {
-  "accession": "GAPGLK9R65M2",
+  "accession": "GAPGLK9R65ML",
   "app_name": "workflow_samplegeno",
   "app_version": "VERSION",
   "arguments": [
@@ -24,14 +24,7 @@
   "description": "Add samplegeno information to variants from input vcf",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_samplegeno_VERSION",
-  "aliases": ["cgap:workflow_samplegeno_VERSION",
-              "cgap:workflow_samplegeno_v26",
-              "cgap:workflow_samplegeno_v25",
-              "cgap:workflow_samplegeno_v24",
-              "cgap:workflow_samplegeno_v23",
-              "cgap:workflow_samplegeno_v22",
-              "cgap:workflow_samplegeno_v21",
-              "cgap:workflow_samplegeno_v20"],
+  "aliases": ["cgap:workflow_samplegeno_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -78,5 +71,7 @@
       }
   ],
   "title": "Add samplegeno",
-  "uuid": "1e86fc97-2cc5-4648-ae3b-9b2295c5f012"
+  "uuid": "068446c4-87f9-48a1-8f46-cf05084392a9",
+  "previous_version": ["1e86fc97-2cc5-4648-ae3b-9b2295c5f012"],
+  "version_upgrade_log": "docker images re-structure"
 }

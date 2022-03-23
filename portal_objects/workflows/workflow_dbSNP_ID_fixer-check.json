@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFRQ54BGL",
+  "accession": "GAPWFRQ54BG2",
   "app_name": "workflow_dbSNP_ID_fixer-check",
   "app_version": "VERSION",
   "arguments": [
@@ -48,9 +48,7 @@
   "description": "Run parallel_dbSNP_ID_fixer on sample file and update ID column with rsIDs from reference dbSNP vcf. An integrity check is performed on the output file",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_dbSNP_ID_fixer-check_VERSION",
-  "aliases": ["cgap:workflow_dbSNP_ID_fixer-check_VERSION",
-              "cgap:workflow_dbSNP_ID_fixer-check_v26",
-              "cgap:workflow_dbSNP_ID_fixer-check_v25"],
+  "aliases": ["cgap:workflow_dbSNP_ID_fixer-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -115,7 +113,7 @@
                   "Run dbSNP_ID_fixer"
               ],
               "software_used": [
-                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+                 "/softwares/04e57a90-471b-431d-a5ec-b94b3dacf219"
               ]
           },
           "name": "dbSNP_ID_fixer",
@@ -182,7 +180,7 @@
       }
   ],
   "title": "Run dbSNP ID fixer plus output integrity-check",
-  "uuid": "b9fe14eb-eab0-4360-b70c-d7a37292ffce",
-  "previous_version": ["7f1a001e-cc1d-442d-9b32-857a6356a85c"],
-  "version_upgrade_log": "modified try except in python script to be specific to tabix error"
+  "uuid": "2fe0a5c6-08f0-4c1b-8ac2-8209927e198b",
+  "previous_version": ["b9fe14eb-eab0-4360-b70c-d7a37292ffce"],
+  "version_upgrade_log": "docker images re-structure"
 }

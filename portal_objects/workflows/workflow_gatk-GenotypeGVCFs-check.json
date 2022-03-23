@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWF2H256P5",
+  "accession": "GAPWF2H256PZ",
   "app_name": "workflow_gatk-GenotypeGVCFs-check",
   "app_version": "VERSION",
   "arguments": [
@@ -53,11 +53,7 @@
   "description": "Run gatk GenotypeGVCFs on g.vcf input file. Produce a vcf file. An integrity check is performed on the output file",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_gatk-GenotypeGVCFs-check_VERSION",
-  "aliases": ["cgap:workflow_gatk-GenotypeGVCFs-check_VERSION",
-              "cgap:workflow_gatk-GenotypeGVCFs-check_v26",
-              "cgap:workflow_gatk-GenotypeGVCFs-check_v25",
-              "cgap:workflow_gatk-GenotypeGVCFs-check_v24",
-              "cgap:workflow_gatk-GenotypeGVCFs-check_v23"],
+  "aliases": ["cgap:workflow_gatk-GenotypeGVCFs-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -136,7 +132,7 @@
                   "Run gatk GenotypeGVCFs"
               ],
               "software_used": [
-                 "/softwares/4ae88fb4-23f2-4939-8852-4644069d14d9"
+                 "/softwares/7b86efcc-60c4-442b-b803-eeccc63ff175"
               ]
           },
           "name": "GenotypeGVCFs",
@@ -203,7 +199,7 @@
       }
   ],
   "title": "Run gatk GenotypeGVCFs plus output integrity-check",
-  "uuid": "4ff008de-6c9c-4991-879a-5925893ca1b1",
-  "previous_version": ["4fbad226-859d-40d4-8192-10c305e819da"],
-  "version_upgrade_log": "Replaced parallel with xargs"
+  "uuid": "bf34d8b4-1b76-4f76-869b-7310537d0998",
+  "previous_version": ["4ff008de-6c9c-4991-879a-5925893ca1b1"],
+  "version_upgrade_log": "docker images re-structure, updated software"
 }

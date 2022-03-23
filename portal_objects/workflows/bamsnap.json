@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFBRDS2L1",
+  "accession": "GAPWFBRDS2A1",
   "app_name": "bamsnap",
   "app_version": "VERSION",
   "arguments": [
@@ -48,9 +48,7 @@
   "description": "Run bamsnap on a list of bam files given a vcf containing variants to be snapped",
   "institution": "INSTITUTION_UUID",
   "name": "bamsnap_VERSION",
-  "aliases": ["cgap:bamsnap_VERSION",
-              "cgap:bamsnap_v26",
-              "cgap:bamsnap_v25"],
+  "aliases": ["cgap:bamsnap_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -163,7 +161,7 @@
       }
   ],
   "title": "Run bamsnap",
-  "uuid": "5d3a7a4b-15d4-4343-9738-79bbc0d44642",
-  "previous_version": ["a147d85c-07c7-4e01-82bb-73b381ebbf11"],
-  "version_upgrade_log": "it is now possible to filter out chromosomes, by default filters chrM"
+  "uuid": "3849ea9c-afbe-4733-8b97-5044dea21e04",
+  "previous_version": ["5d3a7a4b-15d4-4343-9738-79bbc0d44642"],
+  "version_upgrade_log": "docker images re-structure"
 }

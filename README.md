@@ -16,6 +16,7 @@ For more details check [*documentation*](https://cgap-pipeline-main.readthedocs.
 #### v1.0.0
 * v27 -> v1.0.0, we are starting a new more comprehensive versioning system
 * Added some change in metaworkflows to accomodate the changes in foursight
+* Re-organized and updated docker components
 
 #### v27
 * This repo starts from the v26 release of [*cgap-pipeline*](https://github.com/dbmi-bgm/cgap-pipeline) and contains the second half of the original pipeline (starting from `bam` files and producing `g.vcf` and `vcf` files)

@@ -9,7 +9,7 @@ requirements:
 
 hints:
   - class: DockerRequirement
-    dockerPull: ACCOUNT/snv_germline:VERSION
+    dockerPull: ACCOUNT/snv_germline_misc:VERSION
 
 baseCommand: [bamsnap]
 

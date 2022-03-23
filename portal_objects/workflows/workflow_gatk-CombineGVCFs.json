@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFR81TL97",
+  "accession": "GAPWFR81TL9K",
   "app_name": "workflow_gatk-CombineGVCFs",
   "app_version": "VERSION",
   "arguments": [
@@ -38,11 +38,7 @@
   "description": "Run gatk CombineGVCFs on input g.vcf files",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_gatk-CombineGVCFs_VERSION",
-  "aliases": ["cgap:workflow_gatk-CombineGVCFs_VERSION",
-              "cgap:workflow_gatk-CombineGVCFs_v26",
-              "cgap:workflow_gatk-CombineGVCFs_v25",
-              "cgap:workflow_gatk-CombineGVCFs_v24",
-              "cgap:workflow_gatk-CombineGVCFs_v23"],
+  "aliases": ["cgap:workflow_gatk-CombineGVCFs_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -107,7 +103,7 @@
                   "Run gatk CombineGVCFs"
               ],
               "software_used": [
-                 "/softwares/4ae88fb4-23f2-4939-8852-4644069d14d9"
+                 "/softwares/7b86efcc-60c4-442b-b803-eeccc63ff175"
               ]
           },
           "name": "CombineGVCFs",
@@ -130,7 +126,7 @@
       }
   ],
   "title": "Run gatk CombineGVCFs",
-  "uuid": "2d0eed17-0bf5-49ea-94b1-c4913bf1a058",
-  "previous_version": ["c7223a1c-ed48-4c54-a39f-35f05d61e850"],
-  "version_upgrade_log": "Replaced parallel with xargs"
+  "uuid": "dce317eb-8dcf-4ea3-94ef-6a4a4fbe4bed",
+  "previous_version": ["2d0eed17-0bf5-49ea-94b1-c4913bf1a058"],
+  "version_upgrade_log": "docker images re-structure, updated software"
 }
