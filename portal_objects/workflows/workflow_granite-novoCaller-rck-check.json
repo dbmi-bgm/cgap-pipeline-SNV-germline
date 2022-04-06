@@ -1,5 +1,5 @@
 {
-  "accession": "GAPS8LJG3FD1",
+  "accession": "GAPS8LJG3FDL",
   "app_name": "workflow_granite-novoCaller-rck-check",
   "app_version": "VERSION",
   "arguments": [
@@ -42,15 +42,9 @@
   "cwl_main_filename": "workflow_granite-novoCaller-rck_plus_vcf-integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Run granite novoCaller on vcf input file. Use rck files. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_granite-novoCaller-rck-check_VERSION",
-  "aliases": ["cgap:workflow_granite-novoCaller-rck-check_VERSION",
-              "cgap:workflow_granite-novoCaller-rck-check_v26",
-              "cgap:workflow_granite-novoCaller-rck-check_v25",
-              "cgap:workflow_granite-novoCaller-rck-check_v24",
-              "cgap:workflow_granite-novoCaller-rck-check_v23"],
+  "aliases": ["cgap:workflow_granite-novoCaller-rck-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -102,7 +96,7 @@
                   "Run granite novoCaller"
               ],
               "software_used": [
-                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+                 "/softwares/04e57a90-471b-431d-a5ec-b94b3dacf219"
               ]
           },
           "name": "granite",
@@ -169,7 +163,7 @@
       }
   ],
   "title": "Run granite novoCaller using rck files plus output integrity-check",
-  "uuid": "efbd956d-809d-4860-9ebd-cd1abe490b46",
-  "previous_version": ["d95137cf-f926-4bcf-9b4b-78738c00b0a0"],
-  "version_upgrade_log": "Updated granite version, novoCaller expect proband first now"
+  "uuid": "4903b64d-ec78-4673-8bc9-cfd16d1cc0c1",
+  "previous_version": ["efbd956d-809d-4860-9ebd-cd1abe490b46"],
+  "version_upgrade_log": "docker images re-structure"
 }

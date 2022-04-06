@@ -1,5 +1,5 @@
 {
-  "accession": "GAPXFAL93FSQ",
+  "accession": "GAPXFAL93FS1",
   "app_name": "workflow_granite-qcVCF",
   "app_version": "VERSION",
   "arguments": [
@@ -56,15 +56,9 @@
   "cwl_main_filename": "workflow_granite-qcVCF_plus_uniq_variants.cwl",
   "cwl_pointer": "",
   "description": "Run granite qcVCF on vcf input file. Produce a json report for quality metrics",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_granite-qcVCF_VERSION",
-  "aliases": ["cgap:workflow_granite-qcVCF_VERSION",
-              "cgap:workflow_granite-qcVCF_v26",
-              "cgap:workflow_granite-qcVCF_v25",
-              "cgap:workflow_granite-qcVCF_v24",
-              "cgap:workflow_granite-qcVCF_v23"],
+  "aliases": ["cgap:workflow_granite-qcVCF_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -153,7 +147,7 @@
                   "Run granite qcVCF"
               ],
               "software_used": [
-                  "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+                  "/softwares/04e57a90-471b-431d-a5ec-b94b3dacf219"
               ]
           },
           "name": "granite",
@@ -188,7 +182,7 @@
       }
   ],
   "title": "Run granite qcVCF",
-  "uuid": "e9a20462-5b4f-4105-8835-7f669629d88d",
-  "previous_version": ["a28d7aee-54df-4c33-a1be-268217ea5a72"],
-  "version_upgrade_log": "Updated granite version, novoCaller expect proband first now"
+  "uuid": "78ba0550-0c09-47e1-8559-a45be0058056",
+  "previous_version": ["e9a20462-5b4f-4105-8835-7f669629d88d"],
+  "version_upgrade_log": "docker images re-structure"
 }

@@ -7,21 +7,9 @@
             "variant caller"
         ],
         "source_url": "https://software.broadinstitute.org/gatk/gatk4",
-        "title": "gatk_4.1.2.0",
-        "uuid": "4ae88fb4-23f2-4939-8852-4644069d14d9",
-        "version": "4.1.2.0"
-    },
-    {
-        "project": "PROJECT_UUID",
-        "institution": "INSTITUTION_UUID",
-        "name": "picard",
-        "software_type": [
-            "filter"
-        ],
-        "source_url": "https://broadinstitute.github.io/picard/",
-        "title": "picard_2.20.2",
-        "uuid": "586cef39-6505-4bf6-920a-4b26a500d210",
-        "version": "2.20.2"
+        "title": "gatk_4.2.5.0",
+        "uuid": "7b86efcc-60c4-442b-b803-eeccc63ff175",
+        "version": "4.2.5.0"
     },
     {
         "project": "PROJECT_UUID",
@@ -34,18 +22,6 @@
         "title": "vcf-tools_954e607",
         "uuid": "f7ac2c5f-9203-49fa-b918-cede02bf46f7",
         "commit": "954e607"
-    },
-    {
-        "project": "PROJECT_UUID",
-        "institution": "INSTITUTION_UUID",
-        "name": "pigz",
-        "software_type": [
-            "compressor"
-        ],
-        "source_url": "https://zlib.net/pigz/",
-        "title": "pigz_pigz-2.6",
-        "uuid": "c730b361-1b4d-4d29-8eff-8f7576d776e2",
-        "version": "2.6"
     },
     {
         "project": "PROJECT_UUID",
@@ -67,9 +43,9 @@
             "filter"
         ],
         "source_url": "https://github.com/dbmi-bgm/granite",
-        "title": "granite_0.1.12",
-        "uuid": "aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52",
-        "commit": "0.1.12"
+        "title": "granite_0.2.0",
+        "uuid": "04e57a90-471b-431d-a5ec-b94b3dacf219",
+        "commit": "0.2.0"
     },
     {
         "project": "PROJECT_UUID",
@@ -94,18 +70,6 @@
         "title": "bcftools_1.11",
         "uuid": "791a7248-9ba3-44da-bff9-0d9b121eaf5c",
         "version": "1.11"
-    },
-    {
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-        "name": "samtools",
-        "software_type": [
-            "file format converter"
-        ],
-        "source_url": "https://github.com/samtools/samtools",
-        "title": "samtools_1.9",
-        "uuid": "3f2d3b0e-0365-4212-9468-c16ad9531c4d",
-        "version": "1.9"
     },
     {
         "project": "PROJECT_UUID",

@@ -1,5 +1,5 @@
 {
-  "accession": "GAPFKJF3DVCP",
+  "accession": "GAPFKJF3DVC7",
   "app_name": "workflow_granite-mpileupCounts",
   "app_version": "VERSION",
   "arguments": [
@@ -44,15 +44,9 @@
   "cwl_main_filename": "granite-mpileupCounts.cwl",
   "cwl_pointer": "",
   "description": "Run granite mpileupCounts on bam input file. Produce a rck.gz file",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_granite-mpileupCounts_VERSION",
-  "aliases": ["cgap:workflow_granite-mpileupCounts_VERSION",
-              "cgap:workflow_granite-mpileupCounts_v26",
-              "cgap:workflow_granite-mpileupCounts_v25",
-              "cgap:workflow_granite-mpileupCounts_v24",
-              "cgap:workflow_granite-mpileupCounts_v23"],
+  "aliases": ["cgap:workflow_granite-mpileupCounts_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -143,7 +137,7 @@
                   "Run granite mpileupCounts"
               ],
               "software_used": [
-                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52",
+                 "/softwares/04e57a90-471b-431d-a5ec-b94b3dacf219",
                  "/softwares/3f2d3b0e-0365-4212-9468-c16ad9531c4d"
               ]
           },
@@ -167,7 +161,7 @@
       }
   ],
   "title": "Run granite mpileupCounts",
-  "uuid": "620671e7-b21a-4c48-aa90-b5beb3283d64",
-  "previous_version": ["7d79eb1a-e784-43e8-b902-5f99ccecde0f"],
-  "version_upgrade_log": "Updated granite version, novoCaller expect proband first now"
+  "uuid": "ace7324e-2943-435b-ac1d-5565953953d5",
+  "previous_version": ["620671e7-b21a-4c48-aa90-b5beb3283d64"],
+  "version_upgrade_log": "docker images re-structure"
 }

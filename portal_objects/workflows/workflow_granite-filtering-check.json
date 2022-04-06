@@ -1,5 +1,5 @@
 {
-  "accession": "GAPK43RH92D8",
+  "accession": "GAPK43RH92DS",
   "app_name": "workflow_granite-filtering-check",
   "app_version": "VERSION",
   "arguments": [
@@ -63,15 +63,9 @@
   "cwl_main_filename": "workflow_granite-filtering_plus_vcf-integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Filter and clean the input vcf using granite (geneList, whiteList, cleanVCF, blackList). An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_granite-filtering-check_VERSION",
-  "aliases": ["cgap:workflow_granite-filtering-check_VERSION",
-              "cgap:workflow_granite-filtering-check_v26",
-              "cgap:workflow_granite-filtering-check_v25",
-              "cgap:workflow_granite-filtering-check_v24",
-              "cgap:workflow_granite-filtering-check_v23"],
+  "aliases": ["cgap:workflow_granite-filtering-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -189,7 +183,7 @@
                   "Run granite geneList, whiteList, cleanVCF, blackList"
               ],
               "software_used": [
-                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+                 "/softwares/04e57a90-471b-431d-a5ec-b94b3dacf219"
               ]
           },
           "name": "granite",
@@ -256,7 +250,7 @@
       }
   ],
   "title": "Run granite to filter and clean input vcf (geneList, whiteList, cleanVCF, blackList) plus output integrity-check",
-  "uuid": "77b36194-7f22-41b0-a4c9-12d0682501ef",
-  "previous_version": ["4a78b81f-3b1b-46d3-8f68-3c28229962bd"],
-  "version_upgrade_log": "Updated granite version, novoCaller expect proband first now"
+  "uuid": "97190da3-b0db-4176-b8e2-dd2168f85c31",
+  "previous_version": ["77b36194-7f22-41b0-a4c9-12d0682501ef"],
+  "version_upgrade_log": "docker images re-structure"
 }

@@ -1,5 +1,5 @@
 {
-  "accession": "GAPW9IDRLG3D",
+  "accession": "GAPW9IDRLG31",
   "app_name": "workflow_granite-rckTar",
   "app_version": "VERSION",
   "arguments": [
@@ -22,15 +22,9 @@
   "cwl_main_filename": "granite-rckTar.cwl",
   "cwl_pointer": "",
   "description": "Create a tar archive of rck files. Create an index file for the archive",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_granite-rckTar_VERSION",
-  "aliases": ["cgap:workflow_granite-rckTar_VERSION",
-              "cgap:workflow_granite-rckTar_v26",
-              "cgap:workflow_granite-rckTar_v25",
-              "cgap:workflow_granite-rckTar_v24",
-              "cgap:workflow_granite-rckTar_v23"],
+  "aliases": ["cgap:workflow_granite-rckTar_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -54,7 +48,7 @@
                   "Run granite rckTar"
               ],
               "software_used": [
-                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+                 "/softwares/04e57a90-471b-431d-a5ec-b94b3dacf219"
               ]
           },
           "name": "granite",
@@ -77,7 +71,7 @@
       }
   ],
   "title": "Create a tar archive of rck files and an associate index file",
-  "uuid": "43200ef2-a5da-4216-a736-4d4eac4449d0",
-  "previous_version": ["dca2f426-7ef0-456b-927d-ba0ab388d0da"],
-  "version_upgrade_log": "Updated granite version, novoCaller expect proband first now"
+  "uuid": "14eb6324-1ac2-40fd-9f39-de7f46604763",
+  "previous_version": ["43200ef2-a5da-4216-a736-4d4eac4449d0"],
+  "version_upgrade_log": "docker images re-structure"
 }

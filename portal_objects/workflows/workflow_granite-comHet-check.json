@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFC63LK8I",
+  "accession": "GAPWFC63LK1I",
   "app_name": "workflow_granite-comHet-check",
   "app_version": "VERSION",
   "arguments": [
@@ -46,15 +46,9 @@
   "cwl_main_filename": "workflow_granite-comHet_plus_vcf-integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Run granite comHet on vcf input file. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_granite-comHet-check_VERSION",
-  "aliases": ["cgap:workflow_granite-comHet-check_VERSION",
-              "cgap:workflow_granite-comHet-check_v26",
-              "cgap:workflow_granite-comHet-check_v25",
-              "cgap:workflow_granite-comHet-check_v24",
-              "cgap:workflow_granite-comHet-check_v23"],
+  "aliases": ["cgap:workflow_granite-comHet-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -91,7 +85,7 @@
                   "Run granite comHet"
               ],
               "software_used": [
-                 "/softwares/aa7c1c7d-8533-4ad7-bfe1-7ea40e86bb52"
+                 "/softwares/04e57a90-471b-431d-a5ec-b94b3dacf219"
               ]
           },
           "name": "granite",
@@ -171,7 +165,7 @@
       }
   ],
   "title": "Run granite comHet plus output integrity-check",
-  "uuid": "8fc79178-a81e-4da1-8cfd-121d4193e12c",
-  "previous_version": ["81c29481-81df-49e9-80e8-4bfe36d3a5bf"],
-  "version_upgrade_log": "Updated granite version, novoCaller expect proband first now"
+  "uuid": "bdcd68e4-be7f-43ea-a6a7-567dc682217e",
+  "previous_version": ["8fc79178-a81e-4da1-8cfd-121d4193e12c"],
+  "version_upgrade_log": "docker images re-structure"
 }

@@ -1,5 +1,5 @@
 {
-  "accession": "GAPL87J8PD3Q",
+  "accession": "GAPL87J8PQLQ",
   "app_name": "workflow_merge-sort-vcf-check",
   "app_version": "VERSION",
   "arguments": [
@@ -37,24 +37,9 @@
   "cwl_main_filename": "workflow_merge-sort-vcf_plus_vcf-integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Merge two vcf files and sort removing duplicates. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/snv_germline:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_merge-sort-vcf-check_VERSION",
-  "aliases": ["cgap:workflow_merge-sort-vcf-check_VERSION",
-              "cgap:workflow_merge-sort-vcf-check_v26",
-              "cgap:workflow_merge-sort-vcf-check_v25",
-              "cgap:workflow_merge-sort-vcf-check_v24",
-              "cgap:workflow_merge-sort-vcf-check_v23",
-              "cgap:workflow_merge-sort-vcf-check_v22",
-              "cgap:workflow_merge-sort-vcf-check_v21",
-              "cgap:workflow_merge-sort-vcf-check_v20",
-              "cgap:workflow_merge-sort-vcf-check_v19",
-              "cgap:workflow_merge-sort-vcf-check_v18",
-              "cgap:workflow_merge-sort-vcf-check_v17",
-              "cgap:workflow_merge-sort-vcf-check_v16",
-              "cgap:workflow_merge-sort-vcf-check_v15",
-              "cgap:workflow_merge-sort-vcf-check_v14"],
+  "aliases": ["cgap:workflow_merge-sort-vcf-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -159,5 +144,7 @@
       }
   ],
   "title": "Merge and sort two vcf files plus output integrity-check",
-  "uuid": "4473ed53-ce74-4c8c-a3fe-facb79f37da5"
+  "uuid": "3467dc5e-020c-4dc9-b915-523df4db90f9",
+  "previous_version": ["4473ed53-ce74-4c8c-a3fe-facb79f37da5"],
+  "version_upgrade_log": "docker images re-structure"
 }
