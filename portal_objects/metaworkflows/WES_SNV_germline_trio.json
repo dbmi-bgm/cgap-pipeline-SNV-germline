@@ -991,7 +991,8 @@
               "file_type": "full-annotated vcf",
               "variant_type": "SNV",
               "description": "fully annotated output in vcf format",
-              "linkto_location": ["SampleProcessing"]
+              "linkto_location": ["SampleProcessing"],
+              "vcf_to_be_ingested": true
           }
       },
       "input": [
