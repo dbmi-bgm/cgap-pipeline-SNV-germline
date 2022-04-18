@@ -21,7 +21,7 @@ RUN apt-get update -y && apt-get install -y \
 WORKDIR /usr/local/bin
 
 ## granite VERSION
-ARG GRANITE_VERSION=0.1.12
+ARG GRANITE_VERSION=0.2.0
 
 #######################################################################
 #     Software
