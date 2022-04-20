@@ -7,9 +7,9 @@
             "variant caller"
         ],
         "source_url": "https://software.broadinstitute.org/gatk/gatk4",
-        "title": "gatk_4.2.5.0",
+        "title": "gatk_4.2.6.1",
         "uuid": "7b86efcc-60c4-442b-b803-eeccc63ff175",
-        "version": "4.2.5.0"
+        "version": "4.2.6.1"
     },
     {
         "project": "PROJECT_UUID",
