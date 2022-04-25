@@ -7,13 +7,15 @@ MAINTAINER Phil Grayson (phil.d.grayson@gmail.com), Michele Berselli (berselli.m
 #######################################################################
 #     General updates & installing necessary Linux components
 #       - libncurses-dev, libbz2-dev, liblzma-dev used by samtools
+#       - parallel is still used by mpileupCounts at the moment
 #######################################################################
 RUN apt-get update -y && apt-get install -y \
     locales \
     tabix \
     libncurses-dev \
     libbz2-dev \
-    liblzma-dev
+    liblzma-dev \
+    parallel
 
 #######################################################################
 #     Setting working env
