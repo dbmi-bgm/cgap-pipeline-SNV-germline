@@ -15,7 +15,7 @@ directory=GVCFS/
 mkdir -p $directory
 
 # runnning HaplotypeCaller in parallel
-cat $regionfile | xargs -P $nthreads -i bash -c "chr={} && fpath=${chr//:/_} && gatk PrintReads --java-options '-Xms2g' -I $inputbam --interval-padding 500 -L {} -O ${fpath}.sharded.bam || exit 1; if [[ -e ${fpath}.sharded.bam ]] || exit 1; then gatk HaplotypeCaller --java-options '-Xms8g' -R $reference -O ${directory}out.${fpath}.g.vcf -I ${fpath}.sharded.bam -L {} -ERC $ERC --max-alternate-alleles 3 --read-filter OverclippedReadFilter -stand-call-conf $threshold || exit 1; fi; rm ${fpath}.sharded.ba*" || exit 1
+cat $regionfile | xargs -P $nthreads -i bash -c "chr={}; fpath=\${chr//:/_}; gatk PrintReads --java-options '-Xms2g' -I $inputbam --interval-padding 500 -L {} -O \${fpath}.sharded.bam || exit 1; if [[ -e \${fpath}.sharded.bam ]] || exit 1; then gatk HaplotypeCaller --java-options '-Xms8g' -R $reference -O ${directory}out.\${fpath}.g.vcf -I \${fpath}.sharded.bam -L {} -ERC $ERC --max-alternate-alleles 3 --read-filter OverclippedReadFilter -stand-call-conf $threshold || exit 1; fi; rm \${fpath}.sharded.ba*" || exit 1
 
 # merging the results
 array=(${directory}*g.vcf)
