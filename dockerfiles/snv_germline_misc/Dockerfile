@@ -16,6 +16,9 @@ RUN apt-get update -y && apt-get install -y \
 #######################################################################
 WORKDIR /usr/local/bin
 
+## granite VERSION
+ARG GRANITE_VERSION=0.2.0
+
 #######################################################################
 #     Software
 #######################################################################
@@ -26,6 +29,9 @@ RUN conda install -c bioconda -y peddy==0.4.7 \
 
 ## bamsnap
 RUN pip install bamsnap-cgap==0.3.0
+
+## granite
+RUN pip install granite-suite==${GRANITE_VERSION}
 
 #######################################################################
 #     Scripts
