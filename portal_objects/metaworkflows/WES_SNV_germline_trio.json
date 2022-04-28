@@ -218,7 +218,8 @@
           "gvcf": {
               "file_type": "HaplotypeCaller g.vcf",
               "variant_type": "SNV",
-              "description": "output from HaplotypeCaller in g.vcf format"
+              "description": "output from HaplotypeCaller in g.vcf format",
+              "linkto_location": ["Sample"]
           }
       },
       "input": [
