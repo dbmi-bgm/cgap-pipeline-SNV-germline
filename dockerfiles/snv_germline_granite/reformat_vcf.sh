@@ -11,5 +11,3 @@ portal_reformat_vcf.py -i $input_vcf -o $output_vcf || exit 1
 bgzip $output_vcf || exit 1
 tabix -p vcf ${output_vcf}.gz || exit 1
 
-# do vcf integrity check here instead of in its own pipeline step
-vcf-validator ${output_vcf}.gz || exit 1
