@@ -16,12 +16,12 @@
     {
       "argument_name": "sample_names",
       "argument_type": "parameter",
-      "value_type": "string"
+      "value_type": "json"
     },
     {
       "argument_name": "sample_name_proband",
       "argument_type": "parameter",
-      "value_type": "json"
+      "value_type": "string"
     },
     {
       "argument_name": "bamsnap_titles",
