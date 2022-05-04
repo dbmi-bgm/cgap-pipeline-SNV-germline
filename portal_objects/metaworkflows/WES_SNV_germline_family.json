@@ -16,7 +16,7 @@
     {
       "argument_name": "sample_names",
       "argument_type": "parameter",
-      "value_type": "json"
+      "value_type": "string"
     },
     {
       "argument_name": "sample_name_proband",
