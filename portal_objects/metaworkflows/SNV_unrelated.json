@@ -4,7 +4,7 @@
   "version": "VERSION",
   "accession": "GAPLAFW1J23K",
   "description": "granite mpileupCounts and rckTar to create panel of unrelated samples for SNV pipeline",
-  "uuid": "",
+  "uuid": "cbe78ec7-ae68-4d65-9bd5-21664d8764ca",
   "project": "PROJECT_UUID",
   "institution": "INSTITUTION_UUID",
   "input": [
