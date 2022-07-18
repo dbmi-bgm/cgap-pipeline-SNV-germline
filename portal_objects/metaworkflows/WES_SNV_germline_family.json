@@ -172,7 +172,8 @@
           "gvcf": {
               "file_type": "HaplotypeCaller g.vcf",
               "variant_type": "SNV",
-              "description": "output from HaplotypeCaller in g.vcf format"
+              "description": "output from HaplotypeCaller in g.vcf format",
+              "linkto_location": ["Sample"]
           }
       },
       "input": [
@@ -834,7 +835,7 @@
               "variant_type": "SNV",
               "description": "fully annotated output in vcf format",
               "linkto_location": ["SampleProcessing"],
-              "vcf_to_be_ingested": true
+              "vcf_to_ingest": true
           }
       },
       "input": [
@@ -857,7 +858,7 @@
         "instance_type": "r5a.4xlarge",
         "ebs_size": "2x",
         "EBS_optimized": true,
-        "spot_instance": true,
+        "spot_instance": false,
         "run_name": "run_bamsnap",
         "behavior_on_capacity_limit": "wait_and_retry"
       },
