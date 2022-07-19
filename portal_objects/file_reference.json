@@ -339,6 +339,25 @@
         "accession": "GAPFIBGEOI72"
     },
     {
+        "uuid": "eac862c0-8c87-4838-83cb-9a77412bff6f",
+        "institution": "INSTITUTION_UUID",
+        "project": "PROJECT_UUID",
+        "file_format": "rck_tar",
+        "description": "archive of 20 unrelated rck.gz files from UGRP, MQ = 0 and BQ = 0, alt index, alignment with GATK",
+        "aliases": [
+            "cgap:novoCaller_unrelated_rcks_ugrp_gatk_v1.0.0"
+        ],
+        "extra_files": [
+            {
+                "file_format": "rck_tar_index",
+                "status": "uploading"
+            }
+        ],
+        "status": "uploading",
+        "file_version": "v1.0.0",
+        "accession": "GAPFIMO8Y4PZ"
+    },
+    {
         "uuid": "196ef586-be28-40c5-a244-d739fd173984",
         "institution": "INSTITUTION_UUID",
         "project": "PROJECT_UUID",
