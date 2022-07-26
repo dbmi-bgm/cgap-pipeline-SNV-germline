@@ -204,10 +204,7 @@ def main(args):
 
     #the proband list contains the cases (or probands) that we want to use for case AN, AC, and AF calculations. currently, gnomAD is going to be used for controls
     #note that these values will differ from the AN, AC, and AF calculated by Sentieon which represent both the probands and family members (all input files)
-    proband_list = []
-    with open(args['probandlist'], 'r') as pl:
-        for p in pl:
-            proband_list.append(p.strip("\n"))
+    proband_list = args['probandlist']
 
     #below, we do the calculations and parsing
     with open(args['outputfile'], 'w') as fo:
@@ -324,7 +321,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Add hgvsg INFO field for each qualified variant')
 
     parser.add_argument('-i','--inputfile', help='input VCF file', required=True)
-    parser.add_argument('-p','--probandlist', help='txt file with all cases (proband) IDs on individual lines', required=True)
+    parser.add_argument('-p','--probandlist', nargs='*', help='list of all cases (proband) sample IDs', required=True)
     parser.add_argument('-o','--outputfile', help='output VCF file', required=True)
     parser.add_argument('-g','--gnomAD', nargs='*', help='gnomAD version(s) to use as control (v2 and/or v3)', choices=['v2', 'v3'], required=True)
 

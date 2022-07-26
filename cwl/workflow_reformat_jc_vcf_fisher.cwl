@@ -12,9 +12,9 @@ inputs:
       - .tbi
     doc: expect the path to the sample vcf gz file
 
-  - id: proband_list
-    type: File
-    doc: expect the path to a list of sample IDs for probands (cases in case vs control)
+  - id: probands
+    type: string[]
+    doc: list of sample IDs for probands (cases in case vs control)
 
   - id: gnomAD
     type: string[]
@@ -38,8 +38,8 @@ steps:
     in:
       input:
         source: reformat_vcf/output
-      proband_list:
-        source: proband_list
+      probands:
+        source: probands
       gnomAD:
         source: gnomAD
     out: [output]

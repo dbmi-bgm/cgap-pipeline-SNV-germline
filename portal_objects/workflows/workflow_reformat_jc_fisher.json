@@ -9,9 +9,8 @@
           "workflow_argument_name": "input_vcf"
       },
       {
-          "argument_format": "txt",
-          "argument_type": "Input file",
-          "workflow_argument_name": "proband_list"
+          "argument_type": "parameter",
+          "workflow_argument_name": "probands"
       },
       {
           "argument_format": "vcf_gz",
@@ -100,14 +99,13 @@
               {
                   "meta": {
                       "cardinality": "single",
-                      "file_format": "txt",
                       "global": true,
-                      "type": "data file"
+                      "type": "parameter"
                   },
-                  "name": "proband_list",
+                  "name": "probands",
                   "source": [
                       {
-                          "name": "proband_list"
+                          "name": "probands"
                       }
                   ]
               },

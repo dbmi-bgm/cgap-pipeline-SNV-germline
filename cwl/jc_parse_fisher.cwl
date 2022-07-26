@@ -26,11 +26,11 @@ inputs:
       prefix: -g
     doc: list of gnomAD version(s) to use as control (v2 and/or v3)
 
-  - id: proband_list
-    type: File
+  - id: probands
+    type: string[]
     inputBinding:
       prefix: -p
-    doc: expect the path to txt file containing 1 proband sample ID per line
+    doc: list of proband sample IDs (cases in case vs control)
 
   - id: outputfile
     default: 'joint_called_higlass.vcf'
