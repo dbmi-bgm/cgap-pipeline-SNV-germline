@@ -4,7 +4,7 @@
 input_vcf=$1
 
 # run
-samplegeno.py -i $input_vcf -o output.vcf
+samplegeno.py -i $input_vcf -o output.vcf || exit 1
 
 # compress and index output vcf
 bgzip output.vcf || exit 1
