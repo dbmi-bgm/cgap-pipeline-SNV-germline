@@ -9,7 +9,7 @@ runner:
   language: cwl
   main: workflow_granite-comHet_plus_vcf-integrity-check.cwl
   child:
-    - granite-comHet.cw
+    - granite-comHet.cwl
     - sort-bgzip-vcf.cwl
     - vcf-integrity-check.cwl
 
