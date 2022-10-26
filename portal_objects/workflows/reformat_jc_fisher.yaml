@@ -1,0 +1,44 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: reformat_jc_fisher
+description: Add Fisher test scores and reformat the annotated jointly-called VCF file for HiGlass viewing. |
+             Run an internal integrity check.
+
+runner:
+  language: cwl
+  main: workflow_reformat_jc_vcf_fisher.cwl
+  child:
+    - reformat_vcf.cwl
+    - jc_parse_fisher.cwl
+
+software:
+  - granite@0.2.0
+  - reformat_vcf@2eeb9da
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_vcf:
+    argument_type: file.vcf_gz
+
+  proband_list:
+    argument_type: file.txt
+
+  # Parameter argument
+  gnomAD:
+    argument_type: parameter.json
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  vcf:
+    argument_type: file.vcf_gz
+    secondary_files:
+      - vcf_gz_tbi

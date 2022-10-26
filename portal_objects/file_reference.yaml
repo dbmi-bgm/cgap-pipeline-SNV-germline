@@ -1,0 +1,268 @@
+#***************************************************************
+# PANEL OF NORMAL
+#***************************************************************
+################################################################
+# Unrelated RCK files from UGRP (Sentieon), 1.0.0
+################################################################
+name: unrelated-rck-ugrp-sentieon
+description: Archive of 20 unrelated compressed RCK files from UGRP. |
+             mpileup MQ = 0 and BQ = 0, .alt index, alignment with Sentieon.
+format: rck_tar
+version: 1.0.0
+secondary_files:
+  - rck_tar_index
+# Required to enable sync with a reference bucket
+uuid: 196ef586-be28-40c5-a244-d739fd173984
+accession: GAPFIMO8Y4K1
+
+---
+
+################################################################
+# Unrelated RCK files from UGRP (GATK), 1.0.0
+################################################################
+name: unrelated-rck-ugrp-gatk
+description: Archive of 20 unrelated compressed RCK files from UGRP. |
+             mpileup MQ = 0 and BQ = 0, .alt index, alignment with GATK.
+format: rck_tar
+version: 1.0.0
+secondary_files:
+  - rck_tar_index
+# Required to enable sync with a reference bucket
+uuid: eac862c0-8c87-4838-83cb-9a77412bff6f
+accession: GAPFIMO8Y4PZ
+
+---
+
+#***************************************************************
+# ANNOTATION SOURCE
+#***************************************************************
+################################################################
+# dbSNP build 151, hg38/GRCh38
+#   Common variants only
+################################################################
+name: dbsnp-common
+description: Common variants from dbSNP build 151. |
+             Build hg38/GRCh38.
+format: vcf_gz
+version: "151"
+secondary_files:
+  - vcf_gz_tbi
+# Required to enable sync with a reference bucket
+uuid: 8ed35691-0af4-467a-adbc-81eb088549f0
+accession: GAPFI4LJRN98
+
+---
+
+################################################################
+# dbSNP build 151, hg38/GRCh38
+#   All variants
+################################################################
+name: dbsnp-all
+description: All variants from dbSNP build 151. |
+             Build hg38/GRCh38.
+format: vcf_gz
+version: "151"
+secondary_files:
+  - vcf_gz_tbi
+# Required to enable sync with a reference bucket
+uuid: aa542c8e-b31c-4cff-b2d4-aa4037bb913c
+accession: GAPFIF4JKLTH
+
+---
+
+################################################################
+# VEP (Variant Effect Predictor) datasource plus plugins, 101b
+#   Include a modified dbNSFP plugin to annotate non-missense variants
+################################################################
+name: vep
+description: Datasource for VEP version 101. |
+             Incude a modified dbNSFP plugin to annotate non-missense variants (101b).
+format: vep_tar
+version: "101b"
+secondary_files:
+  - plugins_tar
+# Required to enable sync with a reference bucket
+uuid: ea103486-b65a-4439-9d0b-1186f8e59388
+accession: GAPFIL8XMTIV
+
+---
+
+################################################################
+# Datasource for ClinVar, 20201101
+################################################################
+name: clinvar
+description: Datasource for ClinVar version 20201101.
+format: vcf_gz
+version: "20201101"
+secondary_files:
+  - vcf_gz_tbi
+# Required to enable sync with a reference bucket
+uuid: 7db786d5-13d2-4622-bdd2-99866036b9b9
+accession: GAPFI121RWQE
+
+---
+
+################################################################
+# Datasource for gnomAD (genomes), 3.1
+#   Trimmed to include only useful annotations
+################################################################
+name: gnomad-genome
+description: Datasource for gnomAD version 3.1 (genomes). |
+             Trimmed to remove unused metrics.
+format: vcf_gz
+version: "3.1"
+secondary_files:
+  - vcf_gz_tbi
+# Required to enable sync with a reference bucket
+uuid: 52c6cbf6-ae94-4c10-ad03-26ed34f74a3e
+accession: GAPFIJOMA2Q8
+
+---
+
+################################################################
+# Datasource for gnomAD (exomes), 2.1.1
+#   Trimmed to include only useful annotations
+################################################################
+name: gnomad-exome
+description: Datasource for gnomAD version 2.1.1 (exomes). |
+             Trimmed to remove unused metrics.
+format: vcf_gz
+version: 2.1.1
+secondary_files:
+  - vcf_gz_tbi
+# Required to enable sync with a reference bucket
+uuid: dd6f0384-d0b5-47d6-99a8-395c0b72feed
+accession: GAPFIC5416E6
+
+---
+
+################################################################
+# Datasource for SpliceAI SNV, 1.3
+################################################################
+name: spliceai-snv
+description: Datasource for SpliceAI SNV version 1.3.
+format: vcf_gz
+version: "1.3"
+secondary_files:
+  - vcf_gz_tbi
+# Required to enable sync with a reference bucket
+uuid: a35e580c-7579-4312-a3a1-66810e6d9366
+accession: GAPFISUOC64Q
+
+---
+
+################################################################
+# Datasource for SpliceAI INDEL, 1.3
+################################################################
+name: spliceai-indel
+description: Datasource for SpliceAI INDEL version 1.3.
+format: vcf_gz
+version: "1.3"
+secondary_files:
+  - vcf_gz_tbi
+# Required to enable sync with a reference bucket
+uuid: 3b7c0c29-5ee2-47c8-95a8-d28e15d5de47
+accession: GAPFIZOPCWIU
+
+---
+
+################################################################
+# dbNSFP, 4.1a
+################################################################
+name: dbnsfp
+description: Datasource for dbNSFP version 4.1a plus README.
+format: dbnsfp_gz
+version: 4.1a
+secondary_files:
+  - dbnsfp_gz_tbi
+  - dbnsfp_readme_txt
+# Required to enable sync with a reference bucket
+uuid: dc02df4c-49ac-4532-b85c-02800941aa44
+accession: GAPFIKJ66FKY
+
+---
+
+################################################################
+# MaxEnt, 20040421
+################################################################
+name: maxent
+description: Datasource for MaxEnt version 20040421.
+format: tar_gz
+version: "20040421"
+# Required to enable sync with a reference bucket
+uuid: 71a7d16b-8452-4266-ae80-bbede2e305e2
+accession: GAPFI6BNNTKA
+
+---
+
+################################################################
+# CADD SNV, 1.6
+################################################################
+name: cadd-snv
+description: Datasource for CADD SNV. |
+             Build hg38/GRCh38.
+format: tsv_gz
+version: "1.6"
+secondary_files:
+  - tsv_gz_tbi
+# Required to enable sync with a reference bucket
+uuid: 672de47f-d058-4dbd-9fc4-3e134cfe71d8
+accession: GAPFI566QQCV
+
+---
+
+################################################################
+# CADD INDEL, 1.6
+################################################################
+name: cadd-indel
+description: Datasource for CADD INDEL. |
+             Build hg38/GRCh38.
+format: tsv_gz
+version: "1.6"
+secondary_files:
+  - tsv_gz_tbi
+# Required to enable sync with a reference bucket
+uuid: b9f123dd-be05-4a14-957a-5e1e5a5ce254
+accession: GAPFI1GC6AXF
+
+---
+
+################################################################
+# PhyloP 30-way mammalian, hg38/GRCh38
+################################################################
+name: phylop30way-mammalian
+description: PhyloP 30-way mammalian. |
+             Build hg38/GRCh38.
+format: BigWig
+version: hg38
+# Required to enable sync with a reference bucket
+uuid: f6809af1-f7b9-43c0-882a-16764ccc431d
+accession: GAPFI5MRTDLN
+
+---
+
+################################################################
+# PhyloP 100-way vertebrate, hg38/GRCh38
+################################################################
+name: phylop100way-vertebrate
+description: PhyloP 100-way vertebrate. |
+             Build hg38/GRCh38.
+format: BigWig
+version: hg38
+# Required to enable sync with a reference bucket
+uuid: af93aecb-6b8e-4c8b-b159-eefb3f9d0ffb
+accession: GAPFIMQ7MHGA
+
+---
+
+################################################################
+# PhastCons 100-way vertebrate, hg38/GRCh38
+################################################################
+name: phastcons100way-vertebrate
+description: PhastCons 100-way vertebrate. |
+             Build hg38/GRCh38.
+format: BigWig
+version: hg38
+# Required to enable sync with a reference bucket
+uuid: 19f03828-175b-4594-ba1a-52ddabcf640d
+accession: GAPFI6KXAQMV

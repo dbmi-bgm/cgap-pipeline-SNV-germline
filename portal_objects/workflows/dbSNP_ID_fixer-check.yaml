@@ -1,0 +1,53 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: dbSNP_ID_fixer-check
+description: Run parallel_dbSNP_ID_fixer on sample file and update ID column with rsIDs from reference dbSNP VCF file. |
+             An integrity check is performed on the output file.
+
+runner:
+  language: cwl
+  main: workflow_parallel_dbSNP_ID_fixer_plus_vcf-integrity-check.cwl
+  child:
+    - parallel_dbSNP_ID_fixer.cwl
+    - vcf-integrity-check.cwl
+
+software:
+  - granite@0.2.0
+  - VCFtools@954e607
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_vcf:
+    argument_type: file.vcf_gz
+
+  dbSNP_ref_vcf:
+    argument_type: file.vcf_gz
+
+  region_file:
+    argument_type: file.txt
+
+  # Parameter argument
+  nthreads:
+    argument_type: parameter.integer
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  vcf:
+    argument_type: file.vcf_gz
+    secondary_files:
+      - vcf_gz_tbi
+
+  # QC output
+  vcf-check:
+    argument_type: qc.quality_metric_vcfcheck
+    argument_to_be_attached_to: vcf
+    table: True

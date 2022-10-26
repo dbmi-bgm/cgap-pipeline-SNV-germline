@@ -1,0 +1,32 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: samplegeno
+description: Add samplegeno annotation to input VCF file.
+
+runner:
+  language: cwl
+  main: samplegeno.cwl
+
+software:
+  - samplegeno@2eeb9da
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_vcf:
+    argument_type: file.vcf_gz
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  samplegeno_vcf:
+    argument_type: file.vcf_gz
+    secondary_files:
+      - vcf_gz_tbi

@@ -1,0 +1,49 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: gatk-HaplotypeCaller
+description: Run GATK HaplotypeCaller on input BAM file. |
+             Produce a GVCF file.
+
+runner:
+  language: cwl
+  main: gatk-HaplotypeCaller.cwl
+
+software:
+  - GATK@4.2.6.1
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bam:
+    argument_type: file.bam
+
+  reference:
+    argument_type: file.fa
+
+  regions:
+    argument_type: file.txt
+
+  # Parameter argument
+  threshold:
+    argument_type: parameter.integer
+
+  ERC:
+    argument_type: parameter.string
+
+  nthreads:
+    argument_type: parameter.integer
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  gvcf:
+    argument_type: file.gvcf_gz
+    secondary_files:
+      - gvcf_gz_tbi

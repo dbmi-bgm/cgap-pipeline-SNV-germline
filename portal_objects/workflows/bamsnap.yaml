@@ -1,0 +1,53 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: bamsnap
+description: Take snaps from input BAM files for the variants in the provided VCF file.
+
+runner:
+  language: cwl
+  main: bamsnap.cwl
+
+software:
+  - BamSnap@0.3.0
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bams:
+    argument_type: file.bam
+
+  ref:
+    argument_type: file.fa
+
+  input_vcf:
+    argument_type: file.vcf_gz
+
+  # Parameter argument
+  titles:
+    argument_type: parameter.json
+
+  nproc:
+    argument_type: parameter.integer
+
+  exclude_chr:
+    argument_type: parameter.json
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # QC output
+  bamsnap_images:
+    argument_type: qc.none    # none is placeholder
+                              #   for when there is no QC type
+    argument_to_be_attached_to: input_vcf
+    zipped: True
+    # This fields are weird,
+    #   to be looked at
+    qc_acl: private
+    qc_unzip_from_ec2: True
