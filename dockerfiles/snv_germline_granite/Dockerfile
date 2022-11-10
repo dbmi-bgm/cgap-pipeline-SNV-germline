@@ -56,7 +56,7 @@ RUN chmod +x sort-bgzip-vcf.sh
 ##  - depth_filter, samplegeno and duplines_vcf, liftover_hg19
 RUN git clone https://github.com/dbmi-bgm/cgap-scripts/ && \
     cd cgap-scripts && \
-    git checkout 2eeb9da && \
+    git checkout 5a06066 && \
     chmod +x depth_filter.py && \
     chmod +x samplegeno.py && \
     chmod +x duplines_vcf.py && \
