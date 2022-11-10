@@ -14,7 +14,7 @@ runner:
 
 software:
   - granite@0.2.0
-  - reformat_vcf@2eeb9da
+  - reformat_vcf@5a06066
 
 ## Input information ########################################
 #     Input files and parameters

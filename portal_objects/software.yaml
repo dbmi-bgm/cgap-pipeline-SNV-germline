@@ -2,7 +2,7 @@
 # Scripts
 #***************************************************************
 ################################################################
-# depth_filter, 2eeb9da
+# depth_filter, 5a06066
 ################################################################
 name: depth_filter
 commit: "5a06066"
@@ -11,7 +11,7 @@ source_url: https://github.com/dbmi-bgm/cgap-scripts
 ---
 
 ################################################################
-# samplegeno, 2eeb9da
+# samplegeno, 5a06066
 ################################################################
 name: samplegeno
 commit: "5a06066"
@@ -20,7 +20,7 @@ source_url: https://github.com/dbmi-bgm/cgap-scripts
 ---
 
 ################################################################
-# duplines_vcf, 2eeb9da
+# duplines_vcf, 5a06066
 ################################################################
 name: duplines_vcf
 commit: "5a06066"
@@ -29,7 +29,7 @@ source_url: https://github.com/dbmi-bgm/cgap-scripts
 ---
 
 ################################################################
-# liftover_hg19, 2eeb9da
+# liftover_hg19, 5a06066
 ################################################################
 name: liftover_hg19
 commit: "5a06066"
@@ -38,7 +38,7 @@ source_url: https://github.com/dbmi-bgm/cgap-scripts
 ---
 
 ################################################################
-# reformat_vcf, 2eeb9da
+# reformat_vcf, 5a06066
 ################################################################
 name: reformat_vcf
 commit: "5a06066"
