@@ -19,7 +19,7 @@ runner:
 software:
   - BCFtools@1.11
   - VEP@101
-  - depth_filter@7d51ca9
+  - depth_filter@4550b2b
   - granite@0.2.0
   - VCFtools@954e607
 
