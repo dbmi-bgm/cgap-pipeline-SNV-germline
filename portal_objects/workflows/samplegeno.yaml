@@ -9,7 +9,7 @@ runner:
   main: samplegeno.cwl
 
 software:
-  - samplegeno@4550b2b
+  - samplegeno@d9c98b0
 
 ## Input information ########################################
 #     Input files and parameters

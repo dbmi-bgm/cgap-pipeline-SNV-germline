@@ -15,7 +15,7 @@ runner:
 
 software:
   - granite@0.2.0
-  - liftover_hg19@4550b2b
+  - liftover_hg19@d9c98b0
   - VCFtools@954e607
 
 ## Input information ########################################

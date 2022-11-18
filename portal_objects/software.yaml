@@ -2,44 +2,44 @@
 # Scripts
 #***************************************************************
 ################################################################
-# depth_filter, 4550b2b
+# depth_filter, d9c98b0
 ################################################################
 name: depth_filter
-commit: "4550b2b"
+commit: "d9c98b0"
 source_url: https://github.com/dbmi-bgm/cgap-scripts
 
 ---
 
 ################################################################
-# samplegeno, 4550b2b
+# samplegeno, d9c98b0
 ################################################################
 name: samplegeno
-commit: "4550b2b"
+commit: "d9c98b0"
 source_url: https://github.com/dbmi-bgm/cgap-scripts
 
 ---
 
 ################################################################
-# duplines_vcf, 4550b2b
+# duplines_vcf, d9c98b0
 ################################################################
 name: duplines_vcf
-commit: "4550b2b"
+commit: "d9c98b0"
 source_url: https://github.com/dbmi-bgm/cgap-scripts
 
 ---
 
 ################################################################
-# liftover_hg19, 4550b2b
+# liftover_hg19, d9c98b0
 ################################################################
 name: liftover_hg19
-commit: "4550b2b"
+commit: "d9c98b0"
 source_url: https://github.com/dbmi-bgm/cgap-scripts
 
 ---
 
 ################################################################
-# reformat_vcf, 4550b2b
+# reformat_vcf, d9c98b0
 ################################################################
 name: reformat_vcf
-commit: "4550b2b"
+commit: "d9c98b0"
 source_url: https://github.com/dbmi-bgm/cgap-scripts

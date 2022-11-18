@@ -13,7 +13,7 @@ runner:
     - vcf-integrity-check.cwl
 
 software:
-  - duplines_vcf@4550b2b
+  - duplines_vcf@d9c98b0
   - VCFtools@954e607
 
 ## Input information ########################################
