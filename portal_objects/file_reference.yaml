@@ -233,7 +233,7 @@ accession: GAPFI1GC6AXF
 name: phylop30way-mammalian
 description: PhyloP 30-way mammalian. |
              Build hg38/GRCh38.
-format: BigWig
+format: bigWig
 version: hg38
 # Required to enable sync with a reference bucket
 uuid: f6809af1-f7b9-43c0-882a-16764ccc431d
@@ -247,7 +247,7 @@ accession: GAPFI5MRTDLN
 name: phylop100way-vertebrate
 description: PhyloP 100-way vertebrate. |
              Build hg38/GRCh38.
-format: BigWig
+format: bigWig
 version: hg38
 # Required to enable sync with a reference bucket
 uuid: af93aecb-6b8e-4c8b-b159-eefb3f9d0ffb
@@ -261,7 +261,7 @@ accession: GAPFIMQ7MHGA
 name: phastcons100way-vertebrate
 description: PhastCons 100-way vertebrate. |
              Build hg38/GRCh38.
-format: BigWig
+format: bigWig
 version: hg38
 # Required to enable sync with a reference bucket
 uuid: 19f03828-175b-4594-ba1a-52ddabcf640d
