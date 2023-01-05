@@ -92,17 +92,17 @@ input:
       - cadd-indel@1.6
 
   phylop100bw:
-    argument_type: file.BigWig
+    argument_type: file.bigWig
     files:
       - phylop100way-vertebrate@hg38
 
   phylop30bw:
-    argument_type: file.BigWig
+    argument_type: file.bigWig
     files:
       - phylop30way-mammalian@hg38
 
   phastc100bw:
-    argument_type: file.BigWig
+    argument_type: file.bigWig
     files:
       - phastcons100way-vertebrate@hg38
 
@@ -408,15 +408,15 @@ workflows:
 
       trio_errors:
         argument_type: parameter.boolean
-        value: True
+        value: "True"
 
       het_hom:
         argument_type: parameter.boolean
-        value: False
+        value: "False"
 
       ti_tv:
         argument_type: parameter.boolean
-        value: False
+        value: "False"
 
     ## EC2 Configuration to use ########
     ####################################
@@ -516,13 +516,13 @@ workflows:
         argument_type: file.tsv_gz
 
       phylop100bw:
-        argument_type: file.BigWig
+        argument_type: file.bigWig
 
       phylop30bw:
-        argument_type: file.BigWig
+        argument_type: file.bigWig
 
       phastc100bw:
-        argument_type: file.BigWig
+        argument_type: file.bigWig
 
       # Parameter argument
       nthreads:
@@ -611,15 +611,15 @@ workflows:
 
       trio_errors:
         argument_type: parameter.boolean
-        value: True
+        value: "True"
 
       het_hom:
         argument_type: parameter.boolean
-        value: True
+        value: "True"
 
       ti_tv:
         argument_type: parameter.boolean
-        value: True
+        value: "True"
 
     ## EC2 Configuration to use ########
     ####################################
@@ -913,15 +913,15 @@ workflows:
 
       trio_errors:
         argument_type: parameter.boolean
-        value: True
+        value: "True"
 
       het_hom:
         argument_type: parameter.boolean
-        value: False
+        value: "False"
 
       ti_tv:
         argument_type: parameter.boolean
-        value: False
+        value: "False"
 
     ## EC2 Configuration to use ########
     ####################################
