@@ -1,0 +1,50 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: granite-mpileupCounts
+description: Run granite mpileupCounts on input BAM file. |
+             Produce a compressed RCK file.
+
+runner:
+  language: cwl
+  main: granite-mpileupCounts.cwl
+
+software:
+  - granite@0.2.0
+  - samtools@1.9
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bam:
+    argument_type: file.bam
+
+  reference:
+    argument_type: file.fa
+
+  regions:
+    argument_type: file.txt
+
+  # Parameter argument
+  nthreads:
+    argument_type: parameter.integer
+
+  MQthr:
+    argument_type: parameter.integer
+
+  BQthr:
+    argument_type: parameter.integer
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  rck:
+    argument_type: file.rck_gz
+    secondary_files:
+      - rck_gz_tbi

@@ -1,0 +1,53 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: granite-comHet-check
+description: Run granite comHet on input VCF file. |
+             An integrity check is performed on the output file.
+
+runner:
+  language: cwl
+  main: workflow_granite-comHet_plus_vcf-integrity-check.cwl
+  child:
+    - granite-comHet.cwl
+    - sort-bgzip-vcf.cwl
+    - vcf-integrity-check.cwl
+
+software:
+  - granite@0.2.0
+  - VCFtools@954e607
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_vcf:
+    argument_type: file.vcf_gz
+
+  # Parameter argument
+  trio:
+    argument_type: parameter.json
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  comHet_vcf:
+    argument_type: file.vcf_gz
+    secondary_files:
+      - vcf_gz_tbi
+
+  # QC output
+  comHet_vcf-json:
+    argument_type: qc.quality_metric_cmphet
+    argument_to_be_attached_to: comHet_vcf
+    json: True
+
+  comHet_vcf-check:
+    argument_type: qc.quality_metric_vcfcheck
+    argument_to_be_attached_to: comHet_vcf
+    table: True
