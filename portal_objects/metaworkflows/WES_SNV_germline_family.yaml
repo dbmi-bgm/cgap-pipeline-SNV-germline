@@ -286,7 +286,7 @@ workflows:
     config:
       instance_type:
         - c5n.4xlarge
-      ebs_size: 2.5x
+      ebs_size: "2.5x"
       EBS_optimized: True
       spot_instance: True
       run_name: run_gatk-GenotypeGVCFs-check
@@ -455,7 +455,7 @@ workflows:
     config:
       instance_type:
         - c5n.18xlarge
-      ebs_size: 1.35x
+      ebs_size: "1.35x"
       EBS_optimized: True
       spot_instance: True
       run_name: run_vep-annot-check
