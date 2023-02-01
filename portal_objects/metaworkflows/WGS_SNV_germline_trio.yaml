@@ -186,6 +186,7 @@ workflows:
       rck:
         file_type: pileup RCK
         description: pileup read counts in RCK format
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -236,6 +237,7 @@ workflows:
         linkto_location:
           - Sample
         variant_type: SNV
+        s3_lifecycle_category: long_term_archive
 
     ## EC2 Configuration to use ########
     ####################################
@@ -274,6 +276,7 @@ workflows:
       rck_tar:
         file_type: archive RCK
         description: archive of pileup read counts in RCK format
+        s3_lifecycle_category: long_term_archive
 
     ## EC2 Configuration to use ########
     ####################################
@@ -318,6 +321,7 @@ workflows:
         file_type: combined GVCF
         description: output from CombineGVCFs in GVCF format
         variant_type: SNV
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -366,6 +370,7 @@ workflows:
         linkto_location:
           - SampleProcessing
         variant_type: SNV
+        s3_lifecycle_category: long_term_archive
 
     ## EC2 Configuration to use ########
     ####################################
@@ -447,6 +452,7 @@ workflows:
         file_type: intermediate VCF
         description: output from samplegeno in VCF format
         variant_type: SNV
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -535,6 +541,7 @@ workflows:
         linkto_location:
           - SampleProcessing
         variant_type: SNV
+        s3_lifecycle_category: long_term_archive
 
     ## EC2 Configuration to use ########
     ####################################
@@ -662,6 +669,7 @@ workflows:
         file_type: filtered VCF
         description: output from filtering step in VCF format
         variant_type: SNV
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -706,6 +714,7 @@ workflows:
         file_type: de novo VCF
         description: output from novoCaller in VCF format
         variant_type: SNV
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -747,6 +756,7 @@ workflows:
         file_type: intermediate VCF
         description: output from comHet in VCF format
         variant_type: SNV
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -790,6 +800,7 @@ workflows:
         file_type: intermediate VCF
         description: output from dbSNP annotation step in VCF format
         variant_type: SNV
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -831,6 +842,7 @@ workflows:
           - SampleProcessing
         variant_type: SNV
         vcf_to_ingest: True
+        s3_lifecycle_category: long_term_archive
 
     ## EC2 Configuration to use ########
     ####################################

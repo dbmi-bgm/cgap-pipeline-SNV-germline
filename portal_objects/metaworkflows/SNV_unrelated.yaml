@@ -70,6 +70,7 @@ workflows:
       rck:
         file_type: pileup RCK
         description: pileup read counts in RCK format
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -108,6 +109,7 @@ workflows:
       rck_tar:
         file_type: archive RCK
         description: archive of pileup read counts in RCK format
+        s3_lifecycle_category: long_term_archive
 
     ## EC2 Configuration to use ########
     ####################################
