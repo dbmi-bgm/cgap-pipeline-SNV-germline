@@ -184,6 +184,11 @@ workflows:
     config:
       instance_type:
         - c5n.18xlarge
+        - m5.12xlarge
+        - m5a.12xlarge
+        - m6i.12xlarge
+        - m6a.12xlarge
+        - m6a.16xlarge
       ebs_size: "5x"
       EBS_optimized: True
       spot_instance: True
@@ -233,6 +238,12 @@ workflows:
     config:
       instance_type:
         - c5n.4xlarge
+        - m5.4xlarge
+        - m5a.4xlarge
+        - c6i.8xlarge
+        - c6a.8xlarge
+        - m6a.4xlarge
+        - m6i.4xlarge
       ebs_size: "2.5x"
       EBS_optimized: True
       spot_instance: True
@@ -404,6 +415,14 @@ workflows:
     config:
       instance_type:
         - c5n.18xlarge
+        - c5.24xlarge
+        - c5a.24xlarge
+        - m5.24xlarge
+        - m5a.24xlarge
+        - m6i.24xlarge
+        - m6a.24xlarge
+        - c6i.24xlarge
+        - c6a.24xlarge
       ebs_size: "1.35x"
       EBS_optimized: True
       spot_instance: True
