@@ -237,7 +237,7 @@ workflows:
         linkto_location:
           - Sample
         variant_type: SNV
-        s3_lifecycle_category: long_term_archive
+        s3_lifecycle_category: long_term_access
 
     ## EC2 Configuration to use ########
     ####################################
