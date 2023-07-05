@@ -25,6 +25,7 @@ RUN apt-get update -y && apt-get install -y \
     libmysqlclient-dev \
     libpng-dev \
     libssl-dev \
+    libxml-libxml-perl \
     libexpat1-dev
 
 #######################################################################

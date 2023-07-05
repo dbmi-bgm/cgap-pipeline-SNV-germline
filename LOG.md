@@ -1,5 +1,8 @@
 ### Version Updates
 
+#### v1.1.1
+* Fixed missing library ``libxml-libxml-perl`` to build VEP docker container
+
 #### v1.1.0
 * Conversion to YAML format for portal objects
 * Updated samplegeno script to better support multiple ``vcf`` files
