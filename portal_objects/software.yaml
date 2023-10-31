@@ -1,45 +1,6 @@
-#***************************************************************
-# Scripts
-#***************************************************************
 ################################################################
-# depth_filter, d9c98b0
+# GATK, 4.1.3
 ################################################################
-name: depth_filter
-commit: d9c98b0
-source_url: https://github.com/dbmi-bgm/cgap-scripts
-
----
-
-################################################################
-# samplegeno, d9c98b0
-################################################################
-name: samplegeno
-commit: d9c98b0
-source_url: https://github.com/dbmi-bgm/cgap-scripts
-
----
-
-################################################################
-# duplines_vcf, d9c98b0
-################################################################
-name: duplines_vcf
-commit: d9c98b0
-source_url: https://github.com/dbmi-bgm/cgap-scripts
-
----
-
-################################################################
-# liftover_hg19, d9c98b0
-################################################################
-name: liftover_hg19
-commit: d9c98b0
-source_url: https://github.com/dbmi-bgm/cgap-scripts
-
----
-
-################################################################
-# reformat_vcf, d9c98b0
-################################################################
-name: reformat_vcf
-commit: d9c98b0
-source_url: https://github.com/dbmi-bgm/cgap-scripts
+name: GATK
+version: 4.1.3
+source_url: https://software.broadinstitute.org/gatk/gatk4

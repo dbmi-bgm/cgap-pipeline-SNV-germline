@@ -20,7 +20,7 @@ WORKDIR /usr/local/bin
 #     Software
 #######################################################################
 ## conda install
-RUN conda install -c bioconda -y gatk4==4.2.6.1 && \
+RUN conda install -c bioconda -y gatk4==4.1.3 && \
     conda clean -a -y -f
 
 #######################################################################
@@ -33,14 +33,6 @@ RUN chmod +x HaplotypeCaller-parallel.sh
 ## HaplotypeCaller
 COPY HaplotypeCaller.sh .
 RUN chmod +x HaplotypeCaller.sh
-
-## CombineGVCFs parallel
-COPY CombineGVCFs-parallel.sh .
-RUN chmod +x CombineGVCFs-parallel.sh
-
-## GenotypeGVCFs parallel
-COPY GenotypeGVCFs-parallel.sh .
-RUN chmod +x GenotypeGVCFs-parallel.sh
 
 #######################################################################
 #     Setting env variables

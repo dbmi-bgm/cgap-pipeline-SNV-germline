@@ -12,3 +12,5 @@ This repository contains components for the CGAP pipeline for Single Nucleotide 
 The pipeline starts from analysis-ready `bam` files and produces `g.vcf` and `vcf` files containing calls for SNVs and small INDELs as output.
 Documentation for all CGAP Pipelines can now be found here:
 https://cgap-pipeline-main.readthedocs.io/en/latest/
+
+## *This is a custom version to run GATK 4.1.3. It is not expected to be merged into the main branch.*

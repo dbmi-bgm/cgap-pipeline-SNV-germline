@@ -1,5 +1,8 @@
 ### Version Updates
 
+#### gatk_4.1.3
+* GATK downgraded to version 4.1.3
+
 #### v1.1.1
 * Fixed missing library ``libxml-libxml-perl`` to build VEP docker container
 

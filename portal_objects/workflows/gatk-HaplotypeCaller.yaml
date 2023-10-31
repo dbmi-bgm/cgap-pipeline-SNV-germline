@@ -10,7 +10,7 @@ runner:
   main: gatk-HaplotypeCaller.cwl
 
 software:
-  - GATK@4.2.6.1
+  - GATK@4.1.3
 
 ## Input information ########################################
 #     Input files and parameters
