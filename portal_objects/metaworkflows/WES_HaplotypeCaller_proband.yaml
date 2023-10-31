@@ -1,8 +1,8 @@
 ## Pipeline information #####################################
 #     General information for the pipeline
 #############################################################
-name: WGS_SNV_germline_proband
-description: Downstream pipeline to call SNV and small Indel for Whole Genome Sequencing, Proband. |
+name: WES_HaplotypeCaller_proband
+description: Downstream pipeline to call SNV and small Indel for Whole Exome Sequencing, Proband. |
              Generate a gVCF file.
 
 ## General arguments ########################################
@@ -21,10 +21,10 @@ input:
     files:
       - complete-reference-fasta@hg38
 
-  regions:
-    argument_type: file.txt
+  regions_exome_bed:
+    argument_type: file.bed
     files:
-      - 10Mb-genomic-regions@hg38
+      - exome-regions-ensembl@101
 
 ## Workflows and dependencies ###############################
 #     Information for the workflows and their dependencies
@@ -32,9 +32,9 @@ input:
 workflows:
 
   ## Workflow definition #####################
-  #   gatk-HaplotypeCaller
+  #   gatk-HaplotypeCaller_exome
   ############################################
-  gatk-HaplotypeCaller:
+  gatk-HaplotypeCaller_exome:
 
     ## Specific arguments ##############
     ####################################
@@ -52,11 +52,12 @@ workflows:
 
       regions:
         argument_type: file.txt
+        source_argument_name: regions_exome_bed
 
       # Parameter argument
       nthreads:
         argument_type: parameter.integer
-        value: "20"
+        value: "1"
 
     ## Output ##########################
     ####################################
@@ -72,15 +73,9 @@ workflows:
     ## EC2 Configuration to use ########
     ####################################
     config:
-      instance_type:
-        - c5n.18xlarge
-        - m5.12xlarge
-        - m5a.12xlarge
-        - m6i.12xlarge
-        - m6a.12xlarge
-        - m6a.16xlarge
+      instance_type: t3.xlarge
       ebs_size: "5x"
       EBS_optimized: True
       spot_instance: True
-      run_name: run_gatk-HaplotypeCaller
+      run_name: run_gatk-HaplotypeCaller_exome
       behavior_on_capacity_limit: wait_and_retry
